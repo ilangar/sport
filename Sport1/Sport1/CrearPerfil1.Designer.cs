@@ -128,6 +128,7 @@
             this.Controls.Add(this.lblNombre);
             this.Name = "CrearPerfil1";
             this.Text = "CrearPerfil1";
+            this.Load += new System.EventHandler(this.CrearPerfil1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

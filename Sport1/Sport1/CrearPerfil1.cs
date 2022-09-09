@@ -46,5 +46,10 @@ namespace Sport1
             deporte = cmbDeporte.SelectedIndex;
             deporte++;
         }
+
+        private void CrearPerfil1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

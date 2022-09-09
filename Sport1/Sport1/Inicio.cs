@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Sport1
 {
     public partial class Inicio : Form
     {
         int pos = 38;
-        int cantPerfiles = 0;
+        int cantPerfiles;
         string[] nombres = new string[1000];
+        OleDbConnection BaseDeDatosProyecto;
+
 
         public void pasarDatos (string hola)
         {
@@ -48,8 +51,17 @@ namespace Sport1
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            
+            OleDbCommand info;
+            string sql = "Select IdCrear FROM Crear WHERE ID " + cantPerfiles;
+            info = new OleDbCommand(sql, BaseDeDatosProyecto);
+            OleDbDataAdapter da = new OleDbDataAdapter(info);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Crear");
+            string cantBotones = ds.Tables["Crear"].Rows[0][0].ToString();
+            MessageBox.Show(cantBotones);
             //cant de  perfiles
-            if (cantPerfiles > 0)
+            if (Convert.ToInt32(cantBotones) > 0)
             {
 
 
