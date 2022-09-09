@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Sport1
 {
@@ -16,13 +17,21 @@ namespace Sport1
         public string nombre;
         public int deporte;
         public int rol;
+        OleDbConnection connection = new OleDbConnection();
         public CrearPerfil1()
         {
             InitializeComponent();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\47575158\\Desktop\\Proyecto\\sport\\Sport1-DB.accdb";
         }
 
         private void BtnAceptarPerfil_Click(object sender, EventArgs e)
         {
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "insert into Crear (Nombre, Deporte, Rol) values ('" + nombre + "','" + deporte + "','" + rol + "')";
+            command.ExecuteNonQuery();
+            connection.Close();
             this.Hide();
             formInicio.pasarDatos(nombre);
             formInicio.Show();
@@ -31,8 +40,6 @@ namespace Sport1
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
             nombre = txtNombre.Text;
-            
-            
         }
 
         private void CmbRol_SelectedIndexChanged(object sender, EventArgs e)
