@@ -32,7 +32,7 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)
