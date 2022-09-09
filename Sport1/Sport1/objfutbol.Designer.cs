@@ -146,6 +146,7 @@
             this.Controls.Add(this.btnguardar);
             this.Name = "objfutbol";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Objfutbol_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
