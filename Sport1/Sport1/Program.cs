@@ -16,7 +16,7 @@ namespace Sport1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CrearPerfil1());
+            Application.Run(new Form1());
         }
     }
 }

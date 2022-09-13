@@ -33,8 +33,8 @@ namespace Sport1
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();
-            formInicio.pasarDatos(nombre);
-            formInicio.Show();
+            Inicio f2 = new Inicio();
+            f2.ShowDialog();
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)

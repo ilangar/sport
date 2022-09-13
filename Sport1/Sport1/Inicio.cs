@@ -52,32 +52,6 @@ namespace Sport1
         private void Inicio_Load(object sender, EventArgs e)
         {
             
-            OleDbCommand info;
-            string sql = "Select IdCrear FROM Crear WHERE ID " + cantPerfiles;
-            info = new OleDbCommand(sql, BaseDeDatosProyecto);
-            OleDbDataAdapter da = new OleDbDataAdapter(info);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Crear");
-            string cantBotones = ds.Tables["Crear"].Rows[0][0].ToString();
-            MessageBox.Show(cantBotones);
-            //cant de  perfiles
-            if (Convert.ToInt32(cantBotones) > 0)
-            {
-
-
-                Button btnPerfil1 = new Button();
-                btnPerfil1.DialogResult = DialogResult.OK;
-                btnPerfil1.Text = nombres[cantPerfiles - 1];
-                btnPerfil1.Location = new Point(24, pos);
-                pos += 100;
-                btnPerfil1.Size = new Size(160, 70);
-                btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
-                Controls.Add(btnPerfil1);
-                
-
-
-            }
-            
         }
     }
 }
