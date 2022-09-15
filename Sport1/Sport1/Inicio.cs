@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace Sport1
 {
@@ -16,7 +17,12 @@ namespace Sport1
         int pos = 38;
         int cantPerfiles;
         string[] nombres = new string[1000];
-        OleDbConnection BaseDeDatosProyecto;
+        OleDbConnection BaseDeDatosProyecto = new OleDbConnection;
+        
+        SqlCommand command;
+        SqlDataReader dataReader;
+        String sql, Output = "";
+        BaseDeDatosProyecto.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\47575158\\Desktop\\Proyecto\\sport\\Sport1-DB.accdb";
 
 
         public void pasarDatos (string hola)
@@ -51,7 +57,9 @@ namespace Sport1
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            
+            sql = "Select IdCrear, Nombre from Crear";
+            command = new SqlCommand(sql, BaseDeDatosProyecto);
+
         }
     }
 }
