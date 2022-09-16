@@ -22,7 +22,7 @@ namespace Sport1
         SqlCommand command;
         SqlDataReader dataReader;
         String sql, Output = "";
-        BaseDeDatosProyecto = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\47575158\\Desktop\\Proyecto\\sport\\Sport1-DB.accdb";
+        BaseDeDatosProyecto.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\47575158\\Desktop\\Proyecto\\sport\\Sport1-DB.accdb";
 
 
         public void pasarDatos (string hola)
