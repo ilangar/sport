@@ -21,7 +21,7 @@ namespace Sport1
         public CrearPerfil1()
         {
             InitializeComponent();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\47575158\\Desktop\\Proyecto\\sport\\Sport1-DB.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
         }
 
         private void BtnAceptarPerfil_Click(object sender, EventArgs e)
