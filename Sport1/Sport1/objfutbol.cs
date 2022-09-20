@@ -11,10 +11,10 @@ using System.Data.OleDb;
 
 namespace Sport1
 {
-    public partial class objfutbol : Form
+    public partial class objetivos : Form
     {
         OleDbConnection BaseDeDatosProyecto;
-        public objfutbol()
+        public objetivos()
         {
             InitializeComponent();
         }
@@ -30,6 +30,11 @@ namespace Sport1
         }
 
         private void Objfutbol_Load(object sender, EventArgs e)
+        {
+            txtboxFutbol.Show = false;
+        }
+
+        private void Lblobjfutbol_Click(object sender, EventArgs e)
         {
 
         }

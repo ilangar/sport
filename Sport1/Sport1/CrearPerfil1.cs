@@ -56,7 +56,7 @@ namespace Sport1
 
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
