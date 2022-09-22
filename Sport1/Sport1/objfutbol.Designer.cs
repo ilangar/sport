@@ -30,7 +30,7 @@
         {
             this.btnguardar = new System.Windows.Forms.Button();
             this.lblObj = new System.Windows.Forms.Label();
-            this.txtboxFutbol = new System.Windows.Forms.GroupBox();
+            this.boxFut = new System.Windows.Forms.GroupBox();
             this.boxgolFut = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.boxpasFut = new System.Windows.Forms.TextBox();
@@ -48,8 +48,18 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.lbltirosHan = new System.Windows.Forms.Label();
-            this.txtboxFutbol.SuspendLayout();
+            this.boxBas = new System.Windows.Forms.GroupBox();
+            this.boxtriBas = new System.Windows.Forms.TextBox();
+            this.lblasiBas = new System.Windows.Forms.Label();
+            this.boxminjugBas = new System.Windows.Forms.TextBox();
+            this.lbltriBas = new System.Windows.Forms.Label();
+            this.lblminjugBas = new System.Windows.Forms.Label();
+            this.boxasiBas = new System.Windows.Forms.TextBox();
+            this.boxdobBas = new System.Windows.Forms.TextBox();
+            this.lbldobBas = new System.Windows.Forms.Label();
+            this.boxFut.SuspendLayout();
             this.boxHan.SuspendLayout();
+            this.boxBas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -72,21 +82,21 @@
             this.lblObj.Text = "Objetivos";
             this.lblObj.Click += new System.EventHandler(this.Lblobjfutbol_Click);
             // 
-            // txtboxFutbol
+            // boxFut
             // 
-            this.txtboxFutbol.Controls.Add(this.boxgolFut);
-            this.txtboxFutbol.Controls.Add(this.label4);
-            this.txtboxFutbol.Controls.Add(this.boxpasFut);
-            this.txtboxFutbol.Controls.Add(this.golFutbol);
-            this.txtboxFutbol.Controls.Add(this.label2);
-            this.txtboxFutbol.Controls.Add(this.boxasiFut);
-            this.txtboxFutbol.Controls.Add(this.boxfaltFut);
-            this.txtboxFutbol.Controls.Add(this.label3);
-            this.txtboxFutbol.Location = new System.Drawing.Point(30, 102);
-            this.txtboxFutbol.Name = "txtboxFutbol";
-            this.txtboxFutbol.Size = new System.Drawing.Size(230, 157);
-            this.txtboxFutbol.TabIndex = 10;
-            this.txtboxFutbol.TabStop = false;
+            this.boxFut.Controls.Add(this.boxgolFut);
+            this.boxFut.Controls.Add(this.label4);
+            this.boxFut.Controls.Add(this.boxpasFut);
+            this.boxFut.Controls.Add(this.golFutbol);
+            this.boxFut.Controls.Add(this.label2);
+            this.boxFut.Controls.Add(this.boxasiFut);
+            this.boxFut.Controls.Add(this.boxfaltFut);
+            this.boxFut.Controls.Add(this.label3);
+            this.boxFut.Location = new System.Drawing.Point(30, 74);
+            this.boxFut.Name = "boxFut";
+            this.boxFut.Size = new System.Drawing.Size(230, 157);
+            this.boxFut.TabIndex = 10;
+            this.boxFut.TabStop = false;
             // 
             // boxgolFut
             // 
@@ -99,11 +109,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 47);
+            this.label4.Location = new System.Drawing.Point(6, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 24);
+            this.label4.Size = new System.Drawing.Size(104, 24);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Asistencias:";
+            this.label4.Text = "Asistencias";
             // 
             // boxpasFut
             // 
@@ -116,17 +126,17 @@
             // 
             this.golFutbol.AutoSize = true;
             this.golFutbol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.golFutbol.Location = new System.Drawing.Point(27, 9);
+            this.golFutbol.Location = new System.Drawing.Point(6, 18);
             this.golFutbol.Name = "golFutbol";
-            this.golFutbol.Size = new System.Drawing.Size(69, 24);
+            this.golFutbol.Size = new System.Drawing.Size(59, 24);
             this.golFutbol.TabIndex = 19;
-            this.golFutbol.Text = "Goles: ";
+            this.golFutbol.Text = "Goles";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 122);
+            this.label2.Location = new System.Drawing.Point(6, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 24);
             this.label2.TabIndex = 25;
@@ -150,7 +160,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 84);
+            this.label3.Location = new System.Drawing.Point(6, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 23;
@@ -166,7 +176,7 @@
             this.boxHan.Controls.Add(this.textBox7);
             this.boxHan.Controls.Add(this.textBox8);
             this.boxHan.Controls.Add(this.lbltirosHan);
-            this.boxHan.Location = new System.Drawing.Point(277, 102);
+            this.boxHan.Location = new System.Drawing.Point(30, 265);
             this.boxHan.Name = "boxHan";
             this.boxHan.Size = new System.Drawing.Size(230, 159);
             this.boxHan.TabIndex = 27;
@@ -185,9 +195,9 @@
             this.lblAsisHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsisHan.Location = new System.Drawing.Point(6, 47);
             this.lblAsisHan.Name = "lblAsisHan";
-            this.lblAsisHan.Size = new System.Drawing.Size(109, 24);
+            this.lblAsisHan.Size = new System.Drawing.Size(104, 24);
             this.lblAsisHan.TabIndex = 21;
-            this.lblAsisHan.Text = "Asistencias:";
+            this.lblAsisHan.Text = "Asistencias";
             // 
             // textBox6
             // 
@@ -241,22 +251,110 @@
             this.lbltirosHan.TabIndex = 23;
             this.lbltirosHan.Text = "Tiros ";
             // 
+            // boxBas
+            // 
+            this.boxBas.Controls.Add(this.lbldobBas);
+            this.boxBas.Controls.Add(this.boxtriBas);
+            this.boxBas.Controls.Add(this.lblasiBas);
+            this.boxBas.Controls.Add(this.boxminjugBas);
+            this.boxBas.Controls.Add(this.lbltriBas);
+            this.boxBas.Controls.Add(this.lblminjugBas);
+            this.boxBas.Controls.Add(this.boxasiBas);
+            this.boxBas.Controls.Add(this.boxdobBas);
+            this.boxBas.Location = new System.Drawing.Point(266, 27);
+            this.boxBas.Name = "boxBas";
+            this.boxBas.Size = new System.Drawing.Size(230, 157);
+            this.boxBas.TabIndex = 27;
+            this.boxBas.TabStop = false;
+            // 
+            // boxtriBas
+            // 
+            this.boxtriBas.Location = new System.Drawing.Point(182, 9);
+            this.boxtriBas.Name = "boxtriBas";
+            this.boxtriBas.Size = new System.Drawing.Size(21, 20);
+            this.boxtriBas.TabIndex = 20;
+            // 
+            // lblasiBas
+            // 
+            this.lblasiBas.AutoSize = true;
+            this.lblasiBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblasiBas.Location = new System.Drawing.Point(6, 43);
+            this.lblasiBas.Name = "lblasiBas";
+            this.lblasiBas.Size = new System.Drawing.Size(104, 24);
+            this.lblasiBas.TabIndex = 21;
+            this.lblasiBas.Text = "Asistencias";
+            // 
+            // boxminjugBas
+            // 
+            this.boxminjugBas.Location = new System.Drawing.Point(182, 122);
+            this.boxminjugBas.Name = "boxminjugBas";
+            this.boxminjugBas.Size = new System.Drawing.Size(21, 20);
+            this.boxminjugBas.TabIndex = 26;
+            // 
+            // lbltriBas
+            // 
+            this.lbltriBas.AutoSize = true;
+            this.lbltriBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltriBas.Location = new System.Drawing.Point(6, 9);
+            this.lbltriBas.Name = "lbltriBas";
+            this.lbltriBas.Size = new System.Drawing.Size(72, 24);
+            this.lbltriBas.TabIndex = 19;
+            this.lbltriBas.Text = "Triples ";
+            // 
+            // lblminjugBas
+            // 
+            this.lblminjugBas.AutoSize = true;
+            this.lblminjugBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblminjugBas.Location = new System.Drawing.Point(6, 118);
+            this.lblminjugBas.Name = "lblminjugBas";
+            this.lblminjugBas.Size = new System.Drawing.Size(153, 24);
+            this.lblminjugBas.TabIndex = 25;
+            this.lblminjugBas.Text = "Minutos jugados ";
+            this.lblminjugBas.Click += new System.EventHandler(this.Label6_Click_1);
+            // 
+            // boxasiBas
+            // 
+            this.boxasiBas.Location = new System.Drawing.Point(182, 47);
+            this.boxasiBas.Name = "boxasiBas";
+            this.boxasiBas.Size = new System.Drawing.Size(21, 20);
+            this.boxasiBas.TabIndex = 22;
+            // 
+            // boxdobBas
+            // 
+            this.boxdobBas.Location = new System.Drawing.Point(182, 84);
+            this.boxdobBas.Name = "boxdobBas";
+            this.boxdobBas.Size = new System.Drawing.Size(21, 20);
+            this.boxdobBas.TabIndex = 24;
+            // 
+            // lbldobBas
+            // 
+            this.lbldobBas.AutoSize = true;
+            this.lbldobBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldobBas.Location = new System.Drawing.Point(6, 80);
+            this.lbldobBas.Name = "lbldobBas";
+            this.lbldobBas.Size = new System.Drawing.Size(69, 24);
+            this.lbldobBas.TabIndex = 27;
+            this.lbldobBas.Text = "Dobles";
+            // 
             // objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.boxBas);
             this.Controls.Add(this.boxHan);
-            this.Controls.Add(this.txtboxFutbol);
+            this.Controls.Add(this.boxFut);
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
             this.Name = "objetivos";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Objfutbol_Load);
-            this.txtboxFutbol.ResumeLayout(false);
-            this.txtboxFutbol.PerformLayout();
+            this.boxFut.ResumeLayout(false);
+            this.boxFut.PerformLayout();
             this.boxHan.ResumeLayout(false);
             this.boxHan.PerformLayout();
+            this.boxBas.ResumeLayout(false);
+            this.boxBas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +364,7 @@
 
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblObj;
-        private System.Windows.Forms.GroupBox txtboxFutbol;
+        private System.Windows.Forms.GroupBox boxFut;
         private System.Windows.Forms.TextBox boxgolFut;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox boxpasFut;
@@ -284,5 +382,14 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label lbltirosHan;
+        private System.Windows.Forms.GroupBox boxBas;
+        private System.Windows.Forms.Label lbldobBas;
+        private System.Windows.Forms.TextBox boxtriBas;
+        private System.Windows.Forms.Label lblasiBas;
+        private System.Windows.Forms.TextBox boxminjugBas;
+        private System.Windows.Forms.Label lbltriBas;
+        private System.Windows.Forms.Label lblminjugBas;
+        private System.Windows.Forms.TextBox boxasiBas;
+        private System.Windows.Forms.TextBox boxdobBas;
     }
 }
