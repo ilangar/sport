@@ -183,7 +183,7 @@
             // 
             this.lblAsisHan.AutoSize = true;
             this.lblAsisHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsisHan.Location = new System.Drawing.Point(27, 47);
+            this.lblAsisHan.Location = new System.Drawing.Point(6, 47);
             this.lblAsisHan.Name = "lblAsisHan";
             this.lblAsisHan.Size = new System.Drawing.Size(109, 24);
             this.lblAsisHan.TabIndex = 21;
@@ -200,7 +200,7 @@
             // 
             this.golHan.AutoSize = true;
             this.golHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.golHan.Location = new System.Drawing.Point(27, 9);
+            this.golHan.Location = new System.Drawing.Point(6, 9);
             this.golHan.Name = "golHan";
             this.golHan.Size = new System.Drawing.Size(69, 24);
             this.golHan.TabIndex = 19;
@@ -235,7 +235,7 @@
             // 
             this.lbltirosHan.AutoSize = true;
             this.lbltirosHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltirosHan.Location = new System.Drawing.Point(27, 84);
+            this.lbltirosHan.Location = new System.Drawing.Point(6, 80);
             this.lbltirosHan.Name = "lbltirosHan";
             this.lbltirosHan.Size = new System.Drawing.Size(57, 24);
             this.lbltirosHan.TabIndex = 23;
