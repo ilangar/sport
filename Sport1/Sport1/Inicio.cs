@@ -17,22 +17,21 @@ namespace Sport1
         int pos = 38;
         int cantPerfiles;
         string[] nombres = new string[1000];
-        OleDbConnection BaseDeDatosProyecto = new OleDbConnection();
         
-        SqlCommand command;
-        SqlDataReader dataReader;
-        String sql, Output = "";
-        BaseDeDatosProyecto = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
 
 
-        public void pasarDatos (string hola)
+
+
+
+
+        public void pasarDatos(string hola)
         {
             nombres[cantPerfiles] = hola;
             cantPerfiles++;
             Inicio_Load(null, null);
         }
-        
-        
+
+
         public Inicio()
         {
             InitializeComponent();
@@ -42,7 +41,7 @@ namespace Sport1
         {
             this.Hide();
             CrearPerfil1 formCrearPerfil = new CrearPerfil1();
-            formCrearPerfil.formInicio = this; 
+            formCrearPerfil.formInicio = this;
             formCrearPerfil.Show();
         }
 
@@ -57,8 +56,23 @@ namespace Sport1
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            sql = "Select IdCrear, Nombre from Crear";
-            command = new SqlCommand(sql, BaseDeDatosProyecto);
+            
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+            sql = "select IdCrear, Nombre from Crear";
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+            while (dataReader.Read())
+            {
+                Output = Output + dataReader.GetValue(0) + "-" + dataReader.GetValue(1) + "/n";
+            }
+
+            MessageBox.Show(Output);
+
+
 
         }
     }
