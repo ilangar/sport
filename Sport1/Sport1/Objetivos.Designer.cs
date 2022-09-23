@@ -49,6 +49,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.lbltirosHan = new System.Windows.Forms.Label();
             this.boxBas = new System.Windows.Forms.GroupBox();
+            this.lbldobBas = new System.Windows.Forms.Label();
             this.boxtriBas = new System.Windows.Forms.TextBox();
             this.lblasiBas = new System.Windows.Forms.Label();
             this.boxminjugBas = new System.Windows.Forms.TextBox();
@@ -56,10 +57,18 @@
             this.lblminjugBas = new System.Windows.Forms.Label();
             this.boxasiBas = new System.Windows.Forms.TextBox();
             this.boxdobBas = new System.Windows.Forms.TextBox();
-            this.lbldobBas = new System.Windows.Forms.Label();
+            this.boxTen = new System.Windows.Forms.GroupBox();
+            this.lblaceTen = new System.Windows.Forms.Label();
+            this.boxsetTen = new System.Windows.Forms.TextBox();
+            this.lblfalTen = new System.Windows.Forms.Label();
+            this.lblsetTen = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.boxfalTen = new System.Windows.Forms.TextBox();
+            this.boxaceTen = new System.Windows.Forms.TextBox();
             this.boxFut.SuspendLayout();
             this.boxHan.SuspendLayout();
             this.boxBas.SuspendLayout();
+            this.boxTen.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -176,7 +185,7 @@
             this.boxHan.Controls.Add(this.textBox7);
             this.boxHan.Controls.Add(this.textBox8);
             this.boxHan.Controls.Add(this.lbltirosHan);
-            this.boxHan.Location = new System.Drawing.Point(30, 265);
+            this.boxHan.Location = new System.Drawing.Point(30, 83);
             this.boxHan.Name = "boxHan";
             this.boxHan.Size = new System.Drawing.Size(230, 159);
             this.boxHan.TabIndex = 27;
@@ -261,15 +270,25 @@
             this.boxBas.Controls.Add(this.lblminjugBas);
             this.boxBas.Controls.Add(this.boxasiBas);
             this.boxBas.Controls.Add(this.boxdobBas);
-            this.boxBas.Location = new System.Drawing.Point(266, 27);
+            this.boxBas.Location = new System.Drawing.Point(30, 87);
             this.boxBas.Name = "boxBas";
             this.boxBas.Size = new System.Drawing.Size(230, 157);
             this.boxBas.TabIndex = 27;
             this.boxBas.TabStop = false;
             // 
+            // lbldobBas
+            // 
+            this.lbldobBas.AutoSize = true;
+            this.lbldobBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldobBas.Location = new System.Drawing.Point(6, 80);
+            this.lbldobBas.Name = "lbldobBas";
+            this.lbldobBas.Size = new System.Drawing.Size(69, 24);
+            this.lbldobBas.TabIndex = 27;
+            this.lbldobBas.Text = "Dobles";
+            // 
             // boxtriBas
             // 
-            this.boxtriBas.Location = new System.Drawing.Point(182, 9);
+            this.boxtriBas.Location = new System.Drawing.Point(203, 13);
             this.boxtriBas.Name = "boxtriBas";
             this.boxtriBas.Size = new System.Drawing.Size(21, 20);
             this.boxtriBas.TabIndex = 20;
@@ -286,7 +305,7 @@
             // 
             // boxminjugBas
             // 
-            this.boxminjugBas.Location = new System.Drawing.Point(182, 122);
+            this.boxminjugBas.Location = new System.Drawing.Point(203, 122);
             this.boxminjugBas.Name = "boxminjugBas";
             this.boxminjugBas.Size = new System.Drawing.Size(21, 20);
             this.boxminjugBas.TabIndex = 26;
@@ -314,33 +333,100 @@
             // 
             // boxasiBas
             // 
-            this.boxasiBas.Location = new System.Drawing.Point(182, 47);
+            this.boxasiBas.Location = new System.Drawing.Point(203, 47);
             this.boxasiBas.Name = "boxasiBas";
             this.boxasiBas.Size = new System.Drawing.Size(21, 20);
             this.boxasiBas.TabIndex = 22;
             // 
             // boxdobBas
             // 
-            this.boxdobBas.Location = new System.Drawing.Point(182, 84);
+            this.boxdobBas.Location = new System.Drawing.Point(203, 84);
             this.boxdobBas.Name = "boxdobBas";
             this.boxdobBas.Size = new System.Drawing.Size(21, 20);
             this.boxdobBas.TabIndex = 24;
             // 
-            // lbldobBas
+            // boxTen
             // 
-            this.lbldobBas.AutoSize = true;
-            this.lbldobBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldobBas.Location = new System.Drawing.Point(6, 80);
-            this.lbldobBas.Name = "lbldobBas";
-            this.lbldobBas.Size = new System.Drawing.Size(69, 24);
-            this.lbldobBas.TabIndex = 27;
-            this.lbldobBas.Text = "Dobles";
+            this.boxTen.Controls.Add(this.lblaceTen);
+            this.boxTen.Controls.Add(this.boxsetTen);
+            this.boxTen.Controls.Add(this.lblfalTen);
+            this.boxTen.Controls.Add(this.lblsetTen);
+            this.boxTen.Controls.Add(this.label7);
+            this.boxTen.Controls.Add(this.boxfalTen);
+            this.boxTen.Controls.Add(this.boxaceTen);
+            this.boxTen.Location = new System.Drawing.Point(288, 74);
+            this.boxTen.Name = "boxTen";
+            this.boxTen.Size = new System.Drawing.Size(230, 116);
+            this.boxTen.TabIndex = 28;
+            this.boxTen.TabStop = false;
+            this.boxTen.Enter += new System.EventHandler(this.GroupBox1_Enter);
+            // 
+            // lblaceTen
+            // 
+            this.lblaceTen.AutoSize = true;
+            this.lblaceTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaceTen.Location = new System.Drawing.Point(6, 80);
+            this.lblaceTen.Name = "lblaceTen";
+            this.lblaceTen.Size = new System.Drawing.Size(53, 24);
+            this.lblaceTen.TabIndex = 27;
+            this.lblaceTen.Text = "Aces";
+            // 
+            // boxsetTen
+            // 
+            this.boxsetTen.Location = new System.Drawing.Point(203, 13);
+            this.boxsetTen.Name = "boxsetTen";
+            this.boxsetTen.Size = new System.Drawing.Size(21, 20);
+            this.boxsetTen.TabIndex = 20;
+            // 
+            // lblfalTen
+            // 
+            this.lblfalTen.AutoSize = true;
+            this.lblfalTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfalTen.Location = new System.Drawing.Point(6, 43);
+            this.lblfalTen.Name = "lblfalTen";
+            this.lblfalTen.Size = new System.Drawing.Size(64, 24);
+            this.lblfalTen.TabIndex = 21;
+            this.lblfalTen.Text = "Faltas ";
+            // 
+            // lblsetTen
+            // 
+            this.lblsetTen.AutoSize = true;
+            this.lblsetTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsetTen.Location = new System.Drawing.Point(6, 9);
+            this.lblsetTen.Name = "lblsetTen";
+            this.lblsetTen.Size = new System.Drawing.Size(140, 24);
+            this.lblsetTen.TabIndex = 19;
+            this.lblsetTen.Text = "Sets gandados ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 118);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 24);
+            this.label7.TabIndex = 25;
+            // 
+            // boxfalTen
+            // 
+            this.boxfalTen.Location = new System.Drawing.Point(203, 47);
+            this.boxfalTen.Name = "boxfalTen";
+            this.boxfalTen.Size = new System.Drawing.Size(21, 20);
+            this.boxfalTen.TabIndex = 22;
+            // 
+            // boxaceTen
+            // 
+            this.boxaceTen.Location = new System.Drawing.Point(203, 84);
+            this.boxaceTen.Name = "boxaceTen";
+            this.boxaceTen.Size = new System.Drawing.Size(21, 20);
+            this.boxaceTen.TabIndex = 24;
             // 
             // objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.boxTen);
             this.Controls.Add(this.boxBas);
             this.Controls.Add(this.boxHan);
             this.Controls.Add(this.boxFut);
@@ -355,6 +441,8 @@
             this.boxHan.PerformLayout();
             this.boxBas.ResumeLayout(false);
             this.boxBas.PerformLayout();
+            this.boxTen.ResumeLayout(false);
+            this.boxTen.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +479,13 @@
         private System.Windows.Forms.Label lblminjugBas;
         private System.Windows.Forms.TextBox boxasiBas;
         private System.Windows.Forms.TextBox boxdobBas;
+        private System.Windows.Forms.GroupBox boxTen;
+        private System.Windows.Forms.Label lblaceTen;
+        private System.Windows.Forms.TextBox boxsetTen;
+        private System.Windows.Forms.Label lblfalTen;
+        private System.Windows.Forms.Label lblsetTen;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox boxfalTen;
+        private System.Windows.Forms.TextBox boxaceTen;
     }
 }
