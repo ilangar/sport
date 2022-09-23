@@ -53,7 +53,6 @@ C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\S
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.Agenda.resources
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticas.resources
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticasFutbol.resources
-C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.objfutbol.resources
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil.resources
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil1.resources
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.Form1.resources
@@ -65,3 +64,7 @@ C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\S
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.objetivos.resources
+C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.exe.config
+C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.exe
+C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.pdb
+C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.objetivos.resources

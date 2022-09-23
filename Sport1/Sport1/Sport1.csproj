@@ -64,11 +64,11 @@
     <Compile Include="IngresarEstadisticasFutbol.Designer.cs">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
     </Compile>
-    <Compile Include="objfutbol.cs">
+    <Compile Include="Objetivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="objfutbol.Designer.cs">
-      <DependentUpon>objfutbol.cs</DependentUpon>
+    <Compile Include="Objetivos.Designer.cs">
+      <DependentUpon>Objetivos.cs</DependentUpon>
     </Compile>
     <Compile Include="CrearPerfil.cs">
       <SubType>Form</SubType>
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="IngresarEstadisticasFutbol.resx">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="objfutbol.resx">
-      <DependentUpon>objfutbol.cs</DependentUpon>
+    <EmbeddedResource Include="Objetivos.resx">
+      <DependentUpon>Objetivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearPerfil.resx">
       <DependentUpon>CrearPerfil.cs</DependentUpon>
