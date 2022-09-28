@@ -67,8 +67,8 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
-
-            for(int i = 1; i<ds.Tables["Perfil"].Rows.Count; i++)
+            MessageBox.Show("id: "+ ds.Tables["Crear"].Rows[0][0]  + " texto: " + ds.Tables["Crear"].Rows[0][1]);
+            for (int i = 1; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
                 Button btnPerfil1 = new Button();
                 btnPerfil1.DialogResult = DialogResult.OK;
@@ -80,7 +80,7 @@ namespace Sport1
                 Controls.Add(btnPerfil1);
             }
             
-            //MessageBox.Show("id: "+ ds.Tables["Crear"].Rows[0][0]  + " texto: " + ds.Tables["Crear"].Rows[0][1]);
+            
 
 
         }
