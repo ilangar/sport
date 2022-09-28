@@ -33,11 +33,11 @@ namespace Sport1
         private void Objfutbol_Load(object sender, EventArgs e)
         {
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Crear WHERE Id = 1", BaseDeDatosProyecto);
+            info = new OleDbCommand("Select Deporte FROM Perfil", BaseDeDatosProyecto);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
-            da.Fill(ds, "Crear");
-            string var = ds.Tables["Usuario"].Rows[0][0].ToString();
+            da.Fill(ds, "Perfil");
+            string var = ds.Tables["Perfil"].Rows[0][0].ToString();
             if(var == "Futbol")
             {
                 boxBas.Visible = false;
