@@ -178,6 +178,7 @@
             // boxHan
             // 
             this.boxHan.Controls.Add(this.textBox5);
+            this.boxHan.Controls.Add(this.boxBas);
             this.boxHan.Controls.Add(this.lblAsisHan);
             this.boxHan.Controls.Add(this.textBox6);
             this.boxHan.Controls.Add(this.golHan);
@@ -270,7 +271,7 @@
             this.boxBas.Controls.Add(this.lblminjugBas);
             this.boxBas.Controls.Add(this.boxasiBas);
             this.boxBas.Controls.Add(this.boxdobBas);
-            this.boxBas.Location = new System.Drawing.Point(30, 87);
+            this.boxBas.Location = new System.Drawing.Point(0, 2);
             this.boxBas.Name = "boxBas";
             this.boxBas.Size = new System.Drawing.Size(230, 157);
             this.boxBas.TabIndex = 27;
@@ -354,7 +355,7 @@
             this.boxTen.Controls.Add(this.label7);
             this.boxTen.Controls.Add(this.boxfalTen);
             this.boxTen.Controls.Add(this.boxaceTen);
-            this.boxTen.Location = new System.Drawing.Point(288, 74);
+            this.boxTen.Location = new System.Drawing.Point(305, 105);
             this.boxTen.Name = "boxTen";
             this.boxTen.Size = new System.Drawing.Size(230, 116);
             this.boxTen.TabIndex = 28;
@@ -427,7 +428,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.boxTen);
-            this.Controls.Add(this.boxBas);
             this.Controls.Add(this.boxHan);
             this.Controls.Add(this.boxFut);
             this.Controls.Add(this.lblObj);
