@@ -18,6 +18,7 @@ namespace Sport1
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
+        int idNom = 1;
 
 
 
@@ -67,13 +68,11 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
-            MessageBox.Show("id: "+ ds.Tables["Perfil"].Rows[0][0]  + " texto: " + ds.Tables["Perfil"].Rows[0][1]);
-
             for (int i = 1; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
                 Button btnPerfil1 = new Button();
                 btnPerfil1.DialogResult = DialogResult.OK;
-                btnPerfil1.Text = nombres[cantPerfiles - 1];
+                btnPerfil1.Text = ds.Tables["Perfil"].Rows[i][1];
                 btnPerfil1.Location = new Point(24, pos);
                 pos += 100;
                 btnPerfil1.Size = new Size(160, 70);
