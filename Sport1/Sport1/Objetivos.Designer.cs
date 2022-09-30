@@ -30,12 +30,16 @@
         {
             this.btnguardar = new System.Windows.Forms.Button();
             this.lblObj = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             this.pnlObjetivos = new System.Windows.Forms.Panel();
+=======
+            this.pnlCheckbox = new System.Windows.Forms.Panel();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(563, 302);
+            this.btnguardar.Location = new System.Drawing.Point(30, 359);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(133, 65);
             this.btnguardar.TabIndex = 0;
@@ -53,19 +57,32 @@
             this.lblObj.Text = "Objetivos";
             this.lblObj.Click += new System.EventHandler(this.Lblobjfutbol_Click);
             // 
+<<<<<<< Updated upstream
             // pnlObjetivos
             // 
             this.pnlObjetivos.Location = new System.Drawing.Point(30, 81);
             this.pnlObjetivos.Name = "pnlObjetivos";
             this.pnlObjetivos.Size = new System.Drawing.Size(485, 286);
             this.pnlObjetivos.TabIndex = 2;
+=======
+            // pnlCheckbox
+            // 
+            this.pnlCheckbox.Location = new System.Drawing.Point(179, 84);
+            this.pnlCheckbox.Name = "pnlCheckbox";
+            this.pnlCheckbox.Size = new System.Drawing.Size(533, 326);
+            this.pnlCheckbox.TabIndex = 2;
+>>>>>>> Stashed changes
             // 
             // objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< Updated upstream
             this.Controls.Add(this.pnlObjetivos);
+=======
+            this.Controls.Add(this.pnlCheckbox);
+>>>>>>> Stashed changes
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
             this.Name = "objetivos";
@@ -80,6 +97,10 @@
 
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblObj;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Panel pnlObjetivos;
+=======
+        private System.Windows.Forms.Panel pnlCheckbox;
+>>>>>>> Stashed changes
     }
 }
