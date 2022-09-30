@@ -13,8 +13,8 @@ namespace Sport1
 {
     public partial class objetivos : Form
     {
-        
-        OleDbConnection BaseDeDatosProyecto;
+
+        private OleDbConnection connection = new OleDbConnection();
         public objetivos()
         {
             InitializeComponent();
@@ -32,38 +32,28 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + "Mauro" + "'";
+            OleDbDataReader reader = command.ExecuteReader();
+
+            reader.Read();
+            int Deporte = int.Parse(reader["Deporte"].ToString());
+
+            connection.Close();
+            connection.Open();
+=======
             OleDbCommand info;
             info = new OleDbCommand("Select Deporte FROM Perfil", BaseDeDatosProyecto);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
-            if(var == "Futbol")
-            {
-                boxBas.Visible = false;
-                boxHan.Visible = false;
-                boxTen.Visible = false;
-
-            }
-            if (var == "Handball")
-            {
-                boxBas.Visible = false;
-                boxFut.Visible = false;
-                boxTen.Visible = false;
-            }
-            if (var == "Basquetball")
-            {
-                boxFut.Visible = false;
-                boxHan.Visible = false;
-                boxTen.Visible = false;
-            }
-            if (var == "Tenis")
-            {
-                boxFut.Visible = false;
-                boxHan.Visible = false;
-                boxBas.Visible = false;
-            }
-
+>>>>>>> Stashed changes
 
         }
 
