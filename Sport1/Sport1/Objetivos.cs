@@ -32,7 +32,6 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
 
             connection.Open();
@@ -46,14 +45,13 @@ namespace Sport1
 
             connection.Close();
             connection.Open();
-=======
+
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil", BaseDeDatosProyecto);
+            info = new OleDbCommand("Select Deporte FROM Perfil", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
->>>>>>> Stashed changes
 
         }
 
