@@ -56,7 +56,7 @@ namespace Sport1
 
                 TextBox txtPuntos = new TextBox();
                 this.Controls.Add(txtPuntos);
-                txtPuntos.Location = new Point(200, 120);
+                txtPuntos.Location = new Point(260, 120);
 
                 Label lblAsistencias = new Label();
                 this.Controls.Add(lblAsistencias);
@@ -69,7 +69,7 @@ namespace Sport1
 
                 TextBox txtAsistencias = new TextBox();
                 this.Controls.Add(txtAsistencias);
-                txtAsistencias.Location = new Point(200, 160);
+                txtAsistencias.Location = new Point(260, 160);
 
                 Label lblFaltas = new Label();
                 this.Controls.Add(lblFaltas);
@@ -82,18 +82,206 @@ namespace Sport1
 
                 TextBox txtFaltas = new TextBox();
                 this.Controls.Add(txtFaltas);
-                txtFaltas.Location = new Point(200, 200);
+                txtFaltas.Location = new Point(260, 200);
 
                 Label lblMinJug = new Label();
                 this.Controls.Add(lblMinJug);
-                lblFaltas.Location = new Point(90, 240);
+                lblMinJug.Location = new Point(90, 240);
+                lblMinJug.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblMinJug.AutoSize = true;
+                lblMinJug.TextAlign = ContentAlignment.MiddleCenter;
+                lblMinJug.Text = "Minutos jugados";
+                lblMinJug.Show();
+
+                TextBox txtMinJug = new TextBox();
+                this.Controls.Add(txtMinJug);
+                txtMinJug.Location = new Point(260, 240);
+
+                Label lblTirosFal = new Label();
+                this.Controls.Add(lblTirosFal);
+                lblTirosFal.Location = new Point(90, 280);
+                lblTirosFal.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblTirosFal.AutoSize = true;
+                lblTirosFal.TextAlign = ContentAlignment.MiddleCenter;
+                lblTirosFal.Text = "Tiros fallados";
+                lblTirosFal.Show();
+
+                TextBox txtTirosFal = new TextBox();
+                this.Controls.Add(txtTirosFal);
+                txtTirosFal.Location = new Point(260, 280);
+
+                Label lblBloqueos = new Label();
+                this.Controls.Add(lblBloqueos);
+                lblBloqueos.Location = new Point(90, 320);
+                lblBloqueos.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblBloqueos.AutoSize = true;
+                lblBloqueos.TextAlign = ContentAlignment.MiddleCenter;
+                lblBloqueos.Text = "Bloqueos";
+                lblBloqueos.Show();
+
+                TextBox txtBloqueos = new TextBox();
+                this.Controls.Add(txtBloqueos);
+                txtBloqueos.Location = new Point(260, 320);
+
+                Label lblRebotes = new Label();
+                this.Controls.Add(lblRebotes);
+                lblRebotes.Location = new Point(90, 360);
+                lblRebotes.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblRebotes.AutoSize = true;
+                lblRebotes.TextAlign = ContentAlignment.MiddleCenter;
+                lblRebotes.Text = "Rebotes";
+                lblRebotes.Show();
+
+                TextBox txtRebotes = new TextBox();
+                this.Controls.Add(txtRebotes);
+                txtRebotes.Location = new Point(260, 360);
+
+                Label lblPelRec = new Label();
+                this.Controls.Add(lblPelRec);
+                lblPelRec.Location = new Point(90, 400);
+                lblPelRec.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblPelRec.AutoSize = true;
+                lblPelRec.TextAlign = ContentAlignment.MiddleCenter;
+                lblPelRec.Text = "Pelotas recuperadas";
+                lblPelRec.Show();
+
+                TextBox txtPelRec = new TextBox();
+                this.Controls.Add(txtPelRec);
+                txtPelRec.Location = new Point(260, 400);
+
+                Label lblAmon = new Label();
+                this.Controls.Add(lblAmon);
+                lblAmon.Location = new Point(90, 440);
+                lblAmon.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblAmon.AutoSize = true;
+                lblAmon.TextAlign = ContentAlignment.MiddleCenter;
+                lblAmon.Text = "Amonestaciones";
+                lblAmon.Show();
+
+                TextBox txtAmon = new TextBox();
+                this.Controls.Add(txtAmon);
+                txtAmon.Location = new Point(260, 440);
+            }
+            if (Convert.ToString(ds.Tables["Perfil"].Rows[1][0]) == "2")
+            {
+                Label lblGoles = new Label();
+                this.Controls.Add(lblGoles);
+                lblGoles.Location = new Point(90, 120);
+                lblGoles.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblGoles.AutoSize = true;
+                lblGoles.TextAlign = ContentAlignment.MiddleCenter;
+                lblGoles.Text = "Goles";
+                lblGoles.Show();
+
+                TextBox txtGoles = new TextBox();
+                this.Controls.Add(txtGoles);
+                txtGoles.Location = new Point(260, 120);
+
+                Label lblAsistencias = new Label();
+                this.Controls.Add(lblAsistencias);
+                lblAsistencias.Location = new Point(90, 160);
+                lblAsistencias.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblAsistencias.AutoSize = true;
+                lblAsistencias.TextAlign = ContentAlignment.MiddleCenter;
+                lblAsistencias.Text = "Asistencias";
+                lblAsistencias.Show();
+
+                TextBox txtAsistencias = new TextBox();
+                this.Controls.Add(txtAsistencias);
+                txtAsistencias.Location = new Point(260, 160);
+
+                Label lblFaltas = new Label();
+                this.Controls.Add(lblFaltas);
+                lblFaltas.Location = new Point(90, 200);
                 lblFaltas.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblFaltas.AutoSize = true;
                 lblFaltas.TextAlign = ContentAlignment.MiddleCenter;
-                lblFaltas.Text = "Minutos jugados";
+                lblFaltas.Text = "Faltas";
                 lblFaltas.Show();
 
+                TextBox txtFaltas = new TextBox();
+                this.Controls.Add(txtFaltas);
+                txtFaltas.Location = new Point(260, 200);
+
+                Label lblMinJug = new Label();
+                this.Controls.Add(lblMinJug);
+                lblMinJug.Location = new Point(90, 240);
+                lblMinJug.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblMinJug.AutoSize = true;
+                lblMinJug.TextAlign = ContentAlignment.MiddleCenter;
+                lblMinJug.Text = "Minutos jugados";
+                lblMinJug.Show();
+
+                TextBox txtMinJug = new TextBox();
+                this.Controls.Add(txtMinJug);
+                txtMinJug.Location = new Point(260, 240);
+
+                Label lblTirosFal = new Label();
+                this.Controls.Add(lblTirosFal);
+                lblTirosFal.Location = new Point(90, 280);
+                lblTirosFal.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblTirosFal.AutoSize = true;
+                lblTirosFal.TextAlign = ContentAlignment.MiddleCenter;
+                lblTirosFal.Text = "Tiros fallados";
+                lblTirosFal.Show();
+
+                TextBox txtTirosFal = new TextBox();
+                this.Controls.Add(txtTirosFal);
+                txtTirosFal.Location = new Point(260, 280);
+
+                Label lblTirosArco = new Label();
+                this.Controls.Add(lblTirosArco);
+                lblTirosArco.Location = new Point(90, 320);
+                lblTirosArco.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblTirosArco.AutoSize = true;
+                lblTirosArco.TextAlign = ContentAlignment.MiddleCenter;
+                lblTirosArco.Text = "Tiros al arco";
+                lblTirosArco.Show();
+
+                TextBox txtTirosArco = new TextBox();
+                this.Controls.Add(txtTirosArco);
+                txtTirosArco.Location = new Point(260, 320);
+
+                Label lblRebotes = new Label();
+                this.Controls.Add(lblRebotes);
+                lblRebotes.Location = new Point(90, 360);
+                lblRebotes.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblRebotes.AutoSize = true;
+                lblRebotes.TextAlign = ContentAlignment.MiddleCenter;
+                lblRebotes.Text = "Rebotes";
+                lblRebotes.Show();
+
+                TextBox txtRebotes = new TextBox();
+                this.Controls.Add(txtRebotes);
+                txtRebotes.Location = new Point(260, 360);
+
+                Label lblPelRec = new Label();
+                this.Controls.Add(lblPelRec);
+                lblPelRec.Location = new Point(90, 400);
+                lblPelRec.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblPelRec.AutoSize = true;
+                lblPelRec.TextAlign = ContentAlignment.MiddleCenter;
+                lblPelRec.Text = "Pelotas recuperadas";
+                lblPelRec.Show();
+
+                TextBox txtPelRec = new TextBox();
+                this.Controls.Add(txtPelRec);
+                txtPelRec.Location = new Point(260, 400);
+
+                Label lblAmon = new Label();
+                this.Controls.Add(lblAmon);
+                lblAmon.Location = new Point(90, 440);
+                lblAmon.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblAmon.AutoSize = true;
+                lblAmon.TextAlign = ContentAlignment.MiddleCenter;
+                lblAmon.Text = "Amonestaciones";
+                lblAmon.Show();
+
+                TextBox txtAmon = new TextBox();
+                this.Controls.Add(txtAmon);
+                txtAmon.Location = new Point(260, 440);
             }
+
         }
 
 
