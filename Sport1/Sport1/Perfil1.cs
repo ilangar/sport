@@ -23,7 +23,7 @@ namespace Sport1
 
         private void Perfil1_Load(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(formInicio.idPerfil);
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -47,6 +47,7 @@ namespace Sport1
         {
             
             formIngrEst = new IngresarEstadisticas();
+            formIngrEst.formInicio = formInicio;
             this.Hide();
             formIngrEst.Show();
         }

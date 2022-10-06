@@ -30,6 +30,7 @@ namespace Sport1
         int posLbl = 120;
         int posTxt = 120;
         Perfil1 formPerfil1;
+        public Inicio formInicio;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         public void lblBasket()
@@ -68,17 +69,21 @@ namespace Sport1
             connection.Open();
 
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte, Nombre FROM Perfil", connection);
+            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = " + formInicio.idPerfil, connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
-
+            MessageBox.Show(Convert.ToString(ds.Tables["Perfil"].Rows[1][0]));
             if (Convert.ToString(ds.Tables["Perfil"].Rows[1][0]) == "1")
             {
                 lblBasket();
                 txtBasket();
+                
             }
-            if (Convert.ToString(ds.Tables["Perfil"].Rows[1][0]) == "2")
+            if (Convert.ToString(ds.Tables["Perfil"].Rows[1][0]) =="1")
+            {
+
+            }
 
         }
 
