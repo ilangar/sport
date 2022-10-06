@@ -19,7 +19,7 @@ namespace Sport1
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         public string idPerfil = "";
-
+        int x = 1;
 
 
 
@@ -68,7 +68,7 @@ namespace Sport1
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
 
-            for (int i = 1; i<ds.Tables["Perfil"].Rows.Count; i++)
+            for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
                 Button btnPerfil1 = new Button();
                 btnPerfil1.DialogResult = DialogResult.OK;
@@ -77,7 +77,9 @@ namespace Sport1
                 pos += 100;
                 btnPerfil1.Size = new Size(160, 70);
                 btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                btnPerfil1.Tag = x;
                 Controls.Add(btnPerfil1);
+                x++; 
             }
             
             
