@@ -28,9 +28,10 @@ namespace Sport1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            formInicio.Show();
-            this.Hide();
 
+            this.Hide();
+            formInicio = new Inicio();
+            formInicio.Show();
         }
 
         private void Label1_Click(object sender, EventArgs e)

@@ -28,15 +28,15 @@ namespace Sport1
         int lB = 0;
         int tB = 0;
         int lF = 0;
-        int tf = 0;
-        int posLblBas = 120;
-        int posTxtBas = 120;
-        int posLblFut = 120;
-        int posTxtFut = 120;
+        int tF = 0;
+        int posLbl = 120;
+        int posTxt = 120;
+
         Perfil1 formPerfil1;
         public Inicio formInicio;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
+        string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
 
         public void lblBasket()
         {
@@ -44,13 +44,13 @@ namespace Sport1
             {
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
-                lblBasket.Location = new Point(90, posLblBas);
+                lblBasket.Location = new Point(90, posLbl);
                 lblBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask [lB];
                 lB++;
-                posLblBas += 40;
+                posLbl += 40;
             }
         }
         public void txtBasket()
@@ -59,27 +59,37 @@ namespace Sport1
             {
                 TextBox txtBasket = new TextBox();
                 this.Controls.Add(txtBasket);
-                txtBasket.Location = new Point(260, posTxtBas);
+                txtBasket.Location = new Point(260, posTxt);
                 tB++;
-                posTxtBas += 40;
+                posTxt += 40;
             }
         }
         public void lblFutbol()
         {
-            while(lF < 9)
+            while(lF < 8)
             {
                 Label lblFutbol = new Label();
                 this.Controls.Add(lblFutbol);
-                lblFutbol.Location = new Point(90, posLblBas);
-                lblFut.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblBasket.AutoSize = true;
-                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
-                lblBasket.Text = arrBask[lB];
-                lB++;
-                posLblBas += 40;
+                lblFutbol.Location = new Point(90, posLbl);
+                lblFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblFutbol.AutoSize = true;
+                lblFutbol.TextAlign = ContentAlignment.MiddleCenter;
+                lblFutbol.Text = arrFut[lF];
+                lF++;
+                posLbl += 40;
             }
         }
-
+        public void txtFutbol()
+        {
+            while (tF < 8)
+            {
+                TextBox txtFutbol = new TextBox();
+                this.Controls.Add(txtFutbol);
+                txtFutbol.Location = new Point(260, posTxt);
+                tF++;
+                posTxt += 40;
+            }
+        }
 
 
         public IngresarEstadisticas()
@@ -96,7 +106,6 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
-            MessageBox.Show(Convert.ToString(ds.Tables["Perfil"].Rows[0][0]));
             if (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]) == "1")
             {
                 lblBasket();
@@ -105,7 +114,8 @@ namespace Sport1
             }
             if (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]) =="2")
             {
-
+                lblFutbol();
+                txtFutbol();
             }
 
         }
