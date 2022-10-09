@@ -20,6 +20,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         public string idPerfil = "";
         int x = 1;
+        int k = 0;
         public Perfil1 formPerfil1;
 
 
@@ -71,11 +72,11 @@ namespace Sport1
 
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
-                if (i < 6)
+                while (k < 6 && k < ds.Tables["Perfil"].Rows.Count)
                 {
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
-                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[i][1]);
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
                     btnPerfil1.Location = new Point(24, pos);
                     pos += 100;
                     btnPerfil1.Size = new Size(160, 70);
@@ -83,21 +84,28 @@ namespace Sport1
                     btnPerfil1.Tag = x;
                     Controls.Add(btnPerfil1);
                     x++;
+                    k++;
                 }
-                if (i >= 6)
+                pos = 38;
+
+                while (k >= 6 && k < ds.Tables["Perfil"].Rows.Count)
                 {
-                    pos = 38;
+                    
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
-                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[i][1]);
-                    btnPerfil1.Location = new Point(250, pos);
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
+                    btnPerfil1.Location = new Point(240, pos);
                     pos += 100;
                     btnPerfil1.Size = new Size(160, 70);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
                     btnPerfil1.Tag = x;
                     Controls.Add(btnPerfil1);
                     x++;
+                    k++;
+                    
                 }
+                
+
             }
             
             

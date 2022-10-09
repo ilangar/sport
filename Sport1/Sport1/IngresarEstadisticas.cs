@@ -41,6 +41,7 @@ namespace Sport1
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas"  };
         string[] arrRugby = new string[9] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas"};
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres"};
+        string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones","Armados", "Bloqueos" };
         public void lblBasket()
         {
             while (lbl < 9)
@@ -165,7 +166,7 @@ namespace Sport1
         }
         public void txtRugby()
         {
-            while (txt < 10)
+            while (txt < 9)
             {
                 TextBox txtRugby = new TextBox();
                 this.Controls.Add(txtRugby);
@@ -185,7 +186,7 @@ namespace Sport1
                 lblTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblTenis.AutoSize = true;
                 lblTenis.TextAlign = ContentAlignment.MiddleCenter;
-                lblTenis.Text = arrRugby[lbl];
+                lblTenis.Text = arrTenis[lbl];
                 lbl++;
                 posLbl += 40;
             }
@@ -197,6 +198,32 @@ namespace Sport1
                 TextBox txtTenis = new TextBox();
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(260, posTxt);
+                txt++;
+                posTxt += 40;
+            }
+        }
+        public void lblVoley()
+        {
+            while (lbl < 7)
+            {
+                Label lblVoley = new Label();
+                this.Controls.Add(lblVoley);
+                lblVoley.Location = new Point(90, posLbl);
+                lblVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblVoley.AutoSize = true;
+                lblVoley.TextAlign = ContentAlignment.MiddleCenter;
+                lblVoley.Text = arrVoley[lbl];
+                lbl++;
+                posLbl += 40;
+            }
+        }
+        public void txtVoley()
+        {
+            while (txt < 7)
+            {
+                TextBox txtVoley = new TextBox();
+                this.Controls.Add(txtVoley);
+                txtVoley.Location = new Point(260, posTxt);
                 txt++;
                 posTxt += 40;
             }
@@ -231,11 +258,8 @@ namespace Sport1
                     break;
                 case "6": lblTenis(); txtTenis();
                     break;
-                
-
-
-
-            
+                case "7": lblVoley(); txtVoley();
+                    break;
             }
 
         }
