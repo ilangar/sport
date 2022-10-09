@@ -86,3 +86,22 @@ C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Spor
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInputs.cache
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\bin\Debug\Sport1.exe.config
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\bin\Debug\Sport1.exe
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\bin\Debug\Sport1.pdb
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.AssemblyReference.cache
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.SuggestedBindingRedirects.cache
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.Agenda.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticas.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticasFutbol.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.objetivos.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil1.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.Form1.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.Inicio.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.Perfil1.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.Properties.Resources.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.GenerateResource.cache
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInputs.cache
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.exe
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.pdb

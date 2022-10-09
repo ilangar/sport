@@ -20,6 +20,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         public string idPerfil = "";
         int x = 1;
+        public Perfil1 formPerfil1;
 
 
 
@@ -50,7 +51,7 @@ namespace Sport1
         private void click_btn_perfil(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Perfil1 formPerfil1 = new Perfil1();
+            formPerfil1 = new Perfil1();
             formPerfil1.formInicio = this;
             idPerfil = ((Button)sender).Text;
             connection.Close();
@@ -70,16 +71,33 @@ namespace Sport1
 
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
-                Button btnPerfil1 = new Button();
-                btnPerfil1.DialogResult = DialogResult.OK;
-                btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[i][1]);
-                btnPerfil1.Location = new Point(24, pos);
-                pos += 100;
-                btnPerfil1.Size = new Size(160, 70);
-                btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
-                btnPerfil1.Tag = x;
-                Controls.Add(btnPerfil1);
-                x++; 
+                if (i < 6)
+                {
+                    Button btnPerfil1 = new Button();
+                    btnPerfil1.DialogResult = DialogResult.OK;
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[i][1]);
+                    btnPerfil1.Location = new Point(24, pos);
+                    pos += 100;
+                    btnPerfil1.Size = new Size(160, 70);
+                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    btnPerfil1.Tag = x;
+                    Controls.Add(btnPerfil1);
+                    x++;
+                }
+                if (i >= 6)
+                {
+                    pos = 38;
+                    Button btnPerfil1 = new Button();
+                    btnPerfil1.DialogResult = DialogResult.OK;
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[i][1]);
+                    btnPerfil1.Location = new Point(250, pos);
+                    pos += 100;
+                    btnPerfil1.Size = new Size(160, 70);
+                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    btnPerfil1.Tag = x;
+                    Controls.Add(btnPerfil1);
+                    x++;
+                }
             }
             
             
