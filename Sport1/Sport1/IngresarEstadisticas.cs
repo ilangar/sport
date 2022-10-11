@@ -29,8 +29,10 @@ namespace Sport1
         int lbl = 0;
         int txt = 0;
 
-        int posLbl = 120;
-        int posTxt = 120;
+        int posLblY = 120;
+        int posLblX = 90;
+        int posTxtY = 120;
+        int posTxtX = 250;
 
         Perfil1 formPerfil1;
         public Inicio formInicio;
@@ -48,13 +50,13 @@ namespace Sport1
             {
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
-                lblBasket.Location = new Point(90, posLbl);
+                lblBasket.Location = new Point(posLblX, posLblY);
                 lblBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask [lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtBasket()
@@ -63,9 +65,9 @@ namespace Sport1
             {
                 TextBox txtBasket = new TextBox();
                 this.Controls.Add(txtBasket);
-                txtBasket.Location = new Point(260, posTxt);
+                txtBasket.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
         public void lblFutbol()
@@ -74,13 +76,13 @@ namespace Sport1
             {
                 Label lblFutbol = new Label();
                 this.Controls.Add(lblFutbol);
-                lblFutbol.Location = new Point(90, posLbl);
+                lblFutbol.Location = new Point(posLblX, posLblY);
                 lblFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblFutbol.AutoSize = true;
                 lblFutbol.TextAlign = ContentAlignment.MiddleCenter;
                 lblFutbol.Text = arrFut[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtFutbol()
@@ -89,9 +91,9 @@ namespace Sport1
             {
                 TextBox txtFutbol = new TextBox();
                 this.Controls.Add(txtFutbol);
-                txtFutbol.Location = new Point(260, posTxt);
+                txtFutbol.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
 
@@ -101,13 +103,13 @@ namespace Sport1
             {
                 Label lblHandball = new Label();
                 this.Controls.Add(lblHandball);
-                lblHandball.Location = new Point(90, posLbl);
+                lblHandball.Location = new Point(posLblX, posLblY);
                 lblHandball.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHandball.AutoSize = true;
                 lblHandball.TextAlign = ContentAlignment.MiddleCenter;
                 lblHandball.Text = arrHand[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtHandball()
@@ -116,9 +118,9 @@ namespace Sport1
             {
                 TextBox txtHand = new TextBox();
                 this.Controls.Add(txtHand);
-                txtHand.Location = new Point(260, posTxt);
+                txtHand.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
 
@@ -128,13 +130,13 @@ namespace Sport1
             {
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
-                lblHockey.Location = new Point(90, posLbl);
+                lblHockey.Location = new Point(posLblX, posLblY);
                 lblHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHockey.AutoSize = true;
                 lblHockey.TextAlign = ContentAlignment.MiddleCenter;
                 lblHockey.Text = arrHock[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtHockey()
@@ -143,9 +145,9 @@ namespace Sport1
             {
                 TextBox txtHockey = new TextBox();
                 this.Controls.Add(txtHockey);
-                txtHockey.Location = new Point(260, posTxt);
+                txtHockey.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
 
@@ -155,13 +157,13 @@ namespace Sport1
             {
                 Label lblRugby = new Label();
                 this.Controls.Add(lblRugby);
-                lblRugby.Location = new Point(90, posLbl);
+                lblRugby.Location = new Point(posLblX, posLblY);
                 lblRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblRugby.AutoSize = true;
                 lblRugby.TextAlign = ContentAlignment.MiddleCenter;
                 lblRugby.Text = arrRugby[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtRugby()
@@ -170,9 +172,9 @@ namespace Sport1
             {
                 TextBox txtRugby = new TextBox();
                 this.Controls.Add(txtRugby);
-                txtRugby.Location = new Point(260, posTxt);
+                txtRugby.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
 
@@ -182,13 +184,13 @@ namespace Sport1
             {
                 Label lblTenis = new Label();
                 this.Controls.Add(lblTenis);
-                lblTenis.Location = new Point(90, posLbl);
+                lblTenis.Location = new Point(posLblX, posLblY);
                 lblTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblTenis.AutoSize = true;
                 lblTenis.TextAlign = ContentAlignment.MiddleCenter;
                 lblTenis.Text = arrTenis[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtTenis()
@@ -197,9 +199,9 @@ namespace Sport1
             {
                 TextBox txtTenis = new TextBox();
                 this.Controls.Add(txtTenis);
-                txtTenis.Location = new Point(260, posTxt);
+                txtTenis.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
         public void lblVoley()
@@ -208,13 +210,13 @@ namespace Sport1
             {
                 Label lblVoley = new Label();
                 this.Controls.Add(lblVoley);
-                lblVoley.Location = new Point(90, posLbl);
+                lblVoley.Location = new Point(posLblX, posLblY);
                 lblVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblVoley.AutoSize = true;
                 lblVoley.TextAlign = ContentAlignment.MiddleCenter;
                 lblVoley.Text = arrVoley[lbl];
                 lbl++;
-                posLbl += 40;
+                posLblY += 40;
             }
         }
         public void txtVoley()
@@ -223,9 +225,9 @@ namespace Sport1
             {
                 TextBox txtVoley = new TextBox();
                 this.Controls.Add(txtVoley);
-                txtVoley.Location = new Point(260, posTxt);
+                txtVoley.Location = new Point(posTxtX, posTxtY);
                 txt++;
-                posTxt += 40;
+                posTxtY += 40;
             }
         }
 

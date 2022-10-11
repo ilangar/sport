@@ -125,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 1048);
+            this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.lblDeporte);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.cmbDeporte);

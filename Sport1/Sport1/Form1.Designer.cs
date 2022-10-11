@@ -33,9 +33,10 @@
             // 
             // btnComenzar
             // 
-            this.btnComenzar.Location = new System.Drawing.Point(389, 530);
+            this.btnComenzar.Location = new System.Drawing.Point(584, 815);
+            this.btnComenzar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnComenzar.Name = "btnComenzar";
-            this.btnComenzar.Size = new System.Drawing.Size(179, 86);
+            this.btnComenzar.Size = new System.Drawing.Size(268, 132);
             this.btnComenzar.TabIndex = 0;
             this.btnComenzar.Text = "Toca para comenzar";
             this.btnComenzar.UseVisualStyleBackColor = true;
@@ -43,10 +44,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.btnComenzar);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
