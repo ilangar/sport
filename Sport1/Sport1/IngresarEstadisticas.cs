@@ -28,7 +28,7 @@ namespace Sport1
         public int bloqueos;
         int lbl = 0;
         int txt = 0;
-
+        int 
         int posLblY = 120;
         int posLblX = 90;
         int posTxtY = 120;
