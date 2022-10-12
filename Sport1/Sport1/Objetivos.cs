@@ -27,7 +27,7 @@ namespace Sport1
             while (lbl < 6)
             {
                 Label lblObjBasket = new Label();
-                this.Controls.Add(lblBasket);
+                this.Controls.Add(lblObjBasket);
                 lblObjBasket.Location = new Point(posLblX, posLblY);
                 lblObjBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblObjBasket.AutoSize = true;
