@@ -28,12 +28,11 @@ namespace Sport1
         public int bloqueos;
         int lbl = 0;
         int txt = 0;
-        int 
         int posLblY = 120;
         int posLblX = 90;
         int posTxtY = 120;
         int posTxtX = 250;
-
+        int nom = 0;
         Perfil1 formPerfil1;
         public Inicio formInicio;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
@@ -66,16 +65,19 @@ namespace Sport1
                 TextBox txtBasket = new TextBox();
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
+                txtBasket.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
 
-                OleDbCommand command = new OleDbCommand();
+
+                /*OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 command.CommandText = "insert into Estadisticas (Estd) values ('" +  + "')";
                 command.ExecuteNonQuery();
                 this.Hide();
                 Inicio f2 = new Inicio();
-                f2.ShowDialog();
+                f2.ShowDialog();*/
             }
             connection.Close();
         }
@@ -101,8 +103,10 @@ namespace Sport1
                 TextBox txtFutbol = new TextBox();
                 this.Controls.Add(txtFutbol);
                 txtFutbol.Location = new Point(posTxtX, posTxtY);
+                txtFutbol.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -128,8 +132,10 @@ namespace Sport1
                 TextBox txtHand = new TextBox();
                 this.Controls.Add(txtHand);
                 txtHand.Location = new Point(posTxtX, posTxtY);
+                txtHand.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -155,8 +161,10 @@ namespace Sport1
                 TextBox txtHockey = new TextBox();
                 this.Controls.Add(txtHockey);
                 txtHockey.Location = new Point(posTxtX, posTxtY);
+                txtHockey.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -182,8 +190,10 @@ namespace Sport1
                 TextBox txtRugby = new TextBox();
                 this.Controls.Add(txtRugby);
                 txtRugby.Location = new Point(posTxtX, posTxtY);
+                txtRugby.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -209,8 +219,10 @@ namespace Sport1
                 TextBox txtTenis = new TextBox();
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(posTxtX, posTxtY);
+                txtTenis.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
         public void lblVoley()
@@ -234,9 +246,11 @@ namespace Sport1
             {
                 TextBox txtVoley = new TextBox();
                 this.Controls.Add(txtVoley);
-                txtVoley.Location = new Point(posTxtX, posTxtY);
+                txtVoley.Location = new Point(posTxtX, posTxtY)
+                txtVoley.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
