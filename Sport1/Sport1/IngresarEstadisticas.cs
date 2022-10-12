@@ -71,7 +71,7 @@ namespace Sport1
 
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into Estadisticas (Estadisticas) values ('"+ 1 + "','" + 2 + "','" + 3 + "','" + 4 + "','" + 5 + "','" + 6 + "','" + 7 + "','" + 8 + "','" + 9 + "','" + 10 + "','" + 11 + "','" + 12 + "')";
+                command.CommandText = "insert into Estadisticas (Estd) values ('" +  + "')";
                 command.ExecuteNonQuery();
                 this.Hide();
                 Inicio f2 = new Inicio();
