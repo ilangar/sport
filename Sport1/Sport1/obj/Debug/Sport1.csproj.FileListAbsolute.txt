@@ -37,7 +37,6 @@ C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.csprojAs
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.Agenda.resources
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticas.resources
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.IngresarEstadisticasFutbol.resources
-C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.objfutbol.resources
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil.resources
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.CrearPerfil1.resources
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.Form1.resources
