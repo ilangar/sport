@@ -15,7 +15,7 @@ namespace Sport1
         public CrearPerfil1 formCrearPerfil1;
         public Inicio formInicio;
         public IngresarEstadisticas formIngrEst;
-        
+        public perfilEnt formPerfilEnt;
         public Perfil1()
         {
             InitializeComponent();

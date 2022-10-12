@@ -22,6 +22,8 @@ namespace Sport1
         int x = 1;
         int k = 0;
         public Perfil1 formPerfil1;
+        public perfilEnt formPerfilEnt;
+
         DataSet ds = new DataSet();
 
 
@@ -57,13 +59,20 @@ namespace Sport1
                 Button btn = (Button)sender;
                 formPerfil1 = new Perfil1();
                 formPerfil1.formInicio = this;
-                idPerfil = ((Button)sender).Text;
-                connection.Close();
                 formPerfil1.Show();
                 this.Hide();
             }
+           /* if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 1)
+            {
+                Button btn = (Button)sender;
+                formPerfilEnt = new perfilEnt();
+                formPerfil1.formInicio = this;
+                formPerfilEnt.Show();
+                this.Hide();
+            }*/
+            idPerfil = ((Button)sender).Text;
+            connection.Close();
 
-            
 
         }
 

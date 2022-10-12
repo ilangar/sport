@@ -104,3 +104,4 @@ C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.GenerateResour
 C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInputs.cache
 C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
+C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
