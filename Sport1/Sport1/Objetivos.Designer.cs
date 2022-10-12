@@ -31,7 +31,6 @@
             this.btnguardar = new System.Windows.Forms.Button();
             this.lblObj = new System.Windows.Forms.Label();
             this.pnlObjetivos = new System.Windows.Forms.Panel();
-            this.pnlCheckbox = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -60,12 +59,6 @@
             this.pnlObjetivos.Name = "pnlObjetivos";
             this.pnlObjetivos.Size = new System.Drawing.Size(485, 286);
             this.pnlObjetivos.TabIndex = 2;
-            // pnlCheckbox
-            // 
-            this.pnlCheckbox.Location = new System.Drawing.Point(179, 84);
-            this.pnlCheckbox.Name = "pnlCheckbox";
-            this.pnlCheckbox.Size = new System.Drawing.Size(533, 326);
-            this.pnlCheckbox.TabIndex = 2;
             // 
             // objetivos
             // 
@@ -73,8 +66,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlObjetivos);
-            this.Controls.Add(this.pnlCheckbox);
-
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
             this.Name = "objetivos";
@@ -90,6 +81,5 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblObj;
         private System.Windows.Forms.Panel pnlObjetivos;
-        private System.Windows.Forms.Panel pnlCheckbox;
     }
 }
