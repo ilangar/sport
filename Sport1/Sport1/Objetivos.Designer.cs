@@ -30,7 +30,6 @@
         {
             this.btnguardar = new System.Windows.Forms.Button();
             this.lblObj = new System.Windows.Forms.Label();
-            this.pnlObjetivos = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -53,19 +52,11 @@
             this.lblObj.Text = "Objetivos";
             this.lblObj.Click += new System.EventHandler(this.Lblobjfutbol_Click);
             // 
-            // pnlObjetivos
-            // 
-            this.pnlObjetivos.Location = new System.Drawing.Point(30, 81);
-            this.pnlObjetivos.Name = "pnlObjetivos";
-            this.pnlObjetivos.Size = new System.Drawing.Size(485, 286);
-            this.pnlObjetivos.TabIndex = 2;
-            // 
             // objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlObjetivos);
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
             this.Name = "objetivos";
@@ -80,6 +71,5 @@
 
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblObj;
-        private System.Windows.Forms.Panel pnlObjetivos;
     }
 }
