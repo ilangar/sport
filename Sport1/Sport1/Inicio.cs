@@ -22,6 +22,7 @@ namespace Sport1
         int x = 1;
         int k = 0;
         public Perfil1 formPerfil1;
+        DataSet ds = new DataSet();
 
 
 
@@ -51,13 +52,19 @@ namespace Sport1
 
         private void click_btn_perfil(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            formPerfil1 = new Perfil1();
-            formPerfil1.formInicio = this;
-            idPerfil = ((Button)sender).Text;
-            connection.Close();
-            formPerfil1.Show();
-            this.Hide();
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[2][0])) == 1)
+            {
+                Button btn = (Button)sender;
+                formPerfil1 = new Perfil1();
+                formPerfil1.formInicio = this;
+                idPerfil = ((Button)sender).Text;
+                connection.Close();
+                formPerfil1.Show();
+                this.Hide();
+            }
+            
+            
+
         }
 
         private void Inicio_Load(object sender, EventArgs e)
@@ -65,9 +72,9 @@ namespace Sport1
             connection.Open(); 
 
             OleDbCommand info;
-            info = new OleDbCommand("Select IdUser, Nombre FROM Perfil", connection);
+            info = new OleDbCommand("Select IdUser, Nombre, Rol FROM Perfil", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-            DataSet ds = new DataSet();
+
             da.Fill(ds, "Perfil");
 
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
