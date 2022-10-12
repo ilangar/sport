@@ -66,20 +66,15 @@ namespace Sport1
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
+                txtBasket.TextChanged += new System.EventHandler(this.TextChanged_txt_basket);
                 txt++;
                 posTxtY += 40;
                 nom++;
 
 
-                /*OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "insert into Estadisticas (Estd) values ('" +  + "')";
-                command.ExecuteNonQuery();
-                this.Hide();
-                Inicio f2 = new Inicio();
-                f2.ShowDialog();*/
+
             }
-            connection.Close();
+
         }
         public void lblFutbol()
         {
@@ -246,7 +241,7 @@ namespace Sport1
             {
                 TextBox txtVoley = new TextBox();
                 this.Controls.Add(txtVoley);
-                txtVoley.Location = new Point(posTxtX, posTxtY)
+                txtVoley.Location = new Point(posTxtX, posTxtY);
                 txtVoley.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
@@ -293,11 +288,18 @@ namespace Sport1
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "insert into Estadisticas (Estd) values  ('"+ Convert.ToInt32 (txtBasket1) + "','" + Convert.ToInt32(txtBasket2) + "','" + Convert.ToInt32(txtBasket3) + "','" + Convert.ToInt32(txtBasket4) + "','" + Convert.ToInt32(txtBasket5) + "','" + Convert.ToInt32(txtBasket6) + "','" + Convert.ToInt32(txtBasket7) + "','" + Convert.ToInt32(txtBasket8) + "','" + Convert.ToInt32(txtBasket9) + "')";
+            command.ExecuteNonQuery();
+            this.Hide();
+            Inicio f2 = new Inicio();
+            f2.ShowDialog();
+            connection.Close();
 
             formPerfil1 = formInicio.formPerfil1;
             formPerfil1.Show();
             this.Hide();
-
         }
     }
 }
