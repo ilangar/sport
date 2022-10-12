@@ -68,6 +68,15 @@ namespace Sport1
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txt++;
                 posTxtY += 40;
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "insert into Estadisticas (Estadisticas) values ('"+ 4 + "','" + 5 + "','" + 6 + "','" + 7 + "','" + 8 + "','" + 9 + "','" + 10 + "','" + 11 + "','" + 12 + "','" + 13 + "','" + 14 + "','" + 15 + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                this.Hide();
+                Inicio f2 = new Inicio();
+                f2.ShowDialog();
             }
         }
         public void lblFutbol()
@@ -270,9 +279,11 @@ namespace Sport1
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
+
             formPerfil1 = formInicio.formPerfil1;
             formPerfil1.Show();
             this.Hide();
+
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Sport1
 
         private void click_btn_perfil(object sender, EventArgs e)
         {
-            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[2][0])) == 1)
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 2)
             {
                 Button btn = (Button)sender;
                 formPerfil1 = new Perfil1();
@@ -62,7 +62,7 @@ namespace Sport1
                 formPerfil1.Show();
                 this.Hide();
             }
-            
+
             
 
         }
