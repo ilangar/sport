@@ -105,3 +105,4 @@ C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInp
 C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
 C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
+C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
