@@ -52,6 +52,8 @@ namespace Sport1
 
         private void click_btn_perfil(object sender, EventArgs e)
         {
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 2)
+            {
                 Button btn = (Button)sender;
                 formPerfil1 = new Perfil1();
                 formPerfil1.formInicio = this;
@@ -59,8 +61,8 @@ namespace Sport1
                 connection.Close();
                 formPerfil1.Show();
                 this.Hide();
-                MessageBox.Show((Convert.ToString(ds.Tables["Perfil"].Rows[0][Convert.ToInt32(((Button)sender).Tag)])));
-            
+            }
+
             
 
         }
