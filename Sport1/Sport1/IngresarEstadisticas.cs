@@ -66,13 +66,10 @@ namespace Sport1
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
-                txtBasket.TextChanged += new System.EventHandler(this.TextChanged_txt_basket);
+
                 txt++;
                 posTxtY += 40;
                 nom++;
-
-
-
             }
 
         }
