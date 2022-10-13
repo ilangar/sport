@@ -19,9 +19,11 @@ namespace Sport1
         int txt = 0;
         int posTxtX = 150;
         int posTxtY = 114;
+        int nom = 0;
 
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
+        string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
         public void lblObjBasket()
         {
             while (lbl < 6)
@@ -75,6 +77,37 @@ namespace Sport1
                 posTxtY += 40;
             }
         }
+        public void lblObjHandball()
+        {
+            while (lbl < 7)
+            {
+                Label lblObjHandball = new Label();
+                this.Controls.Add(lblObjHandball);
+                lblObjHandball.Location = new Point(posLblX, posLblY);
+                lblObjHandball.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjHandball.AutoSize = true;
+                lblObjHandball.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjHandball.Text = arrObjHand[lbl];
+                lbl++;
+                posLblY += 40;
+            }
+        }
+
+        public void txtObjHandball()
+        {
+            while (txt < 7)
+            {
+                TextBox txtObjHand = new TextBox();
+                this.Controls.Add(txtObjHand);
+                txtObjHand.Location = new Point(posTxtX, posTxtY);
+                txtObjHand.Name += Convert.ToString(nom);
+                txt++;
+                posTxtY += 40;
+                nom++;
+            }
+        }
+
+
 
         private OleDbConnection connection = new OleDbConnection();
         public objetivos()
