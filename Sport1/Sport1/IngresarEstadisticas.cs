@@ -287,7 +287,7 @@ namespace Sport1
         {
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "insert into Estadisticas (Estd) values  ('"+ Convert.ToInt32 (txtBasket1) + "','" + Convert.ToInt32(txtBasket2) + "','" + Convert.ToInt32(txtBasket3) + "','" + Convert.ToInt32(txtBasket4) + "','" + Convert.ToInt32(txtBasket5) + "','" + Convert.ToInt32(txtBasket6) + "','" + Convert.ToInt32(txtBasket7) + "','" + Convert.ToInt32(txtBasket8) + "','" + Convert.ToInt32(txtBasket9) + "')";
+            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls [0].Text) + "','" + Convert.ToInt32(this.Controls[1].Text) + "','" + Convert.ToInt32(this.Controls[2].Text) + "','" + Convert.ToInt32(this.Controls[3].Text) + "','" + Convert.ToInt32(this.Controls[4].Text) + "','" + Convert.ToInt32(this.Controls[5].Text) + "','" + Convert.ToInt32(this.Controls[6].Text) + "','" + Convert.ToInt32(this.Controls[7].Text) + "','" + Convert.ToInt32(this.Controls[8].Text) + "')";
             command.ExecuteNonQuery();
             this.Hide();
             Inicio f2 = new Inicio();
