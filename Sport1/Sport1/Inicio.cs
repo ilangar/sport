@@ -62,14 +62,13 @@ namespace Sport1
                 formPerfil1.Show();
                 this.Hide();
             }
-           /* if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 1)
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 1)
             {
                 Button btn = (Button)sender;
                 formPerfilEnt = new perfilEnt();
-                formPerfil1.formInicio = this;
                 formPerfilEnt.Show();
                 this.Hide();
-            }*/
+            }
             idPerfil = ((Button)sender).Text;
             connection.Close();
 
