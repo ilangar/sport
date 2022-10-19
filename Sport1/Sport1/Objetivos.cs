@@ -24,6 +24,11 @@ namespace Sport1
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
+        string[] arrObjHock = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Pelotas recuperadas" };
+        string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
+        string[] arrObjTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
+        string[] arrObjVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones", "Armados", "Bloqueos" };
+
         public void lblObjBasket()
         {
             while (lbl < 6)
@@ -106,8 +111,118 @@ namespace Sport1
                 nom++;
             }
         }
-
-
+        public void lblObjHockey()
+        {
+            while (lbl < 6)
+            {
+                Label lblObjHockey = new Label();
+                this.Controls.Add(lblObjHockey);
+                lblObjHockey.Location = new Point(posLblX, posLblY);
+                lblObjHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjHockey.AutoSize = true;
+                lblObjHockey.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjHockey.Text = arrObjHock[lbl];
+                lbl++;
+                posLblY += 40;
+            }
+        }
+        public void txtObjHockey()
+        {
+            while (txt < 6)
+            {
+                TextBox txtObjHockey = new TextBox();
+                this.Controls.Add(txtObjHockey);
+                txtObjHockey.Location = new Point(posTxtX, posTxtY);
+                txtObjHockey.Name += Convert.ToString(nom);
+                txt++;
+                posTxtY += 40;
+                nom++;
+            }
+        }
+        public void lblObjRugby()
+        {
+            while (lbl < 7)
+            {
+                Label lblObjRugby = new Label();
+                this.Controls.Add(lblObjRugby);
+                lblObjRugby.Location = new Point(posLblX, posLblY);
+                lblObjRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjRugby.AutoSize = true;
+                lblObjRugby.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjRugby.Text = arrObjRugby[lbl];
+                lbl++;
+                posLblY += 40;
+            }
+        }
+        public void txtObjRugby()
+        {
+            while (txt < 9)
+            {
+                TextBox txtObjRugby = new TextBox();
+                this.Controls.Add(txtObjRugby);
+                txtObjRugby.Location = new Point(posTxtX, posTxtY);
+                txtObjRugby.Name += Convert.ToString(nom);
+                txt++;
+                posTxtY += 40;
+                nom++;
+            }
+        }
+        public void lblObjTenis()
+        {
+            while (lbl < 6)
+            {
+                Label lblObjTenis = new Label();
+                this.Controls.Add(lblObjTenis);
+                lblObjTenis.Location = new Point(posLblX, posLblY);
+                lblObjTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjTenis.AutoSize = true;
+                lblObjTenis.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjTenis.Text = arrObjTenis[lbl];
+                lbl++;
+                posLblY += 40;
+            }
+        }
+        public void txtObjTenis()
+        {
+            while (txt < 6)
+            {
+                TextBox txtObjTenis = new TextBox();
+                this.Controls.Add(txtObjTenis);
+                txtObjTenis.Location = new Point(posTxtX, posTxtY);
+                txtObjTenis.Name += Convert.ToString(nom);
+                txt++;
+                posTxtY += 40;
+                nom++;
+            }
+        }
+        public void lblObjVoley()
+        {
+            while (lbl < 7)
+            {
+                Label lblObjVoley = new Label();
+                this.Controls.Add(lblObjVoley);
+                lblObjVoley.Location = new Point(posLblX, posLblY);
+                lblObjVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjVoley.AutoSize = true;
+                lblObjVoley.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjVoley.Text = arrObjVoley[lbl];
+                lbl++;
+                posLblY += 40;
+            }
+        }
+        public void txtObjVoley()
+        {
+            while (txt < 7)
+            {
+                TextBox txtObjVoley = new TextBox();
+                this.Controls.Add(txtObjVoley);
+                txtObjVoley.Location = new Point(posTxtX, posTxtY);
+                txtObjVoley.Name += Convert.ToString(nom);
+                txt++;
+                posTxtY += 40;
+                nom++;
+            }
+        }
 
         private OleDbConnection connection = new OleDbConnection();
         public objetivos()
