@@ -23,6 +23,7 @@ namespace Sport1
         int k = 0;
         public Perfil1 formPerfil1;
         public perfilEnt formPerfilEnt;
+        public string caller = "";
 
         DataSet ds = new DataSet();
 
@@ -47,7 +48,7 @@ namespace Sport1
         private void BtnCrearPerfil_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CrearPerfil1 formCrearPerfil = new CrearPerfil1();
+            CrearPerfil1 formCrearPerfil = new CrearPerfil1(caller);
             formCrearPerfil.formInicio = this;
             formCrearPerfil.Show();
         }
