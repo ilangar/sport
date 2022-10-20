@@ -126,3 +126,4 @@ D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.GenerateResource.cache
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInputs.cache
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
+C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources

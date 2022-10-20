@@ -59,31 +59,16 @@ namespace Sport1
 
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
-            if (i == "Nuevo jugador")
-            {
-                cmbRol.Visible = false;
-                cmbDeporte.Visible = false;
-                lblDeporte.Visible = false;
-                lblRol.Visible = false;
-                btnAceptarPerfil.Text = "Agregar Jugador";
 
-            }
         }
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
         {
-            if (i == "Nuevo jugador")
-            {
-                formPerfilEnt = new perfilEnt();
-                this.Hide();
-                formPerfilEnt.Show();
-            }
-            else
-            {
-                formInicio = new Inicio();
-                this.Hide();
-                formInicio.Show();
-            }
+
+            formInicio = new Inicio();
+            this.Hide();
+            formInicio.Show();
+            
         }
     }
 }

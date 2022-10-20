@@ -256,7 +256,7 @@ namespace Sport1
             connection.Open();
 
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte, FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
+            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");

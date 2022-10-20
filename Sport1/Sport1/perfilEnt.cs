@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace Sport1
 {
@@ -14,6 +16,11 @@ namespace Sport1
     {
         public string caller = "Nuevo jugador";
         public Inicio formInicio;
+        OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
+        DataSet ds = new DataSet();
+        int k = 0;
+        int pos = 38;
+
         public perfilEnt()
         {
             InitializeComponent();
@@ -21,14 +28,52 @@ namespace Sport1
 
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
+            /*connection.Open();
+            OleDbCommand info;
+            info = new OleDbCommand("Select IdUser, Nombre FROM Entrenador", connection);
+            OleDbDataAdapter da = new OleDbDataAdapter(info);
+            da.Fill(ds, "Entrenador");
+            
+            for (int i = 0; i < ds.Tables["Entrenador"].Rows.Count; i++)
+            {
+                while (k < 6 && k < ds.Tables["Entrenador"].Rows.Count)
+                {
+                    Button btnPerfil1 = new Button();
+                    btnPerfil1.DialogResult = DialogResult.OK;
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
+                    btnPerfil1.Location = new Point(24, pos);
+                    pos += 100;
+                    btnPerfil1.Size = new Size(160, 70);
+                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    Controls.Add(btnPerfil1);
+                    k++;
 
+                }
+                pos = 38;
+            }
+            pos = 38;
+
+            while (k >= 6 && k < ds.Tables["Entrenador"].Rows.Count)
+            {
+
+                Button btnPerfil1 = new Button();
+                btnPerfil1.DialogResult = DialogResult.OK;
+                btnPerfil1.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
+                btnPerfil1.Location = new Point(240, pos);
+                pos += 100;
+                btnPerfil1.Size = new Size(160, 70);
+                btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                Controls.Add(btnPerfil1);
+                k++;
+
+            }*/
         }
-
+        
         private void BtnAgregarJug_Click(object sender, EventArgs e)
         {
-            CrearPerfil1 formCrearPerfil1 = new CrearPerfil1(caller);
+            nuevoJug formNuevoJug = new nuevoJug();
             this.Hide();
-            formCrearPerfil1.Show();
+            formNuevoJug.Show();
         }
 
         private void BtnVolverAtras_Click(object sender, EventArgs e)

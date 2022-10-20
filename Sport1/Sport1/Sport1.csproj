@@ -64,6 +64,12 @@
     <Compile Include="IngresarEstadisticasFutbol.Designer.cs">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="nuevoJug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevoJug.Designer.cs">
+      <DependentUpon>nuevoJug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objetivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarEstadisticasFutbol.resx">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoJug.resx">
+      <DependentUpon>nuevoJug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Objetivos.resx">
       <DependentUpon>Objetivos.cs</DependentUpon>
