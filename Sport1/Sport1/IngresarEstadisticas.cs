@@ -66,7 +66,6 @@ namespace Sport1
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
-
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -257,7 +256,7 @@ namespace Sport1
             connection.Open();
 
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
+            info = new OleDbCommand("Select Deporte, FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
@@ -287,7 +286,7 @@ namespace Sport1
         {
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls [0].Text) + "','" + Convert.ToInt32(this.Controls[1].Text) + "','" + Convert.ToInt32(this.Controls[2].Text) + "','" + Convert.ToInt32(this.Controls[3].Text) + "','" + Convert.ToInt32(this.Controls[4].Text) + "','" + Convert.ToInt32(this.Controls[5].Text) + "','" + Convert.ToInt32(this.Controls[6].Text) + "','" + Convert.ToInt32(this.Controls[7].Text) + "','" + Convert.ToInt32(this.Controls[8].Text) + "')";
+            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls [0].Name) + "','" + Convert.ToInt32(this.Controls[1].Name) + "','" + Convert.ToInt32(this.Controls[2].Name) + "','" + Convert.ToInt32(this.Controls[3].Name) + "','" + Convert.ToInt32(this.Controls[4].Name) + "','" + Convert.ToInt32(this.Controls[5].Name) + "','" + Convert.ToInt32(this.Controls[6].Name) + "','" + Convert.ToInt32(this.Controls[7].Name) + "','" + Convert.ToInt32(this.Controls[8].Name) + "')";
             command.ExecuteNonQuery();
             this.Hide();
             Inicio f2 = new Inicio();

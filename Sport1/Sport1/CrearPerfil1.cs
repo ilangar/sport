@@ -17,10 +17,13 @@ namespace Sport1
         public string nombre;
         public int deporte;
         public int rol;
+        public perfilEnt formPerfilEnt;
+        string i = "";
         OleDbConnection connection = new OleDbConnection();
-        public CrearPerfil1()
+        public CrearPerfil1(string caller)
         {
             InitializeComponent();
+            i = caller;
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
         }
 
@@ -56,7 +59,31 @@ namespace Sport1
 
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
-            
+            if (i == "Nuevo jugador")
+            {
+                cmbRol.Visible = false;
+                cmbDeporte.Visible = false;
+                lblDeporte.Visible = false;
+                lblRol.Visible = false;
+                btnAceptarPerfil.Text = "Agregar Jugador";
+
+            }
+        }
+
+        private void BtnVolverAEnt_Click(object sender, EventArgs e)
+        {
+            if (i == "Nuevo jugador")
+            {
+                formPerfilEnt = new perfilEnt();
+                this.Hide();
+                formPerfilEnt.Show();
+            }
+            else
+            {
+                formInicio = new Inicio();
+                this.Hide();
+                formInicio.Show();
+            }
         }
     }
 }
