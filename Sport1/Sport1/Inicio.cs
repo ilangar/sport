@@ -62,6 +62,7 @@ namespace Sport1
                 formPerfil1.formInicio = this;
                 formPerfil1.Show();
                 this.Hide();
+                idPerfil = ((Button)sender).Text;
             }
             if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 1)
             {
@@ -69,8 +70,10 @@ namespace Sport1
                 formPerfilEnt = new perfilEnt();
                 formPerfilEnt.Show();
                 this.Hide();
+                idPerfil = formPerfilEnt.idPerfil;
             }
-            idPerfil = ((Button)sender).Text;
+            
+
             connection.Close();
 
 

@@ -20,12 +20,20 @@ namespace Sport1
         DataSet ds = new DataSet();
         int k = 0;
         int pos = 38;
+        public string idPerfil;
 
         public perfilEnt()
         {
             InitializeComponent();
         }
 
+        private void click_btn_jugador(object sender, EventArgs e)
+        {
+            idPerfil = ((Button)sender).Text;//vicens enstuvo aca
+            Perfil1 formPerfil1 = new Perfil1();
+            this.Hide();
+            formPerfil1.Show();
+        }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
             /*connection.Open();
@@ -38,37 +46,38 @@ namespace Sport1
             {
                 while (k < 6 && k < ds.Tables["Entrenador"].Rows.Count)
                 {
-                    Button btnPerfil1 = new Button();
-                    btnPerfil1.DialogResult = DialogResult.OK;
-                    btnPerfil1.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
-                    btnPerfil1.Location = new Point(24, pos);
+                    Button btnJugador = new Button();
+                    btnJugador.DialogResult = DialogResult.OK;
+                    btnJugador.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
+                    btnJugador.Location = new Point(24, pos);
                     pos += 100;
-                    btnPerfil1.Size = new Size(160, 70);
-                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    btnJugador.Size = new Size(160, 70);
+                    btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
                     Controls.Add(btnPerfil1);
                     k++;
 
                 }
                 pos = 38;
-            }
-            pos = 38;
+            
 
-            while (k >= 6 && k < ds.Tables["Entrenador"].Rows.Count)
-            {
+                while (k >= 6 && k < ds.Tables["Entrenador"].Rows.Count)
+                {
 
-                Button btnPerfil1 = new Button();
-                btnPerfil1.DialogResult = DialogResult.OK;
-                btnPerfil1.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
-                btnPerfil1.Location = new Point(240, pos);
-                pos += 100;
-                btnPerfil1.Size = new Size(160, 70);
-                btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
-                Controls.Add(btnPerfil1);
-                k++;
+                    Button btnJugador = new Button();
+                    btnJugador.DialogResult = DialogResult.OK;
+                    btnJugador.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
+                    btnJugador.Location = new Point(240, pos);
+                    pos += 100;
+                    btnJugador.Size = new Size(160, 70);
+                    btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
+                    Controls.Add(btnJugador);
+                    k++;
 
+                }
+                
             }*/
         }
-        
+
         private void BtnAgregarJug_Click(object sender, EventArgs e)
         {
             nuevoJug formNuevoJug = new nuevoJug();
