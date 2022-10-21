@@ -263,13 +263,33 @@ namespace Sport1
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
 
-
-            switch ((Convert.ToString(ds.Tables["Perfil"].Rows[0][0])))
+            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
-                case "1": lblObjBasket();
+                case "1":
+                    lblObjBasket(); txtObjBasket();
+                    break;
+                case "2":
+                    lblObjFutbol(); txtObjFutbol();
+                    break;
+                case "3":
+                    lblObjHandball(); txtObjHandball();
+                    break;
+                case "4":
+                    lblObjHockey(); txtObjHockey();
+                    break;
+                case "5":
+                    lblObjRugby(); txtObjRugby();
+                    break;
+                case "6":
+                    lblObjTenis(); txtObjTenis();
+                    break;
+                case "7":
+                    lblObjVoley(); txtObjVoley();
                     break;
             }
+
         }
+
 
         private void Lblobjfutbol_Click(object sender, EventArgs e)
         {
@@ -296,7 +316,7 @@ namespace Sport1
             /*  connection.Open();
               OleDbCommand command = new OleDbCommand();
               command.Connection = connection;
-              command.CommandText = "insert into Obj (Nombre, Deporte, Rol) values ('" + nombre + "','" + deporte + "','" + rol + "')";
+              command.CommandText = "insert into Obj () values ('" + nombre + "','" + deporte + "','" + rol + "')";
                   command.ExecuteNonQuery();
                   connection.Close();
                   this.Hide();
