@@ -18,6 +18,7 @@ namespace Sport1
         public Inicio formInicio;
         public IngresarEstadisticas formIngrEst;
         public perfilEnt formPerfilEnt;
+        public progresos formProgresos;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         int lbl = 0;
@@ -87,6 +88,13 @@ namespace Sport1
             formIngrEst.formInicio = formInicio;
             this.Hide();
             formIngrEst.Show();
+        }
+
+        private void BtnVerProgresos_Click(object sender, EventArgs e)
+        {
+            formProgresos = new progresos();
+            this.Hide();
+            formProgresos.Show();
         }
     }
 }
