@@ -29,7 +29,7 @@ namespace Sport1
 
         private void click_btn_jugador(object sender, EventArgs e)
         {
-            idPerfil = ((Button)sender).Text;//vicens enstuvo aca
+            idPerfil = ((Button)sender).Text;
             Perfil1 formPerfil1 = new Perfil1();
             this.Hide();
             formPerfil1.Show();
