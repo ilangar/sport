@@ -83,6 +83,7 @@ namespace Sport1
             while (txt < 8)
             {
                 TextBox txtFutbol = new TextBox();
+                listaTXTDeportes.Add(txtFutbol);
                 this.Controls.Add(txtFutbol);
                 txtFutbol.Location = new Point(posTxtX, posTxtY);
                 txtFutbol.Name += Convert.ToString(nom);
@@ -112,6 +113,7 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtHand = new TextBox();
+                listaTXTDeportes.Add(txtHand);
                 this.Controls.Add(txtHand);
                 txtHand.Location = new Point(posTxtX, posTxtY);
                 txtHand.Name += Convert.ToString(nom);
@@ -141,6 +143,7 @@ namespace Sport1
             while (txt < 10)
             {
                 TextBox txtHockey = new TextBox();
+                listaTXTDeportes.Add(txtHockey);
                 this.Controls.Add(txtHockey);
                 txtHockey.Location = new Point(posTxtX, posTxtY);
                 txtHockey.Name += Convert.ToString(nom);
@@ -170,6 +173,7 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtRugby = new TextBox();
+                listaTXTDeportes.Add(txtRugby);
                 this.Controls.Add(txtRugby);
                 txtRugby.Location = new Point(posTxtX, posTxtY);
                 txtRugby.Name += Convert.ToString(nom);
@@ -199,6 +203,7 @@ namespace Sport1
             while (txt < 6) 
             {
                 TextBox txtTenis = new TextBox();
+                listaTXTDeportes.Add(txtTenis);
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(posTxtX, posTxtY);
                 txtTenis.Name += Convert.ToString(nom);
@@ -227,6 +232,7 @@ namespace Sport1
             while (txt < 7)
             {
                 TextBox txtVoley = new TextBox();
+                listaTXTDeportes.Add(txtVoley);
                 this.Controls.Add(txtVoley);
                 txtVoley.Location = new Point(posTxtX, posTxtY);
                 txtVoley.Name += Convert.ToString(nom);

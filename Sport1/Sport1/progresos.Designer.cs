@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Name = "progresos";
             this.Text = "progresos";
+            this.Load += new System.EventHandler(this.Progresos_Load);
             this.ResumeLayout(false);
 
         }

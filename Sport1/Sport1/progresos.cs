@@ -16,5 +16,10 @@ namespace Sport1
         {
             InitializeComponent();
         }
+
+        private void Progresos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
