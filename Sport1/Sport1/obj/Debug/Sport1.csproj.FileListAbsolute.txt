@@ -127,3 +127,4 @@ D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.CoreCompileInputs.cach
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.exe
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.pdb
 C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources
+C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources

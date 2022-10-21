@@ -15,17 +15,6 @@ namespace Sport1
 {
     public partial class IngresarEstadisticas : Form
     {
-        public int[] fechaBasket = new int[2000];
-        public int dia;
-        public int mes;
-        public int año;
-        public int fecha;
-        public int puntos;
-        public int asistencias;
-        public int faltas;
-        public int minJugados;
-        public int tirosFal;
-        public int bloqueos;
         int lbl = 0;
         int txt = 0;
         int posLblY = 120;
@@ -286,7 +275,7 @@ namespace Sport1
         {
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls [0].Name) + "','" + Convert.ToInt32(this.Controls[1].Name) + "','" + Convert.ToInt32(this.Controls[2].Name) + "','" + Convert.ToInt32(this.Controls[3].Name) + "','" + Convert.ToInt32(this.Controls[4].Name) + "','" + Convert.ToInt32(this.Controls[5].Name) + "','" + Convert.ToInt32(this.Controls[6].Name) + "','" + Convert.ToInt32(this.Controls[7].Name) + "','" + Convert.ToInt32(this.Controls[8].Name) + "')";
+            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls[0].Name) + "','" + Convert.ToInt32(this.Controls[1].Name) + "','" + Convert.ToInt32(this.Controls[2].Name) + "','" + Convert.ToInt32(this.Controls[3].Name) + "','" + Convert.ToInt32(this.Controls[4].Name) + "','" + Convert.ToInt32(this.Controls[5].Name) + "','" + Convert.ToInt32(this.Controls[6].Name) + "','" + Convert.ToInt32(this.Controls[7].Name) + "','" + Convert.ToInt32(this.Controls[8].Name) + "')";
             command.ExecuteNonQuery();
             this.Hide();
             Inicio f2 = new Inicio();

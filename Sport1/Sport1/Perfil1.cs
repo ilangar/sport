@@ -36,7 +36,7 @@ namespace Sport1
             info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre ='" + formInicio.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
-            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            /*switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
                     formIngrEst.lblBasket();
@@ -59,7 +59,7 @@ namespace Sport1
                 case "7":
                     formIngrEst.lblVoley();
                     break;
-            }
+            }*/
         }
 
         private void Button1_Click(object sender, EventArgs e)
