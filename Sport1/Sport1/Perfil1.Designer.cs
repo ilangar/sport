@@ -46,9 +46,9 @@
             // lblNomPerfil
             // 
             this.lblNomPerfil.AutoSize = true;
-            this.lblNomPerfil.Location = new System.Drawing.Point(69, 53);
+            this.lblNomPerfil.Location = new System.Drawing.Point(30, 73);
             this.lblNomPerfil.Name = "lblNomPerfil";
-            this.lblNomPerfil.Size = new System.Drawing.Size(53, 20);
+            this.lblNomPerfil.Size = new System.Drawing.Size(35, 13);
             this.lblNomPerfil.TabIndex = 1;
             this.lblNomPerfil.Text = "label1";
             this.lblNomPerfil.Click += new System.EventHandler(this.LblNomPerfil_Click);
@@ -65,7 +65,7 @@
             // 
             // Perfil1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.btnIngresarEstadisticas);
