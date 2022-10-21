@@ -24,6 +24,7 @@ namespace Sport1
         int nom = 0;
         Perfil1 formPerfil1;
         public Inicio formInicio;
+        List<TextBox> listaTXTDeportes = new List<TextBox>();
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
@@ -52,6 +53,7 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
