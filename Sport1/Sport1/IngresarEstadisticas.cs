@@ -15,6 +15,7 @@ namespace Sport1
 {
     public partial class IngresarEstadisticas : Form
     {
+        DataSet ds = new DataSet();
         int lbl = 0;
         int txt = 0;
         int posLblY = 120;
@@ -22,6 +23,7 @@ namespace Sport1
         int posTxtY = 120;
         int posTxtX = 250;
         int nom = 0;
+        int x = 0;
         Perfil1 formPerfil1;
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
@@ -37,6 +39,7 @@ namespace Sport1
         {
             while (lbl < 9)
             {
+
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
                 lblBasket.Location = new Point(posLblX, posLblY);
@@ -242,6 +245,17 @@ namespace Sport1
             }
         }
 
+        public void dbBasket()
+        {
+            while (x < 9)
+            {
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32 (listaTXTDeportes[x].Text) + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
         public IngresarEstadisticas()
         {
@@ -255,7 +269,7 @@ namespace Sport1
             OleDbCommand info;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-            DataSet ds = new DataSet();
+          
             da.Fill(ds, "Perfil");
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
@@ -274,21 +288,18 @@ namespace Sport1
                 case "7": lblVoley(); txtVoley();
                     break;
             }
-
+            
         }
 
 
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32(this.Controls[0].Name) + "','" + Convert.ToInt32(this.Controls[1].Name) + "','" + Convert.ToInt32(this.Controls[2].Name) + "','" + Convert.ToInt32(this.Controls[3].Name) + "','" + Convert.ToInt32(this.Controls[4].Name) + "','" + Convert.ToInt32(this.Controls[5].Name) + "','" + Convert.ToInt32(this.Controls[6].Name) + "','" + Convert.ToInt32(this.Controls[7].Name) + "','" + Convert.ToInt32(this.Controls[8].Name) + "')";
-            command.ExecuteNonQuery();
-            this.Hide();
-            Inicio f2 = new Inicio();
-            f2.ShowDialog();
-            connection.Close();
+            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            {
+                case "1": dbBasket();
+                    break;
+            }
 
             formPerfil1 = formInicio.formPerfil1;
             formPerfil1.Show();
