@@ -34,6 +34,10 @@ namespace Sport1
             this.Hide();
             formPerfil1.Show();
         }
+        public string entIdPerfil()
+        {
+            return idPerfil;
+        }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
             /*connection.Open();
