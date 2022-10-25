@@ -15,27 +15,18 @@ namespace Sport1
 {
     public partial class IngresarEstadisticas : Form
     {
-        public int[] fechaBasket = new int[2000];
-        public int dia;
-        public int mes;
-        public int año;
-        public int fecha;
-        public int puntos;
-        public int asistencias;
-        public int faltas;
-        public int minJugados;
-        public int tirosFal;
-        public int bloqueos;
+        DataSet ds = new DataSet();
         int lbl = 0;
         int txt = 0;
-
         int posLblY = 120;
         int posLblX = 90;
         int posTxtY = 120;
         int posTxtX = 250;
-
+        int nom = 0;
+        int x = 0;
         Perfil1 formPerfil1;
         public Inicio formInicio;
+        List<TextBox> listaTXTDeportes = new List<TextBox>();
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
@@ -48,6 +39,7 @@ namespace Sport1
         {
             while (lbl < 9)
             {
+
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
                 lblBasket.Location = new Point(posLblX, posLblY);
@@ -64,11 +56,15 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
+                txtBasket.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
+
         }
         public void lblFutbol()
         {
@@ -90,10 +86,13 @@ namespace Sport1
             while (txt < 8)
             {
                 TextBox txtFutbol = new TextBox();
+                listaTXTDeportes.Add(txtFutbol);
                 this.Controls.Add(txtFutbol);
                 txtFutbol.Location = new Point(posTxtX, posTxtY);
+                txtFutbol.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -117,10 +116,13 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtHand = new TextBox();
+                listaTXTDeportes.Add(txtHand);
                 this.Controls.Add(txtHand);
                 txtHand.Location = new Point(posTxtX, posTxtY);
+                txtHand.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -144,10 +146,13 @@ namespace Sport1
             while (txt < 10)
             {
                 TextBox txtHockey = new TextBox();
+                listaTXTDeportes.Add(txtHockey);
                 this.Controls.Add(txtHockey);
                 txtHockey.Location = new Point(posTxtX, posTxtY);
+                txtHockey.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -171,10 +176,13 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtRugby = new TextBox();
+                listaTXTDeportes.Add(txtRugby);
                 this.Controls.Add(txtRugby);
                 txtRugby.Location = new Point(posTxtX, posTxtY);
+                txtRugby.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
@@ -198,10 +206,13 @@ namespace Sport1
             while (txt < 6) 
             {
                 TextBox txtTenis = new TextBox();
+                listaTXTDeportes.Add(txtTenis);
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(posTxtX, posTxtY);
+                txtTenis.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
         public void lblVoley()
@@ -224,13 +235,27 @@ namespace Sport1
             while (txt < 7)
             {
                 TextBox txtVoley = new TextBox();
+                listaTXTDeportes.Add(txtVoley);
                 this.Controls.Add(txtVoley);
                 txtVoley.Location = new Point(posTxtX, posTxtY);
+                txtVoley.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
+                nom++;
             }
         }
 
+        public void dbBasket()
+        {
+            while (x < 9)
+            {
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32 (listaTXTDeportes[x].Text) + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
         public IngresarEstadisticas()
         {
@@ -242,9 +267,9 @@ namespace Sport1
             connection.Open();
 
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
+            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-            DataSet ds = new DataSet();
+          
             da.Fill(ds, "Perfil");
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
@@ -263,13 +288,19 @@ namespace Sport1
                 case "7": lblVoley(); txtVoley();
                     break;
             }
-
+            
         }
 
 
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
+            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            {
+                case "1": dbBasket();
+                    break;
+            }
+
             formPerfil1 = formInicio.formPerfil1;
             formPerfil1.Show();
             this.Hide();

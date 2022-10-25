@@ -1,6 +1,6 @@
 ﻿namespace Sport1
 {
-    partial class Inicio
+    partial class progresos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCrearPerfil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCrearPerfil
-            // 
-            this.btnCrearPerfil.Location = new System.Drawing.Point(835, 305);
-            this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(213, 110);
-            this.btnCrearPerfil.TabIndex = 0;
-            this.btnCrearPerfil.Text = "Crear Perfil";
-            this.btnCrearPerfil.UseVisualStyleBackColor = true;
-            this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
-            // 
-            // Inicio
+            // progresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
-            this.Controls.Add(this.btnCrearPerfil);
-            this.Name = "Inicio";
-            this.Text = "Inicio";
-            this.Load += new System.EventHandler(this.Inicio_Load);
+            this.Name = "progresos";
+            this.Text = "progresos";
+            this.Load += new System.EventHandler(this.Progresos_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCrearPerfil;
     }
 }

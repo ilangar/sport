@@ -31,6 +31,7 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblNomPerfil = new System.Windows.Forms.Label();
             this.btnIngresarEstadisticas = new System.Windows.Forms.Button();
+            this.btnVerProgresos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -46,9 +47,9 @@
             // lblNomPerfil
             // 
             this.lblNomPerfil.AutoSize = true;
-            this.lblNomPerfil.Location = new System.Drawing.Point(69, 53);
+            this.lblNomPerfil.Location = new System.Drawing.Point(30, 73);
             this.lblNomPerfil.Name = "lblNomPerfil";
-            this.lblNomPerfil.Size = new System.Drawing.Size(53, 20);
+            this.lblNomPerfil.Size = new System.Drawing.Size(35, 13);
             this.lblNomPerfil.TabIndex = 1;
             this.lblNomPerfil.Text = "label1";
             this.lblNomPerfil.Click += new System.EventHandler(this.LblNomPerfil_Click);
@@ -63,11 +64,22 @@
             this.btnIngresarEstadisticas.UseVisualStyleBackColor = true;
             this.btnIngresarEstadisticas.Click += new System.EventHandler(this.BtnIngresarEstadisticas_Click);
             // 
+            // btnVerProgresos
+            // 
+            this.btnVerProgresos.Location = new System.Drawing.Point(373, 62);
+            this.btnVerProgresos.Name = "btnVerProgresos";
+            this.btnVerProgresos.Size = new System.Drawing.Size(94, 72);
+            this.btnVerProgresos.TabIndex = 3;
+            this.btnVerProgresos.Text = "Ver progresos";
+            this.btnVerProgresos.UseVisualStyleBackColor = true;
+            this.btnVerProgresos.Click += new System.EventHandler(this.BtnVerProgresos_Click);
+            // 
             // Perfil1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.btnVerProgresos);
             this.Controls.Add(this.btnIngresarEstadisticas);
             this.Controls.Add(this.lblNomPerfil);
             this.Controls.Add(this.btnVolver);
@@ -85,5 +97,6 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblNomPerfil;
         private System.Windows.Forms.Button btnIngresarEstadisticas;
+        private System.Windows.Forms.Button btnVerProgresos;
     }
 }

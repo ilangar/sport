@@ -64,6 +64,12 @@
     <Compile Include="IngresarEstadisticasFutbol.Designer.cs">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="nuevoJug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nuevoJug.Designer.cs">
+      <DependentUpon>nuevoJug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Objetivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,7 +106,19 @@
     <Compile Include="Perfil1.Designer.cs">
       <DependentUpon>Perfil1.cs</DependentUpon>
     </Compile>
+    <Compile Include="perfilEnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perfilEnt.Designer.cs">
+      <DependentUpon>perfilEnt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="progresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progresos.Designer.cs">
+      <DependentUpon>progresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
@@ -110,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IngresarEstadisticasFutbol.resx">
       <DependentUpon>IngresarEstadisticasFutbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoJug.resx">
+      <DependentUpon>nuevoJug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Objetivos.resx">
       <DependentUpon>Objetivos.cs</DependentUpon>
@@ -128,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil1.resx">
       <DependentUpon>Perfil1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perfilEnt.resx">
+      <DependentUpon>perfilEnt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="progresos.resx">
+      <DependentUpon>progresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
