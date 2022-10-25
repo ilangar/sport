@@ -33,9 +33,9 @@
             // 
             // btnCrearPerfil
             // 
-            this.btnCrearPerfil.Location = new System.Drawing.Point(835, 305);
+            this.btnCrearPerfil.Location = new System.Drawing.Point(496, 314);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(213, 110);
+            this.btnCrearPerfil.Size = new System.Drawing.Size(162, 117);
             this.btnCrearPerfil.TabIndex = 0;
             this.btnCrearPerfil.Text = "Crear Perfil";
             this.btnCrearPerfil.UseVisualStyleBackColor = true;
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(738, 522);
             this.Controls.Add(this.btnCrearPerfil);
             this.Name = "Inicio";
             this.Text = "Inicio";
