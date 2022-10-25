@@ -31,6 +31,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.chartProgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartProgresos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,19 +41,30 @@
             this.chartProgresos.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartProgresos.Legends.Add(legend1);
-            this.chartProgresos.Location = new System.Drawing.Point(50, 47);
+            this.chartProgresos.Location = new System.Drawing.Point(33, 31);
+            this.chartProgresos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartProgresos.Name = "chartProgresos";
-            this.chartProgresos.Size = new System.Drawing.Size(1106, 537);
+            this.chartProgresos.Size = new System.Drawing.Size(1178, 466);
             this.chartProgresos.TabIndex = 0;
             this.chartProgresos.Text = "chart1";
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(73, 539);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(132, 52);
+            this.btnVolver.TabIndex = 1;
+            this.btnVolver.Text = "Listo";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // progresos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.chartProgresos);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "progresos";
             this.Text = "progresos";
             this.Load += new System.EventHandler(this.Progresos_Load);
@@ -64,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProgresos;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

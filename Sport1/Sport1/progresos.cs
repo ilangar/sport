@@ -19,6 +19,7 @@ namespace Sport1
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
         public Inicio formInicio;
+        public Perfil1 formPerfil1;
         public void progresosBasket()
         {
             int puntos = Convert.ToInt32((ds.Tables["Estadisticas"].Rows[0][0]));
@@ -41,18 +42,28 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
+            string sql; 
             info = new OleDbCommand("Select Estd FROM Estadisticas", connection);
-            info2 = new OleDbCommand("Select Deporte  FROM Perfil WHERE Nombre = Ilan ", connection);
+            info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = " + formInicio.pasarIdPerfil(), connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             da.Fill(ds, "Estadisticas");
             da2.Fill(ds2, "Perfil");
             switch ((Convert.ToString(ds.Tables["Estadisticas"].Rows[0][0])))
-            { 
+            {
+                case "1": MessageBox.Show("Ok");
+                    break;
             }
         
 
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            formPerfil1 = new Perfil1();
+            formPerfil1.Show();
+            this.Hide();
         }
     }
 }

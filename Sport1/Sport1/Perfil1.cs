@@ -25,6 +25,7 @@ namespace Sport1
         int txt = 0;
         int posLblX = 30;
         int posLblY = 70;
+
         public Perfil1()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace Sport1
         {
             connection.Open();
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'", connection);
+            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);;
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             /*switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
