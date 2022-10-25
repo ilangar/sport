@@ -141,3 +141,4 @@ C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Spor
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources
+D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.SuggestedBindingRedirects.cache
