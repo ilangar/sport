@@ -34,10 +34,10 @@ namespace Sport1
         {
             connection.Open();
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre ='" + formInicio.idPerfil + "'", connection);
+            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
-          /*switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            /*switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
                     formIngrEst.lblBasket();

@@ -132,3 +132,6 @@ C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.progresos
 C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.nuevoJug.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
+C:\Users\ITPS\Desktop\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources

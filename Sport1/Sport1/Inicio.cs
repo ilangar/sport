@@ -18,7 +18,7 @@ namespace Sport1
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
-        public string idPerfil = "";
+        public string idPerfil;
         int x = 1;
         int k = 0;
         public Perfil1 formPerfil1;
