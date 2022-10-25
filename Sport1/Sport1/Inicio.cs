@@ -111,7 +111,7 @@ namespace Sport1
                 }
                 pos = 38;
 
-                while (k >= 6 && k < ds.Tables["Perfil"].Rows.Count)
+                while (k >= 6 && k < 12)
                 {
                     
                     Button btnPerfil1 = new Button();
@@ -127,8 +127,10 @@ namespace Sport1
                     k++;
                     
                 }
-                
 
+                pos = 38;
+
+                while
             }
 
 
