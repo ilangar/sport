@@ -15,7 +15,7 @@ namespace Sport1
     public partial class Perfil1 : Form
     {
         public CrearPerfil1 formCrearPerfil1;
-        public Inicio formInicio;
+        public Inicio formInicio = new Inicio();
         public IngresarEstadisticas formIngrEst;
         public perfilEnt formPerfilEnt;
         public progresos formProgresos;

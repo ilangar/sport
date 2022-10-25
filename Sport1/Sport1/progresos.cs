@@ -18,7 +18,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
-        public Inicio formInicio;
+        public Inicio formInicio = new Inicio();
         public Perfil1 formPerfil1;
         public void progresosBasket()
         {
@@ -44,7 +44,7 @@ namespace Sport1
             OleDbCommand info2;
             string sql; 
             info = new OleDbCommand("Select Estd FROM Estadisticas", connection);
-            info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = " + formInicio.pasarIdPerfil(), connection);
+            info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             da.Fill(ds, "Estadisticas");
