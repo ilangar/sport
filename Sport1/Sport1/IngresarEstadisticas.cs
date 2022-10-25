@@ -251,7 +251,7 @@ namespace Sport1
             {
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into Estadisticas (Estd) values  ('" + Convert.ToInt32 (listaTXTDeportes[x].Text) + "')";
+                command.CommandText = "insert into Estadisticas WHERE IdEst = 1,2,3,4,5,6,7,8,9 (Estd) values ('" + Convert.ToInt32 (listaTXTDeportes[x].Text) + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
             }
