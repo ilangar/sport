@@ -128,6 +128,7 @@
             // 
             this.btnVolverAEnt.BackColor = System.Drawing.Color.Transparent;
             this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9;
+            this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
             this.btnVolverAEnt.Location = new System.Drawing.Point(1221, 12);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
             this.btnVolverAEnt.Size = new System.Drawing.Size(78, 64);
