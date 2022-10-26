@@ -22,11 +22,12 @@ namespace Sport1
         public progresos formProgresos;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
         int lbl = 0;
         int txt = 0;
         int posLblX = 30;
         int posLblY = 70;
-        int posEstLblX = 130;
+        int posEstLblX = 250;
         int posEstLblY = 70;
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
@@ -49,13 +50,14 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-                lblBasket.Location = new Point(posEstLblX, posEstLblY);
-                lblBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblBasket.AutoSize = true;
-                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
-                lblBasket.Text = arrBask[lbl];
+                lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
+                lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstBasket.AutoSize = true;
+                lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
                 lbl++;
                 posLblY += 40;
+                posEstLblY += 40;
             }
         }
 
@@ -168,13 +170,13 @@ namespace Sport1
         {
             connection.Open();
             OleDbCommand info;
-            OleDbConnection info2;
+            OleDbCommand info2;
             info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);
-   //        info2 = new OleDbCommand("Select Estd FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);
-
+            info2 = new OleDbCommand("Select Estd FROM IngresarEstadisticas", connection);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
-            MessageBox.Show(formInicio.pasarIdPerfil());
+            da2.Fill(ds2, "IngresarEstadisticas");
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
