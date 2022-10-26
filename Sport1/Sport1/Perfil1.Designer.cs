@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnVolver = new System.Windows.Forms.Button();
-            this.lblNomPerfil = new System.Windows.Forms.Label();
             this.btnIngresarEstadisticas = new System.Windows.Forms.Button();
             this.btnVerProgresos = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,16 +42,6 @@
             this.btnVolver.Text = "Volver a inicio";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // lblNomPerfil
-            // 
-            this.lblNomPerfil.AutoSize = true;
-            this.lblNomPerfil.Location = new System.Drawing.Point(30, 73);
-            this.lblNomPerfil.Name = "lblNomPerfil";
-            this.lblNomPerfil.Size = new System.Drawing.Size(35, 13);
-            this.lblNomPerfil.TabIndex = 1;
-            this.lblNomPerfil.Text = "label1";
-            this.lblNomPerfil.Click += new System.EventHandler(this.LblNomPerfil_Click);
             // 
             // btnIngresarEstadisticas
             // 
@@ -76,26 +65,23 @@
             // 
             // Perfil1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.btnVerProgresos);
             this.Controls.Add(this.btnIngresarEstadisticas);
-            this.Controls.Add(this.lblNomPerfil);
             this.Controls.Add(this.btnVolver);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "Perfil1";
             this.Text = "Perfil1";
             this.Load += new System.EventHandler(this.Perfil1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.Label lblNomPerfil;
         private System.Windows.Forms.Button btnIngresarEstadisticas;
         private System.Windows.Forms.Button btnVerProgresos;
     }
