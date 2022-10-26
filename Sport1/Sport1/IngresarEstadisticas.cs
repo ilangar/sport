@@ -60,9 +60,16 @@ namespace Sport1
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
+                txtBasket.Tag = arrBask[txt];
                 txt++;
                 posTxtY += 40;
                 nom++;
+                txtBasket.Tag = x;
+                x++;
+                if (txt >= 0 && txt <= 7)
+                {
+                    x++;
+                }
             }
 
         }
@@ -249,11 +256,18 @@ namespace Sport1
         {
             while (x < 9)
             {
+                connection.Open();
                 OleDbCommand command = new OleDbCommand();
+                OleDbCommand command2 = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "insert into Estadisticas WHERE IdEst = 1,2,3,4,5,6,7,8,9 (Estd) values ('" + Convert.ToInt32 (listaTXTDeportes[x].Text) + "')";
+                command2.Connection = connection;
+                command.CommandText = "UPDATE IngresarEstadisticas SET Estd = "+ listaTXTDeportes[x].Text +" WHERE IdIngreEst = "+ x;
+                command2.CommandText = "INSERT INTO Estadisticas (Estd, IdCar) values ('" + listaTXTDeportes[x].Text + "' , '" + Convert.ToInt32 (listaTXTDeportes[x].Tag) + "')";
                 command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
                 connection.Close();
+                x++;
+
             }
         }
 
@@ -264,8 +278,6 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
-            connection.Open();
-
             OleDbCommand info;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);

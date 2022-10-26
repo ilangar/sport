@@ -42,7 +42,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblNombre.Location = new System.Drawing.Point(41, 54);
+            this.lblNombre.Location = new System.Drawing.Point(92, 110);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(44, 74);
+            this.txtNombre.Location = new System.Drawing.Point(95, 130);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // btnAceptarPerfil
             // 
-            this.btnAceptarPerfil.Location = new System.Drawing.Point(415, 311);
+            this.btnAceptarPerfil.Location = new System.Drawing.Point(578, 194);
             this.btnAceptarPerfil.Name = "btnAceptarPerfil";
             this.btnAceptarPerfil.Size = new System.Drawing.Size(202, 98);
             this.btnAceptarPerfil.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblRol.Location = new System.Drawing.Point(41, 102);
+            this.lblRol.Location = new System.Drawing.Point(92, 158);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(29, 17);
             this.lblRol.TabIndex = 3;
@@ -87,7 +87,7 @@
             "Rugby",
             "Tenis",
             "Voleyball"});
-            this.cmbDeporte.Location = new System.Drawing.Point(44, 178);
+            this.cmbDeporte.Location = new System.Drawing.Point(95, 234);
             this.cmbDeporte.Name = "cmbDeporte";
             this.cmbDeporte.Size = new System.Drawing.Size(121, 21);
             this.cmbDeporte.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.cmbRol.Items.AddRange(new object[] {
             "Equipo",
             "Jugador"});
-            this.cmbRol.Location = new System.Drawing.Point(44, 123);
+            this.cmbRol.Location = new System.Drawing.Point(95, 179);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 21);
             this.cmbRol.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             this.lblDeporte.AutoSize = true;
             this.lblDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblDeporte.Location = new System.Drawing.Point(44, 159);
+            this.lblDeporte.Location = new System.Drawing.Point(95, 215);
             this.lblDeporte.Name = "lblDeporte";
             this.lblDeporte.Size = new System.Drawing.Size(59, 17);
             this.lblDeporte.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             // btnVolverAEnt
             // 
-            this.btnVolverAEnt.Location = new System.Drawing.Point(95, 334);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(706, 12);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
             this.btnVolverAEnt.Size = new System.Drawing.Size(108, 64);
             this.btnVolverAEnt.TabIndex = 7;
@@ -129,6 +129,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 432);
             this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.lblDeporte);
@@ -138,7 +140,10 @@
             this.Controls.Add(this.btnAceptarPerfil);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CrearPerfil1";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = " ";
             this.Load += new System.EventHandler(this.CrearPerfil1_Load);
             this.ResumeLayout(false);

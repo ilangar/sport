@@ -18,16 +18,20 @@ namespace Sport1
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
-        public string idPerfil;
-        int x = 1;
+        public string idPerfil = "";
+        int x = 0;
         int k = 0;
         public Perfil1 formPerfil1;
         public perfilEnt formPerfilEnt;
         public string caller = "";
+        string nomPerfil;
 
         DataSet ds = new DataSet();
 
-
+        public string pasarIdPerfil()
+        {
+            return idPerfil;
+        }
 
 
 
@@ -55,22 +59,22 @@ namespace Sport1
 
         private void click_btn_perfil(object sender, EventArgs e)
         {
-            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 2)
+            Button btn = (Button)sender;
+            idPerfil = btn.Text;
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32((btn.Tag)))][2])) == 2)
             {
-                Button btn = (Button)sender;
                 formPerfil1 = new Perfil1();
                 formPerfil1.formInicio = this;
                 formPerfil1.Show();
                 this.Hide();
-                idPerfil = ((Button)sender).Text;
+                
             }
-            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag) - 1)][2])) == 1)
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag))][2])) == 1)
             {
-                Button btn = (Button)sender;
                 formPerfilEnt = new perfilEnt();
                 formPerfilEnt.Show();
                 this.Hide();
-                idPerfil = formPerfilEnt.idPerfil;
+                idPerfil = formPerfilEnt.entIdPerfil();
             }
             
 
@@ -81,6 +85,7 @@ namespace Sport1
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+
             connection.Open(); 
 
             OleDbCommand info;
@@ -88,6 +93,7 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
 
             da.Fill(ds, "Perfil");
+
 
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
@@ -107,7 +113,7 @@ namespace Sport1
                 }
                 pos = 38;
 
-                while (k >= 6 && k < ds.Tables["Perfil"].Rows.Count)
+                while (k >= 6 && k < 12 && k < ds.Tables["Perfil"].Rows.Count)
                 {
                     
                     Button btnPerfil1 = new Button();
@@ -123,11 +129,13 @@ namespace Sport1
                     k++;
                     
                 }
-                
 
+                pos = 38;
+
+                //while
             }
-            
-            
+
+
 
 
         }
