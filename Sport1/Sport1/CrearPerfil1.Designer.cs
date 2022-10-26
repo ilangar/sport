@@ -127,10 +127,14 @@
             // btnVolverAEnt
             // 
             this.btnVolverAEnt.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1221, 12);
+            this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9__1_;
+            this.btnVolverAEnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
+            this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1246, 26);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
-            this.btnVolverAEnt.Size = new System.Drawing.Size(78, 64);
+            this.btnVolverAEnt.Size = new System.Drawing.Size(53, 50);
             this.btnVolverAEnt.TabIndex = 7;
             this.btnVolverAEnt.UseVisualStyleBackColor = false;
             this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);

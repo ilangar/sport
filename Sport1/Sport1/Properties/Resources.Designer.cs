@@ -133,6 +133,26 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_9__1_ {
+            get {
+                object obj = ResourceManager.GetObject("image 9 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Inicio_sesión {
+            get {
+                object obj = ResourceManager.GetObject("Inicio sesión", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pantalla_de_inicio {
             get {
                 object obj = ResourceManager.GetObject("Pantalla de inicio", resourceCulture);
