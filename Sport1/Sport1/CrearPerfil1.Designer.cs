@@ -36,24 +36,26 @@
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.lblDeporte = new System.Windows.Forms.Label();
             this.btnVolverAEnt = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblNombre.Font = new System.Drawing.Font("Adobe Arabic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(127, 224);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(58, 17);
+            this.lblNombre.Size = new System.Drawing.Size(0, 14);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Click += new System.EventHandler(this.LblNombre_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(130, 256);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(204, 20);
+            this.txtNombre.Size = new System.Drawing.Size(250, 20);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
@@ -63,6 +65,7 @@
             this.btnAceptarPerfil.BackgroundImage = global::Sport1.Properties.Resources.Botón_Verde_agua_claro;
             this.btnAceptarPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAceptarPerfil.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnAceptarPerfil.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAceptarPerfil.FlatAppearance.BorderSize = 0;
             this.btnAceptarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarPerfil.ForeColor = System.Drawing.Color.Transparent;
@@ -129,6 +132,7 @@
             this.btnVolverAEnt.BackColor = System.Drawing.Color.Transparent;
             this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9__1_;
             this.btnVolverAEnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolverAEnt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
@@ -139,6 +143,17 @@
             this.btnVolverAEnt.UseVisualStyleBackColor = false;
             this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Sport1.Properties.Resources.Nombre___1_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(468, 285);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 94);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // CrearPerfil1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,6 +161,7 @@
             this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.lblDeporte);
             this.Controls.Add(this.cmbRol);
@@ -155,11 +171,12 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrearPerfil1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = " ";
             this.Load += new System.EventHandler(this.CrearPerfil1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +192,6 @@
         private System.Windows.Forms.Label lblDeporte;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnVolverAEnt;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -70,5 +70,10 @@ namespace Sport1
             formInicio.Show();
             
         }
+
+        private void LblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
