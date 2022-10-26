@@ -68,7 +68,7 @@ namespace Sport1
                 nom++;
                 txtBasket.Tag = x;
                 x++;
-                if (txt >=8)
+                if (txt >=7)
                 {
                     x+=2;
                 }
