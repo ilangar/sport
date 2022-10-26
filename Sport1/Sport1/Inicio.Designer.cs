@@ -33,19 +33,24 @@
             // 
             // btnCrearPerfil
             // 
-            this.btnCrearPerfil.Location = new System.Drawing.Point(496, 314);
+            this.btnCrearPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnCrearPerfil.BackgroundImage = global::Sport1.Properties.Resources.Botón_Verde_agua_claro;
+            this.btnCrearPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCrearPerfil.FlatAppearance.BorderSize = 0;
+            this.btnCrearPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrearPerfil.Location = new System.Drawing.Point(498, 556);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(162, 117);
+            this.btnCrearPerfil.Size = new System.Drawing.Size(278, 79);
             this.btnCrearPerfil.TabIndex = 0;
-            this.btnCrearPerfil.Text = "Crear Perfil";
-            this.btnCrearPerfil.UseVisualStyleBackColor = true;
+            this.btnCrearPerfil.UseVisualStyleBackColor = false;
             this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 522);
+            this.BackgroundImage = global::Sport1.Properties.Resources.Inicio_sesión;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.btnCrearPerfil);
             this.Name = "Inicio";
             this.Text = "Inicio";

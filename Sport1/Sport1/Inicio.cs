@@ -102,7 +102,7 @@ namespace Sport1
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
-                    btnPerfil1.Location = new Point(24, pos);
+                    btnPerfil1.Location = new Point(pos, 150);
                     pos += 100;
                     btnPerfil1.Size = new Size(160, 70);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
@@ -115,16 +115,17 @@ namespace Sport1
 
                 while (k >= 6 && k < 12 && k < ds.Tables["Perfil"].Rows.Count)
                 {
-                    
+
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
-                    btnPerfil1.Location = new Point(240, pos);
-                    pos += 100;
+                    btnPerfil1.Location = new Point(pos, 240);
+                    pos += 3000;
                     btnPerfil1.Size = new Size(160, 70);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
                     btnPerfil1.Tag = x;
                     Controls.Add(btnPerfil1);
+
                     x++;
                     k++;
                     
