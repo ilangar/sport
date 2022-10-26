@@ -262,7 +262,7 @@ namespace Sport1
                 command.Connection = connection;
                 command2.Connection = connection;
                 command.CommandText = "UPDATE IngresarEstadisticas SET Estd = "+ listaTXTDeportes[x].Text +" WHERE IdIngreEst = "+ x;
-                command2.CommandText = "INSERT INTO Estadisticas (Estd, IdCar) values ('" + listaTXTDeportes[x].Text + "' , '" + Convert.ToInt32 (listaTXTDeportes[x].Tag) + "')";
+                command2.CommandText = "INSERT INTO Estadisticas (Estd) values ('" + listaTXTDeportes[x].Text + "' , '" + Convert.ToInt32 (listaTXTDeportes[x].Tag) + "')";
                 command.ExecuteNonQuery();
                 command2.ExecuteNonQuery();
                 connection.Close();
