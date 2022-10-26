@@ -47,7 +47,7 @@ namespace Sport1
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
-            da.Fill(ds, "Estadisticas");x|
+            da.Fill(ds, "Estadisticas");
             da2.Fill(ds2, "Perfil");
             switch ((Convert.ToString(ds.Tables["Estadisticas"].Rows[0][0])))
             {

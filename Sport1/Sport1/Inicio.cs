@@ -18,12 +18,13 @@ namespace Sport1
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
-        public string idPerfil;
+        public string idPerfil = "";
         int x = 0;
         int k = 0;
         public Perfil1 formPerfil1;
         public perfilEnt formPerfilEnt;
         public string caller = "";
+        string nomPerfil;
 
         DataSet ds = new DataSet();
 
@@ -59,13 +60,14 @@ namespace Sport1
         private void click_btn_perfil(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
+            idPerfil = btn.Text;
             if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32((btn.Tag)))][2])) == 2)
             {
                 formPerfil1 = new Perfil1();
                 formPerfil1.formInicio = this;
                 formPerfil1.Show();
                 this.Hide();
-                idPerfil = btn.Text;
+                
             }
             if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag))][2])) == 1)
             {
@@ -130,7 +132,7 @@ namespace Sport1
 
                 pos = 38;
 
-                while
+                //while
             }
 
 
