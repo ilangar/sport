@@ -24,6 +24,8 @@ namespace Sport1
         int posTxtX = 250;
         int nom = 0;
         int x = 0;
+        int d = 0;
+        int j = 0;
         Perfil1 formPerfil1;
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
@@ -66,10 +68,11 @@ namespace Sport1
                 nom++;
                 txtBasket.Tag = x;
                 x++;
-                if (txt >= 0 && txt <= 7)
+                if (txt >=8)
                 {
-                    x++;
+                    x+=2;
                 }
+
             }
 
         }
@@ -258,16 +261,30 @@ namespace Sport1
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
-                OleDbCommand command2 = new OleDbCommand();
                 command.Connection = connection;
-                command2.Connection = connection;
-                command.CommandText = "UPDATE IngresarEstadisticas SET Estd = "+ listaTXTDeportes[x].Text +" WHERE IdIngreEst = "+ x;
-                command2.CommandText = "INSERT INTO Estadisticas (Estd) values ('" + listaTXTDeportes[x].Text + "' , '" + Convert.ToInt32 (listaTXTDeportes[x].Tag) + "')";
+                command.CommandText = "UPDATE IngresarEstadisticas SET Estd = " + listaTXTDeportes[x].Text + " WHERE IdIngreEst = " + x;
                 command.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
                 connection.Close();
                 x++;
 
+            }
+            while (d < 9)
+            {
+                connection.Open();
+                OleDbCommand info = new OleDbCommand();
+                info.CommandText = "SELECT Estd FROM IngresarEstadisticas WHERE IdIngreEst = 1";
+                info.Connection = connection;
+                info.ExecuteNonQuery();
+                connection.Close();
+            }
+            while (j < 9)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "UPDATE Estadisticas SET IdIngreEst WHERE IdEst 1";
+                command.ExecuteNonQuery();
+                connection.Close();
             }
         }
 
