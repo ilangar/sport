@@ -30,12 +30,18 @@ namespace Sport1
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
+        string[] arrBaskId = new string[9] { "1", "2", "3", "4", "5", "6", "7", "10", "11" };
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
+
         string[] arrHand = new string[9] { "Goles", "Asistencias", "Faltas", "Minutos Jugados","Amonestaciones", "Excluciones", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas" };
+
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas"  };
+
         string[] arrRugby = new string[9] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas"};
+
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres"};
+
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones","Armados", "Bloqueos" };
         public void lblBasket()
         {
@@ -68,11 +74,6 @@ namespace Sport1
                 nom++;
                 txtBasket.Tag = x;
                 x++;
-                if (txt >=7)
-                {
-                    x+=2;
-                }
-
             }
 
         }
