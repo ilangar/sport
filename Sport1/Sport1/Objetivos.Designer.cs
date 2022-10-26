@@ -30,6 +30,7 @@
         {
             this.btnguardar = new System.Windows.Forms.Button();
             this.lblObj = new System.Windows.Forms.Label();
+            this.btnVolverAEnt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -53,11 +54,27 @@
             this.lblObj.Text = "Objetivos";
             this.lblObj.Click += new System.EventHandler(this.Lblobjfutbol_Click);
             // 
+            // btnVolverAEnt
+            // 
+            this.btnVolverAEnt.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9__1_;
+            this.btnVolverAEnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
+            this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
+            this.btnVolverAEnt.Location = new System.Drawing.Point(645, 27);
+            this.btnVolverAEnt.Name = "btnVolverAEnt";
+            this.btnVolverAEnt.Size = new System.Drawing.Size(53, 50);
+            this.btnVolverAEnt.TabIndex = 8;
+            this.btnVolverAEnt.UseVisualStyleBackColor = false;
+            this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);
+            // 
             // objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
             this.Name = "objetivos";
@@ -72,5 +89,6 @@
 
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label lblObj;
+        private System.Windows.Forms.Button btnVolverAEnt;
     }
 }

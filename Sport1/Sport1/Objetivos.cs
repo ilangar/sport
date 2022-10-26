@@ -323,5 +323,12 @@ namespace Sport1
                   Inicio f2 = new Inicio();
                   f2.ShowDialog();*/
         }
+
+        private void BtnVolverAEnt_Click(object sender, EventArgs e)
+        {
+            formInicio = new Inicio();
+            this.Hide();
+            formInicio.Show()
+        }
     }
 }
