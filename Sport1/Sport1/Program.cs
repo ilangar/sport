@@ -8,6 +8,8 @@ namespace Sport1
 {
     static class Program
     {
+        public static string idPerfil;
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
