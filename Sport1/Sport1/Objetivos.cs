@@ -314,10 +314,11 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
+            
             /*  connection.Open();
               OleDbCommand command = new OleDbCommand();
               command.Connection = connection;
-              command.CommandText = "insert into Obj () values ('" + nombre + "','" + deporte + "','" + rol + "')";
+              command.CommandText = "insert into Obj (idCar) values ('" + + "','" +  + "','" +  + "')";
                   command.ExecuteNonQuery();
                   connection.Close();
                   this.Hide();
@@ -333,3 +334,4 @@ namespace Sport1
         }
     }
 }
+    
