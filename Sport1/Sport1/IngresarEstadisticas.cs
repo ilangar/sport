@@ -26,6 +26,9 @@ namespace Sport1
         int x = 0;
         int d = 0;
         int j = 0;
+        int dia;
+        int mes;
+        int ano;
         Perfil1 formPerfil1;
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
@@ -69,11 +72,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtBasket);
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
-                txtBasket.Name += Convert.ToString(nom);
                 txtBasket.Tag = arrBaskId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
                 txtBasket.Tag = x;
                 x++;
             }
@@ -102,7 +103,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtFutbol);
                 this.Controls.Add(txtFutbol);
                 txtFutbol.Location = new Point(posTxtX, posTxtY);
-                txtFutbol.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -132,7 +132,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtHand);
                 this.Controls.Add(txtHand);
                 txtHand.Location = new Point(posTxtX, posTxtY);
-                txtHand.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -162,7 +161,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtHockey);
                 this.Controls.Add(txtHockey);
                 txtHockey.Location = new Point(posTxtX, posTxtY);
-                txtHockey.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -192,7 +190,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtRugby);
                 this.Controls.Add(txtRugby);
                 txtRugby.Location = new Point(posTxtX, posTxtY);
-                txtRugby.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -222,7 +219,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtTenis);
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(posTxtX, posTxtY);
-                txtTenis.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -251,7 +247,6 @@ namespace Sport1
                 listaTXTDeportes.Add(txtVoley);
                 this.Controls.Add(txtVoley);
                 txtVoley.Location = new Point(posTxtX, posTxtY);
-                txtVoley.Name += Convert.ToString(nom);
                 txt++;
                 posTxtY += 40;
                 nom++;
@@ -265,29 +260,11 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "UPDATE IngresarEstadisticas SET Estd = " + listaTXTDeportes[x].Text + " WHERE IdIngreEst = " + x;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd,IdCar) values ('" + Convert.ToInt32(listaTXTDeportes[0].Text) + "','" + listaTXTDeportes[0].Tag + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
 
-            }
-            while (d < 9)
-            {
-                connection.Open();
-                OleDbCommand info = new OleDbCommand();
-                info.CommandText = "SELECT Estd FROM IngresarEstadisticas WHERE IdIngreEst = 1";
-                info.Connection = connection;
-                info.ExecuteNonQuery();
-                connection.Close();
-            }
-            while (j < 9)
-            {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "UPDATE Estadisticas SET IdIngreEst WHERE IdEst 1";
-                command.ExecuteNonQuery();
-                connection.Close();
             }
         }
 
@@ -298,6 +275,7 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
+            string fecha = Convert.ToString(dia) + "/" + Convert.ToString(mes) + "/" + Convert.ToString(ano);
             OleDbCommand info;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
@@ -327,6 +305,7 @@ namespace Sport1
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
+
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1": dbBasket();
@@ -336,6 +315,21 @@ namespace Sport1
             formPerfil1 = formInicio.formPerfil1;
             formPerfil1.Show();
             this.Hide();
+        }
+
+        private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dia = cmbDiaBasket.SelectedIndex;
+        }
+
+        private void CmbMesBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mes = cmbMesBasket.SelectedIndex;
+        }
+
+        private void CmbAñoBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ano = cmbAñoBasket.SelectedIndex;
         }
     }
 }

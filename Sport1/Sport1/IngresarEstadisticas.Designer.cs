@@ -76,6 +76,7 @@
             this.cmbDiaBasket.Name = "cmbDiaBasket";
             this.cmbDiaBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbDiaBasket.TabIndex = 13;
+            this.cmbDiaBasket.SelectedIndexChanged += new System.EventHandler(this.CmbDiaBasket_SelectedIndexChanged);
             // 
             // lblFechaBasket
             // 
@@ -99,6 +100,7 @@
             this.cmbAñoBasket.Name = "cmbAñoBasket";
             this.cmbAñoBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbAñoBasket.TabIndex = 16;
+            this.cmbAñoBasket.SelectedIndexChanged += new System.EventHandler(this.CmbAñoBasket_SelectedIndexChanged);
             // 
             // lblBarra1
             // 
@@ -140,6 +142,7 @@
             this.cmbMesBasket.Name = "cmbMesBasket";
             this.cmbMesBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbMesBasket.TabIndex = 21;
+            this.cmbMesBasket.SelectedIndexChanged += new System.EventHandler(this.CmbMesBasket_SelectedIndexChanged);
             // 
             // btnIngresarEst
             // 
