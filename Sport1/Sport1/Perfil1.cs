@@ -50,14 +50,22 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-                /*lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
+                lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
-                lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
+                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0)
+                {
+                    lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
+                }
+                else
+                {
+                    lblEstBasket.Text = "0";
+                }
+
                 lbl++;
                 posLblY += 40;
-                posEstLblY += 40;*/
+                posEstLblY += 40;
             }
         }
 
@@ -171,13 +179,12 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + formInicio.pasarIdPerfil() + "'", connection);
+            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info2 = new OleDbCommand("Select Estd FROM IngresarEstadisticas", connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             da2.Fill(ds2, "IngresarEstadisticas");
-            MessageBox.Show(formInicio.pasarIdPerfil());
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":

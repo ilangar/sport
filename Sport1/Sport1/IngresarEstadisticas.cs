@@ -277,7 +277,7 @@ namespace Sport1
         {
             string fecha = Convert.ToString(dia) + "/" + Convert.ToString(mes) + "/" + Convert.ToString(ano);
             OleDbCommand info;
-            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + formInicio.idPerfil + "'" , connection);
+            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
           
             da.Fill(ds, "Perfil");
