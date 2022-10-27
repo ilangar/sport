@@ -36,6 +36,7 @@
             this.btnComenzar.BackColor = System.Drawing.Color.White;
             this.btnComenzar.BackgroundImage = global::Sport1.Properties.Resources.Botón__2_;
             this.btnComenzar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComenzar.FlatAppearance.BorderSize = 0;
             this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComenzar.ForeColor = System.Drawing.Color.Transparent;
@@ -53,7 +54,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1384, 786);
+            this.ClientSize = new System.Drawing.Size(1278, 718);
             this.ControlBox = false;
             this.Controls.Add(this.btnComenzar);
             this.DoubleBuffered = true;
