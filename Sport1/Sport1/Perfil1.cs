@@ -54,7 +54,7 @@ namespace Sport1
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
-                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0)
+                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0 && lbl < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                 {
                     lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
                 }

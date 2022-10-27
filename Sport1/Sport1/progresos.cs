@@ -43,7 +43,7 @@ namespace Sport1
             chartProgresos.Series.Add("Amonestaciones"); 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
-                estdProgresos.Add(Convert.ToInt32((ds.Tables["Estadisticas"].Rows[0][prog])));
+                estdProgresos.Add(Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows[0][prog])));
                 prog++;
             }
             prog = 0;
