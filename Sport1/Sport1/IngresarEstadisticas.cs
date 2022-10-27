@@ -59,6 +59,8 @@ namespace Sport1
                 posLblY += 40;
             }
         }
+
+
         public void txtBasket()
         {
             while (txt < 9)
@@ -68,7 +70,7 @@ namespace Sport1
                 this.Controls.Add(txtBasket);
                 txtBasket.Location = new Point(posTxtX, posTxtY);
                 txtBasket.Name += Convert.ToString(nom);
-                txtBasket.Tag = arrBask[txt];
+                txtBasket.Tag = arrBaskId[txt];
                 txt++;
                 posTxtY += 40;
                 nom++;

@@ -20,6 +20,7 @@ namespace Sport1
         int posTxtX = 150;
         int posTxtY = 114;
         int nom = 0;
+        Inicio formInicio;
 
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
@@ -328,7 +329,7 @@ namespace Sport1
         {
             formInicio = new Inicio();
             this.Hide();
-            formInicio.Show()
+            formInicio.Show();
         }
     }
 }
