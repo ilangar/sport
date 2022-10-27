@@ -255,12 +255,13 @@ namespace Sport1
 
         public void dbBasket()
         {
+            x = 0;
             while (x < 9)
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd,IdCar) values ('" + Convert.ToInt32(listaTXTDeportes[0].Text) + "','" + listaTXTDeportes[0].Tag + "')";
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, User) values ('"+ listaTXTDeportes[1].Text + "'" + "," + listaTXTDeportes[1].Tag + "'" + ","+ 0 + "'" + ")";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
