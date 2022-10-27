@@ -50,14 +50,14 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-                lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
+                /*lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
                 lbl++;
                 posLblY += 40;
-                posEstLblY += 40;
+                posEstLblY += 40;*/
             }
         }
 
