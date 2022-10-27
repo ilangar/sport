@@ -42,11 +42,12 @@
             legend1.Name = "Legend1";
             this.chartProgresos.Legends.Add(legend1);
             this.chartProgresos.Location = new System.Drawing.Point(33, 31);
-            this.chartProgresos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartProgresos.Margin = new System.Windows.Forms.Padding(2);
             this.chartProgresos.Name = "chartProgresos";
             this.chartProgresos.Size = new System.Drawing.Size(1178, 466);
             this.chartProgresos.TabIndex = 0;
             this.chartProgresos.Text = "chart1";
+            this.chartProgresos.Click += new System.EventHandler(this.chartProgresos_Click);
             // 
             // btnVolver
             // 

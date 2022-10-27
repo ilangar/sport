@@ -23,10 +23,17 @@ namespace Sport1
         int k = 0;
         public Perfil1 formPerfil1;
         public perfilEnt formPerfilEnt;
+        public Inicio formInicio;
         public string caller = "";
         string nomPerfil;
 
         DataSet ds = new DataSet();
+        public Form pasarFormInicio()
+        {
+            
+            formInicio = this;
+            return formInicio;
+        }
 
         public string pasarIdPerfil()
         {

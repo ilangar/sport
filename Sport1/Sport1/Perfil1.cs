@@ -177,6 +177,7 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             da2.Fill(ds2, "IngresarEstadisticas");
+            MessageBox.Show(formInicio.pasarIdPerfil());
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
