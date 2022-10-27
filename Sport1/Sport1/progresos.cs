@@ -227,6 +227,67 @@ namespace Sport1
                         chartProgresos.Series["Minutos jugados"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
                         break;
                     case 4:
+                        chartProgresos.Series["Pelotas perdidas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 5:
+                        chartProgresos.Series["Tirros fallados"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 6:
+                        chartProgresos.Series["Pelotas recuperadas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 7:
+                        chartProgresos.Series["Tarjetas verdes"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 8:
+                        chartProgresos.Series["Tarjetas amarillas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 9:
+                        chartProgresos.Series["Tarjetas rojas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+
+                }
+                x++;
+                prog++;
+                if (x == 10)
+                {
+                    x = 0;
+                }
+            }
+        }
+        public void progresosRugby()
+        {
+            chartProgresos.Series.Add("Tries");
+            chartProgresos.Series.Add("Tackles");
+            chartProgresos.Series.Add("Minutos jugados");
+            chartProgresos.Series.Add("Lines Jugados");
+            chartProgresos.Series.Add("Pelotas perdidas");
+            chartProgresos.Series.Add("Conversiones");
+            chartProgresos.Series.Add("Pelotas perdidas");
+            chartProgresos.Series.Add("Tiros fallados");
+            chartProgresos.Series.Add("Pelotas recuperadas");
+            while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
+            {
+                estdProgresos.Add(Convert.ToInt32((ds.Tables["Estadisticas"].Rows[0][prog])));
+                prog++;
+            }
+            prog = 0;
+            while (prog < estdProgresos.Count)
+            {
+                switch (x)
+                {
+                    case 0:
+                        chartProgresos.Series["Goles"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 1:
+                        chartProgresos.Series["Asistencias"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 2:
+                        chartProgresos.Series["Faltas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 3:
+                        chartProgresos.Series["Minutos jugados"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
+                        break;
+                    case 4:
                         chartProgresos.Series["Amonestaciones"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[2][prog]));
                         break;
                     case 5:
@@ -261,7 +322,7 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
-            info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE User ='" + formInicio.pasarIdPerfil() + "'", connection);
+            info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE User ='" + Program.idPerfil + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
