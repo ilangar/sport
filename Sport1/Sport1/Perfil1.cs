@@ -50,14 +50,14 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-                /*lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
+                lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
                 lbl++;
                 posLblY += 40;
-                posEstLblY += 40;*/
+                posEstLblY += 40;
             }
         }
 
@@ -177,7 +177,6 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             da2.Fill(ds2, "IngresarEstadisticas");
-            MessageBox.Show(Program.idPerfil);
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
