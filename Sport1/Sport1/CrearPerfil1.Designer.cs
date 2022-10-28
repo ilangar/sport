@@ -148,9 +148,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Sport1.Properties.Resources.Nombre___1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 285);
+            this.pictureBox1.Location = new System.Drawing.Point(130, 213);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(79, 25);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
