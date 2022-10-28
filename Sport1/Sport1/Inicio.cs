@@ -14,7 +14,8 @@ namespace Sport1
 {
     public partial class Inicio : Form
     {
-        int pos = 38;
+        int posX = 38;
+        int posY = 100;
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
@@ -104,13 +105,13 @@ namespace Sport1
 
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
-                while (k < 6 && k < ds.Tables["Perfil"].Rows.Count)
+                while (k < 5 && k < ds.Tables["Perfil"].Rows.Count)
                 {
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
-                    btnPerfil1.Location = new Point(pos, 150);
-                    pos += 100;
+                    btnPerfil1.Location = new Point(posX, posY);
+                    posX += 250;
                     btnPerfil1.Size = new Size(160, 70);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
                     btnPerfil1.Tag = x;
@@ -118,16 +119,17 @@ namespace Sport1
                     x++;
                     k++;
                 }
-                pos = 38;
-
-                while (k >= 6 && k < 12 && k < ds.Tables["Perfil"].Rows.Count)
+                posX = 38;
+                posY = 200;
+                    
+                while (k >= 5 && k < 10 && k < ds.Tables["Perfil"].Rows.Count)
                 {
 
                     Button btnPerfil1 = new Button();
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
-                    btnPerfil1.Location = new Point(pos, 240);
-                    pos += 3000;
+                    btnPerfil1.Location = new Point(posX, posY);
+                    posX += 250;
                     btnPerfil1.Size = new Size(160, 70);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
                     btnPerfil1.Tag = x;
@@ -137,10 +139,44 @@ namespace Sport1
                     k++;
                     
                 }
+                posX = 38;
+                posY = 300;
 
-                pos = 38;
+                while (k >= 10 && k < 15 && k < ds.Tables["Perfil"].Rows.Count)
+                {
 
-                //while
+                    Button btnPerfil1 = new Button();
+                    btnPerfil1.DialogResult = DialogResult.OK;
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
+                    btnPerfil1.Location = new Point(posX, posY);
+                    posX += 250;
+                    btnPerfil1.Size = new Size(160, 70);
+                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    btnPerfil1.Tag = x;
+                    Controls.Add(btnPerfil1);
+
+                    x++;
+                    k++;
+
+                }
+                posX = 38;
+                posY = 400;
+                while (k >= 10 && k < 15 && k < ds.Tables["Perfil"].Rows.Count)
+                {
+
+                    Button btnPerfil1 = new Button();
+                    btnPerfil1.DialogResult = DialogResult.OK;
+                    btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
+                    btnPerfil1.Location = new Point(posX, posY);
+                    posX += 250;
+                    btnPerfil1.Size = new Size(160, 70);
+                    btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
+                    btnPerfil1.Tag = x;
+                    Controls.Add(btnPerfil1);
+
+                    x++;
+                    k++;
+                }
             }
 
 

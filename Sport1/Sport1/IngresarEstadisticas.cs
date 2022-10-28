@@ -41,7 +41,7 @@ namespace Sport1
 
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas"  };
 
-        string[] arrRugby = new string[9] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas"};
+        string[] arrRugby = new string[9] { "Tries", "Tackles", "Minutos jugados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas"};
 
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres"};
 
@@ -255,16 +255,16 @@ namespace Sport1
 
         public void dbBasket()
         {
+            x = 0;
             while (x < 9)
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd,IdCar) values ('" + Convert.ToInt32(listaTXTDeportes[0].Text) + "','" + listaTXTDeportes[0].Tag + "')";
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd,IdCar,User,Fecha) values ('"+ listaTXTDeportes[1].Text + "','" + Convert.ToInt32(listaTXTDeportes[1].Tag) + "',"+ Convert.ToInt32(1) +")";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
-
             }
         }
 

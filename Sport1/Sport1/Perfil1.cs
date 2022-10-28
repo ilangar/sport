@@ -33,7 +33,7 @@ namespace Sport1
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrHand = new string[9] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Excluciones", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas" };
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas" };
-        string[] arrRugby = new string[9] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas" };
+        string[] arrRugby = new string[9] { "Tries", "Tackles", "Minutos jugados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas" };
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones", "Armados", "Bloqueos" };
         public void lblBasket()
@@ -54,7 +54,7 @@ namespace Sport1
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
-                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0)
+                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0 && lbl < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                 {
                     lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lbl][0]);
                 }
