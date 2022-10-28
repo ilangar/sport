@@ -244,5 +244,11 @@ namespace Sport1
             this.Hide();
             formProgresos.Show();
         }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            objetivos f3 = new objetivos();
+            f3.ShowDialog();
+        }
     }
 }
