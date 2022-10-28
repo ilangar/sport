@@ -29,6 +29,7 @@ namespace Sport1
         int dia;
         int mes;
         int ano;
+        string prueba = "a";
         Perfil1 formPerfil1;
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
@@ -262,7 +263,7 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "INSERT INTO IngresarEstadisticas (Estd , IdCar , User) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", " + 138 + ")";
+                string query = "insert into IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + Convert.ToInt32(listaTXTDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTDeportes[x].Tag) + ", '" + Program.idPerfil + "', '" + prueba + "')";
                 MessageBox.Show(query);
                 command.CommandText = query;
                 command.ExecuteNonQuery();
