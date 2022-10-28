@@ -314,16 +314,17 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
+
             
-            /*  connection.Open();
+              connection.Open();
               OleDbCommand command = new OleDbCommand();
               command.Connection = connection;
-              command.CommandText = "insert into Obj (idCar) values ('" + + "','" +  + "','" +  + "')";
+              command.CommandText = "INSERT INTO (FechaLimite) FROM Obj values ('" + cmbAñoBasket + "','" + cmbMesBasket + "','" + cmbAñoBasket + "')";
                   command.ExecuteNonQuery();
                   connection.Close();
                   this.Hide();
                   Inicio f2 = new Inicio();
-                  f2.ShowDialog();*/
+            f2.ShowDialog();
         }
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
@@ -331,6 +332,11 @@ namespace Sport1
             formInicio = new Inicio();
             this.Hide();
             formInicio.Show();
+        }
+
+        private void CmbMesBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
