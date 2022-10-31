@@ -262,7 +262,7 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + prueba + "')";
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + prueba + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
