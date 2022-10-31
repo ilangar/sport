@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Sport1
 {
@@ -40,43 +41,65 @@ namespace Sport1
             chartProgresos.Series.Add("Bloqueos");
             chartProgresos.Series.Add("Rebotes");
             chartProgresos.Series.Add("Pelotas recuperadas");
-            chartProgresos.Series.Add("Amonestaciones"); 
+            chartProgresos.Series.Add("Amonestaciones");
+            chartProgresos.Series["Puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Tiros fallados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Bloqueos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Rebotes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Amonestaciones"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Puntos"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Asistencias"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Faltas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Minutos jugados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Tiros fallados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Bloqueos"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Rebotes"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Amonestaciones"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
                 estdProgresos.Add(Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows[prog][0])));
                 prog++;
             }
             prog = 0;
+
             while (prog < estdProgresos.Count)
             {
                 switch(x)
                 {
-                    case 0: chartProgresos.Series["Puntos"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 0: chartProgresos.Series["Puntos"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]);
                         break;
-                    case 1: chartProgresos.Series["Asistencias"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 1: chartProgresos.Series["Asistencias"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]);
                         break;
-                    case 2: chartProgresos.Series["Faltas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 2: chartProgresos.Series["Faltas"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]);
                         break;
-                    case 3: chartProgresos.Series["Minutos jugados"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 3: chartProgresos.Series["Minutos jugados"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); 
                         break;
-                    case 4: chartProgresos.Series["Tiros fallados"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 4: chartProgresos.Series["Tiros fallados"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); ;
                         break;
-                    case 5: chartProgresos.Series["Bloqueos"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 5: chartProgresos.Series["Bloqueos"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); ;
                         break;
-                    case 6: chartProgresos.Series["Rebotes"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 6: chartProgresos.Series["Rebotes"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); ;
                         break;
-                    case 7: chartProgresos.Series["Pelotas recuperadas"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 7: chartProgresos.Series["Pelotas recuperadas"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); ;
                         break;
-                    case 8: chartProgresos.Series["Amonestaciones"].Points.AddXY(estdProgresos[prog], Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]));
+                    case 8: chartProgresos.Series["Amonestaciones"].Points.AddXY(Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[prog][2]), estdProgresos[prog]); ;
                         break;
 
                 }
                 x++;
+
                 prog++;
                 if (x==9)
                 {
                     x = 0;
                 }
+
             }
         }
 
@@ -426,9 +449,8 @@ namespace Sport1
             MessageBox.Show(Program.idPerfil);
             da.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
-            chartProgresos.Series.Add("Prueba");
-            chartProgresos.Series["Prueba"].Points.AddXY(2, 1);
-            /*switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
+
+            switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
             {
                 case "1": progresosBasket();
                     break;
@@ -444,7 +466,7 @@ namespace Sport1
                     break;
                 case "7": progresosVoley();
                     break;
-            }*/
+            }
 
 
 
