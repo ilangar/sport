@@ -251,8 +251,8 @@ namespace Sport1
             command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + "Mauro" + "'";
             OleDbDataReader reader = command.ExecuteReader();
 
-            reader.Read();
-            int Deporte = int.Parse(reader["Deporte"].ToString());
+           // reader.Read();
+            // int Deporte = int.Parse(reader["Deporte"].ToString());
 
             connection.Close();
             connection.Open();
@@ -314,14 +314,14 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-
             
-              connection.Open();
+            
+              
               OleDbCommand command = new OleDbCommand();
               command.Connection = connection;
-              command.CommandText = "INSERT INTO (FechaLimite) FROM Obj values ('" + cmbAñoBasket + "','" + cmbMesBasket + "','" + cmbAñoBasket + "')";
+            command.CommandText = "UPDATE Obj SET FechaLimite = " + cmbDiaBasket + cmbMesBasket + cmbAñoBasket + "WHERE IdObj =" + 1;
                   command.ExecuteNonQuery();
-                  connection.Close();
+                  
                   this.Hide();
                   Inicio f2 = new Inicio();
             f2.ShowDialog();
