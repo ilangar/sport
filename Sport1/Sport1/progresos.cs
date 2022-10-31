@@ -599,18 +599,8 @@ namespace Sport1
                         chartProgresos.Series["Recepciones"].Points.AddY(estdProgresos[prog]);
                         break;
                     case 5:
-                        chartProgresos.Series["Conversiones"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Armados"].Points.AddY(estdProgresos[prog]);
                         break;
-                    case 6:
-                        chartProgresos.Series["Pelotas recuperadas"].Points.AddY(estdProgresos[prog]);
-                        break;
-                    case 7:
-                        chartProgresos.Series["Tarjetas amarillas"].Points.AddY(estdProgresos[prog]);
-                        break;
-                    case 8:
-                        chartProgresos.Series["Tarjetasa rojas"].Points.AddY(estdProgresos[prog]);
-                        break;
-
                 }
 
                 x++;

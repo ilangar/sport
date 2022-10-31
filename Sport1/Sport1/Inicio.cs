@@ -102,7 +102,10 @@ namespace Sport1
 
             da.Fill(ds, "Perfil");
 
-
+            if(ds.Tables["Perfil"].Rows.Count == 0)
+            {
+                lblCrearPerfil.Visible = true;
+            }
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
                 while (k < 5 && k < ds.Tables["Perfil"].Rows.Count)
