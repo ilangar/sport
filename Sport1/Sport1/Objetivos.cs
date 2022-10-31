@@ -21,6 +21,9 @@ namespace Sport1
         int posTxtY = 114;
         int nom = 0;
         Inicio formInicio;
+        int dia;
+        int mes;
+        int ano;
 
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
@@ -314,13 +317,12 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-            
-            
-              
-              OleDbCommand command = new OleDbCommand();
+            string fecha = Convert.ToString(dia) + "/" + Convert.ToString(mes) + "/" + Convert.ToString(ano);
+
+            OleDbCommand command = new OleDbCommand();
               command.Connection = connection;
-            command.CommandText = "UPDATE Obj SET FechaLimite = " + cmbDiaBasket + cmbMesBasket + cmbAñoBasket + "WHERE IdObj =" + 1;
-                  command.ExecuteNonQuery();
+            command.CommandText = "INSERT INTO (FechaLimite) FROM Obj VALUES ('" + fecha + "')";
+                 
                   
                   this.Hide();
                   Inicio f2 = new Inicio();
@@ -336,7 +338,22 @@ namespace Sport1
 
         private void CmbMesBasket_SelectedIndexChanged(object sender, EventArgs e)
         {
+            mes = cmbMesBasket.SelectedIndex;
+        }
 
+        private void LblFechaBasket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dia = cmbDiaBasket.SelectedIndex;
+        }
+
+        private void CmbAñoBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ano = cmbAñoBasket.SelectedIndex;
         }
     }
 }
