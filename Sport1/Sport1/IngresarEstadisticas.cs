@@ -77,8 +77,7 @@ namespace Sport1
                 txtBasket.Tag = arrBaskId[txt];
                 txt++;
                 posTxtY += 40;
-                txtBasket.Tag = x;
-                x++;
+                
             }
 
         }
@@ -108,7 +107,6 @@ namespace Sport1
                 txtFutbol.Tag = arrFutId[txt];
                 txt++;
                 posTxtY += 40;
-                txtFutbol.Tag = x;
                 x++;
             }
         }
@@ -259,7 +257,6 @@ namespace Sport1
 
         public void dbBasket()
         {
-            x = 0;
             while (x < 9)
             {
                 connection.Open();
@@ -293,7 +290,7 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
-            fecha = dia + "/" + mes + "/" + ano;
+
             OleDbCommand info;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
@@ -323,7 +320,7 @@ namespace Sport1
 
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
-
+            fecha = dia + "/" + mes + "/" + ano;
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1": dbBasket();
