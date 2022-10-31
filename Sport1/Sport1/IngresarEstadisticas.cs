@@ -26,9 +26,10 @@ namespace Sport1
         int x = 0;
         int d = 0;
         int j = 0;
-        int dia;
-        int mes;
-        int ano;
+        string dia;
+        string mes;
+        string ano;
+        string fecha;
         string prueba = "a";
         Perfil1 formPerfil1;
         public Inicio formInicio;
@@ -262,7 +263,7 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + prueba + "')";
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
@@ -276,7 +277,7 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
-            string fecha = Convert.ToString(dia) + "/" + Convert.ToString(mes) + "/" + Convert.ToString(ano);
+            fecha = dia + "/" + mes + "/" + ano;
             OleDbCommand info;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'" , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
@@ -320,17 +321,17 @@ namespace Sport1
 
         private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dia = cmbDiaBasket.SelectedIndex;
+            dia = cmbDiaBasket.Text;
         }
 
         private void CmbMesBasket_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mes = cmbMesBasket.SelectedIndex;
+            mes = cmbMesBasket.Text;
         }
 
         private void CmbAñoBasket_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ano = cmbAñoBasket.SelectedIndex;
+            ano = cmbAñoBasket.Text;
         }
     }
 }
