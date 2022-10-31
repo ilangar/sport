@@ -624,11 +624,11 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
-            info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE User ='" + Convert.ToString(Program.idPerfil) + "'", connection);
+            info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            OleDbDataAdapter da = new OleDbDataAdapter(info);
+            OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
-            da.Fill(ds, "IngresarEstadisticas");
+            da1.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
 
             switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
