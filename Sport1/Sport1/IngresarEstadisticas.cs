@@ -259,13 +259,10 @@ namespace Sport1
             x = 0;
             while (x < 9)
             {
-                MessageBox.Show(x.ToString());
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                string query = "insert into IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + Convert.ToInt32(listaTXTDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTDeportes[x].Tag) + ", '" + Program.idPerfil + "', '" + prueba + "')";
-                MessageBox.Show(query);
-                command.CommandText = query;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + prueba + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
