@@ -38,7 +38,7 @@ namespace Sport1
         string[] arrBaskId = new string[9] { "1", "2", "3", "4", "5", "6", "7", "10", "11" };
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
-
+        string[] arrFutId = new string[8] { "2", "3", "4", "5", "8", "9", "10", "11" };
         string[] arrHand = new string[9] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Excluciones", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas" };
 
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas" };
@@ -105,9 +105,11 @@ namespace Sport1
                 listaTXTDeportes.Add(txtFutbol);
                 this.Controls.Add(txtFutbol);
                 txtFutbol.Location = new Point(posTxtX, posTxtY);
+                txtFutbol.Tag = arrFutId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
+                txtFutbol.Tag = x;
+                x++;
             }
         }
 
@@ -263,7 +265,21 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, User, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbFutbol()
+        {
+            x = 0;
+            while (x < 8)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
@@ -311,6 +327,8 @@ namespace Sport1
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1": dbBasket();
+                    break;
+                case "2": dbFutbol();
                     break;
             }
 
