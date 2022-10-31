@@ -628,7 +628,6 @@ namespace Sport1
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
-            MessageBox.Show(Program.idPerfil);
             da.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
 
