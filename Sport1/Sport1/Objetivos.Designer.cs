@@ -95,7 +95,6 @@
             this.cmbMesBasket.Name = "cmbMesBasket";
             this.cmbMesBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbMesBasket.TabIndex = 27;
-            this.cmbMesBasket.SelectedIndexChanged += new System.EventHandler(this.CmbMesBasket_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -130,7 +129,6 @@
             this.cmbAñoBasket.Name = "cmbAñoBasket";
             this.cmbAñoBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbAñoBasket.TabIndex = 24;
-            this.cmbAñoBasket.SelectedIndexChanged += new System.EventHandler(this.CmbAñoBasket_SelectedIndexChanged);
             // 
             // lblFechaBasket
             // 
@@ -140,7 +138,6 @@
             this.lblFechaBasket.Size = new System.Drawing.Size(63, 13);
             this.lblFechaBasket.TabIndex = 23;
             this.lblFechaBasket.Text = "Fecha limite";
-            this.lblFechaBasket.Click += new System.EventHandler(this.LblFechaBasket_Click);
             // 
             // cmbDiaBasket
             // 
@@ -181,7 +178,6 @@
             this.cmbDiaBasket.Name = "cmbDiaBasket";
             this.cmbDiaBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbDiaBasket.TabIndex = 22;
-            this.cmbDiaBasket.SelectedIndexChanged += new System.EventHandler(this.CmbDiaBasket_SelectedIndexChanged);
             // 
             // Objetivos
             // 

@@ -140,5 +140,5 @@ C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Spor
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.perfilEnt.resources
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.SuggestedBindingRedirects.cache
-C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.dbObjFutbol.resources
 C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.Objetivos.resources
+C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.Objetivos.resources

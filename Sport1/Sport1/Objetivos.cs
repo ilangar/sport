@@ -248,13 +248,12 @@ namespace Sport1
         {
             while (x < 6)
             {
-                connection.Open();
+                
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "', '" +FechaLimite +"')";
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "')";
                 command.ExecuteNonQuery();
                 connection.Close();
-                x++;
             }
         }
         public void dbObjeFutbol()
@@ -265,7 +264,7 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + "')";
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag +" , '" + Program.idPerfil + "')";
                 command.ExecuteNonQuery();
             }
         }
