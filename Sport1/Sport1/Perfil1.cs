@@ -50,20 +50,15 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-
                 lbl++;
                 posLblY += 40;
-                posEstLblY += 40;
-            }
-            while (lblEst < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
-            {
                 Label lblEstBasket = new Label();
                 this.Controls.Add(lblEstBasket);
                 lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
-                { }
+
                 if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0 && lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                 {
                     lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
@@ -72,8 +67,10 @@ namespace Sport1
                 {
                     lblEstBasket.Text = "0";
                 }
-
+                posEstLblY += 40;
+                lblEst++;
             }
+            
         }
 
 

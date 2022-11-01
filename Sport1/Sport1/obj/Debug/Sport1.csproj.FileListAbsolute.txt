@@ -65,7 +65,6 @@ C:\Users\47575158\Desktop\Proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.objetivo
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.exe.config
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.exe
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\bin\Debug\Sport1.pdb
-C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.objetivos.resources
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\bin\Debug\Sport1.exe.config
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\bin\Debug\Sport1.exe
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\bin\Debug\Sport1.pdb
@@ -142,3 +141,4 @@ C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Spor
 C:\Users\Lucas Behrend\Desktop\sport proyecto\sport\Sport1\Sport1\obj\Debug\Sport1.progresos.resources
 D:\Escritorio\sport\Sport1\Sport1\obj\Debug\Sport1.csproj.SuggestedBindingRedirects.cache
 C:\Users\47572434\Desktop\Sport 1\Proyecto sport\sport\Sport1\Sport1\obj\Debug\Sport1.dbObjFutbol.resources
+C:\Users\47494202\Desktop\SPORT_1\sport\Sport1\Sport1\obj\Debug\Sport1.dbObjFutbol.resources
