@@ -15,11 +15,11 @@ namespace Sport1
     public partial class dbObjFutbol : Form
     {
         int lbl = 0;
-        int posLblX = 50;
-        int posLblY = 114;
         int txt = 0;
-        int posTxtX = 150;
-        int posTxtY = 200;
+        int posLblY = 120;
+        int posLblX = 90;
+        int posTxtY = 120;
+        int posTxtX = 250;
         int nom = 0;
         Inicio formInicio;
         int x = 0;
