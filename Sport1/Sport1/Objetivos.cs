@@ -28,6 +28,7 @@ namespace Sport1
         int ano;
         string FechaLimite;
         Perfil1 formPerfil1;
+        DataSet ds = new DataSet();
         List<TextBox> listaTXTObjDeportes = new List<TextBox>();
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjBaskid = new string[6] { "1", "2", "3", "4", "7", "10" };
@@ -60,6 +61,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjBasket = new TextBox();
+                this.Controls.Add(txtObjBasket);
                 listaTXTObjDeportes.Add(txtObjBasket);
                 txtObjBasket.Location = new Point(posTxtX, posTxtY);
                 txtObjBasket.Tag = arrObjBaskid[txt];
@@ -85,8 +87,10 @@ namespace Sport1
         public void txtObjFutbol()
         {
             while (txt < 6)
-            {
+            { 
+
                 TextBox txtObjFutbol = new TextBox();
+                this.Controls.Add(txtObjFutbol);
                 listaTXTObjDeportes.Add(txtObjFutbol);
                 txtObjFutbol.Location = new Point(posTxtX, posTxtY);
                 txt++;
@@ -109,11 +113,12 @@ namespace Sport1
             }
         }
 
-        public void txtObjHandball()
+        public void txtObjHand()
         {
             while (txt < 7)
             {
                 TextBox txtObjHand = new TextBox();
+                this.Controls.Add(txtObjHand);
                 listaTXTObjDeportes.Add(txtObjHand);
                 txtObjHand.Location = new Point(posTxtX, posTxtY);
                 txtObjHand.Name += Convert.ToString(nom);
@@ -142,6 +147,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjHockey = new TextBox();
+                this.Controls.Add(txtObjHockey);
                 listaTXTObjDeportes.Add(txtObjHockey);
                 txtObjHockey.Location = new Point(posTxtX, posTxtY);
                 txtObjHockey.Name += Convert.ToString(nom);
@@ -170,6 +176,7 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtObjRugby = new TextBox();
+                this.Controls.Add(txtObjRugby);
                 listaTXTObjDeportes.Add(txtObjRugby);
                 txtObjRugby.Location = new Point(posTxtX, posTxtY);
                 txtObjRugby.Name += Convert.ToString(nom);
@@ -198,6 +205,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjTenis = new TextBox();
+                this.Controls.Add(txtObjTenis);
                 listaTXTObjDeportes.Add(txtObjTenis);
                 txtObjTenis.Location = new Point(posTxtX, posTxtY);
                 txtObjTenis.Name += Convert.ToString(nom);
@@ -226,6 +234,7 @@ namespace Sport1
             while (txt < 7)
             {
                 TextBox txtObjVoley = new TextBox();
+                this.Controls.Add(txtObjVoley);
                 listaTXTObjDeportes.Add(txtObjVoley);
                 txtObjVoley.Location = new Point(posTxtX, posTxtY);
                 txtObjVoley.Name += Convert.ToString(nom);
@@ -256,7 +265,7 @@ namespace Sport1
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + FechaLimite + "')";
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + "')";
                 command.ExecuteNonQuery();
             }
         }
@@ -280,7 +289,6 @@ namespace Sport1
         private void Objfutbol_Load(object sender, EventArgs e)
         {
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
-
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
@@ -296,7 +304,6 @@ namespace Sport1
             OleDbCommand info;
             info = new OleDbCommand("Select Deporte FROM Perfil", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-            DataSet ds = new DataSet();
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
 
@@ -309,7 +316,7 @@ namespace Sport1
                     lblObjFutbol(); txtObjFutbol();
                     break;
                 case "3":
-                    lblObjHandball(); txtObjHandball();
+                    lblObjHandball(); txtObjHand();
                     break;
                 case "4":
                     lblObjHockey(); txtObjHockey();
@@ -350,36 +357,29 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-
+            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            {
+                case "1":
+                    dbObjBasket();
+                    break;
+                case "2":
+                    dbObjeFutbol();
+                    break;
+            }
+            formPerfil1 = new Perfil1();
+            this.Hide();
+            formPerfil1.Show();
         }
 
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
         {
-            formInicio = new Inicio();
+            formPerfil1 = new Perfil1();
             this.Hide();
-            formInicio.Show();
+            formPerfil1.Show();
         }
 
-        private void CmbMesBasket_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            mes = cmbMesBasket.SelectedIndex;
-        }
-
-        private void LblFechaBasket_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            dia = cmbDiaBasket.SelectedIndex;
-        }
-
-        private void CmbAñoBasket_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ano = cmbAñoBasket.SelectedIndex;
-        }
+        
     }
 }
     
