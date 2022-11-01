@@ -12,7 +12,7 @@ using System.Security.Cryptography;
 
 namespace Sport1
 {
-    public partial class dbObjFutbol : Form
+    public partial class Objetivos : Form
     {
         int lbl = 0;
         int txt = 0;
@@ -262,7 +262,7 @@ namespace Sport1
         }
 
         private OleDbConnection connection = new OleDbConnection();
-        public dbObjFutbol()
+        public Objetivos()
         {
             InitializeComponent();
         }

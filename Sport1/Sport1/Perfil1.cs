@@ -253,7 +253,8 @@ namespace Sport1
         private void Button1_Click_1(object sender, EventArgs e)
         {
             Objetivos formObj = new Objetivos();
-            f3.ShowDialog();
+            formObj.Show();
+            this.Hide();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Sport1
 {
-    partial class dbObjFutbol
+    partial class Objetivos
     {
         /// <summary>
         /// Required designer variable.
@@ -183,7 +183,7 @@
             this.cmbDiaBasket.TabIndex = 22;
             this.cmbDiaBasket.SelectedIndexChanged += new System.EventHandler(this.CmbDiaBasket_SelectedIndexChanged);
             // 
-            // objetivos
+            // Objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +197,7 @@
             this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.lblObj);
             this.Controls.Add(this.btnguardar);
-            this.Name = "objetivos";
+            this.Name = "Objetivos";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Objfutbol_Load);
             this.ResumeLayout(false);
