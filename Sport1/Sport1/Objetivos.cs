@@ -317,7 +317,15 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-           
+            {
+                OleDbConnection con = new OleDbConnection(@ "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\HP\Desktop\DS Project.mdb");
+                OleDbCommand cmd = con.CreateCommand();
+                con.Open();
+                cmd.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values('" + textBox1.Text + "')";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Submitted", "Congrats");
+                con.Close();
+            }
         }
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
