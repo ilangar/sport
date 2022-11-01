@@ -137,9 +137,9 @@
             this.lblFechaBasket.AutoSize = true;
             this.lblFechaBasket.Location = new System.Drawing.Point(239, 46);
             this.lblFechaBasket.Name = "lblFechaBasket";
-            this.lblFechaBasket.Size = new System.Drawing.Size(37, 13);
+            this.lblFechaBasket.Size = new System.Drawing.Size(63, 13);
             this.lblFechaBasket.TabIndex = 23;
-            this.lblFechaBasket.Text = "Fecha";
+            this.lblFechaBasket.Text = "Fecha limite";
             this.lblFechaBasket.Click += new System.EventHandler(this.LblFechaBasket_Click);
             // 
             // cmbDiaBasket
