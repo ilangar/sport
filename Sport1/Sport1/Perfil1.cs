@@ -20,6 +20,7 @@ namespace Sport1
         public IngresarEstadisticas formIngrEst = new IngresarEstadisticas();
         public perfilEnt formPerfilEnt;
         public progresos formProgresos;
+        public Objetivos formObj;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
@@ -251,7 +252,7 @@ namespace Sport1
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            dbObjFutbol f3 = new dbObjFutbol();
+            Objetivos formObj = new Objetivos();
             f3.ShowDialog();
         }
     }
