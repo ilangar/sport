@@ -1,6 +1,6 @@
 ﻿namespace Sport1
 {
-    partial class objetivos
+    partial class dbObjFutbol
     {
         /// <summary>
         /// Required designer variable.

@@ -253,7 +253,7 @@ namespace Sport1
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            objetivos f3 = new objetivos();
+            dbObjFutbol f3 = new dbObjFutbol();
             f3.ShowDialog();
         }
     }

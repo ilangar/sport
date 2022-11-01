@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace Sport1
 {
-    public partial class objetivos : Form
+    public partial class dbObjFutbol : Form
     {
         int lbl = 0;
         int posLblX = 50;
@@ -21,12 +22,17 @@ namespace Sport1
         int posTxtY = 200;
         int nom = 0;
         Inicio formInicio;
+        int x = 0;
         int dia;
         int mes;
         int ano;
-
+        string FechaLimite;
+        Perfil1 formPerfil1;
+        List<TextBox> listaTXTObjDeportes = new List<TextBox>();
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
+        string[] arrObjBaskid = new string[6] { "1", "2", "3", "4", "7", "10" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
+        string[] arrObjFutid= new string[6] { "2", "3", "4", "5", "8","11" };
         string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
         string[] arrObjHock = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Pelotas recuperadas" };
         string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
@@ -54,8 +60,9 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjBasket = new TextBox();
-                this.Controls.Add(txtObjBasket);
+                listaTXTObjDeportes.Add(txtObjBasket);
                 txtObjBasket.Location = new Point(posTxtX, posTxtY);
+                txtObjBasket.Tag = arrObjBaskid[txt];
                 txt++;
                 posTxtY += 40;
             }
@@ -70,7 +77,7 @@ namespace Sport1
                 lblObjFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblObjFutbol.AutoSize = true;
                 lblObjFutbol.TextAlign = ContentAlignment.MiddleCenter;
-                lblObjFutbol.Text = arrObjFut[lbl];
+                lblObjFutbol.Text = arrObjFutid[lbl];
                 lbl++;
                 posLblY += 40;
             }
@@ -80,7 +87,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjFutbol = new TextBox();
-                this.Controls.Add(txtObjFutbol);
+                listaTXTObjDeportes.Add(txtObjFutbol);
                 txtObjFutbol.Location = new Point(posTxtX, posTxtY);
                 txt++;
                 posTxtY += 40;
@@ -107,7 +114,7 @@ namespace Sport1
             while (txt < 7)
             {
                 TextBox txtObjHand = new TextBox();
-                this.Controls.Add(txtObjHand);
+                listaTXTObjDeportes.Add(txtObjHand);
                 txtObjHand.Location = new Point(posTxtX, posTxtY);
                 txtObjHand.Name += Convert.ToString(nom);
                 txt++;
@@ -135,7 +142,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjHockey = new TextBox();
-                this.Controls.Add(txtObjHockey);
+                listaTXTObjDeportes.Add(txtObjHockey);
                 txtObjHockey.Location = new Point(posTxtX, posTxtY);
                 txtObjHockey.Name += Convert.ToString(nom);
                 txt++;
@@ -163,7 +170,7 @@ namespace Sport1
             while (txt < 9)
             {
                 TextBox txtObjRugby = new TextBox();
-                this.Controls.Add(txtObjRugby);
+                listaTXTObjDeportes.Add(txtObjRugby);
                 txtObjRugby.Location = new Point(posTxtX, posTxtY);
                 txtObjRugby.Name += Convert.ToString(nom);
                 txt++;
@@ -191,7 +198,7 @@ namespace Sport1
             while (txt < 6)
             {
                 TextBox txtObjTenis = new TextBox();
-                this.Controls.Add(txtObjTenis);
+                listaTXTObjDeportes.Add(txtObjTenis);
                 txtObjTenis.Location = new Point(posTxtX, posTxtY);
                 txtObjTenis.Name += Convert.ToString(nom);
                 txt++;
@@ -219,7 +226,7 @@ namespace Sport1
             while (txt < 7)
             {
                 TextBox txtObjVoley = new TextBox();
-                this.Controls.Add(txtObjVoley);
+                listaTXTObjDeportes.Add(txtObjVoley);
                 txtObjVoley.Location = new Point(posTxtX, posTxtY);
                 txtObjVoley.Name += Convert.ToString(nom);
                 txt++;
@@ -227,9 +234,35 @@ namespace Sport1
                 nom++;
             }
         }
+         
+        public void dbObjBasket()
+        {
+            while (x < 6)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "', '" +FechaLimite +"')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbObjeFutbol()
+        {
+            x = 0;
+            while (x < 6)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + FechaLimite + "')";
+                command.ExecuteNonQuery();
+            }
+        }
 
         private OleDbConnection connection = new OleDbConnection();
-        public objetivos()
+        public dbObjFutbol()
         {
             InitializeComponent();
         }
@@ -317,16 +350,9 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-            {
-                OleDbConnection con = new OleDbConnection(@ "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\HP\Desktop\DS Project.mdb");
-                OleDbCommand cmd = con.CreateCommand();
-                con.Open();
-                cmd.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per, FechaLimite) values('" + textBox1.Text + "')";
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Submitted", "Congrats");
-                con.Close();
-            }
+
         }
+
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
         {
