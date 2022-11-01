@@ -18,7 +18,7 @@ namespace Sport1
         int posLblY = 114;
         int txt = 0;
         int posTxtX = 150;
-        int posTxtY = 114;
+        int posTxtY = 200;
         int nom = 0;
         Inicio formInicio;
         int dia;
@@ -317,16 +317,7 @@ namespace Sport1
 
         private void Btnguardar_Click(object sender, EventArgs e)
         {
-            string fecha = Convert.ToString(dia) + "/" + Convert.ToString(mes) + "/" + Convert.ToString(ano);
-
-            OleDbCommand command = new OleDbCommand();
-              command.Connection = connection;
-            command.CommandText = "INSERT INTO (FechaLimite) FROM Obj VALUES ('" + fecha + "')";
-                 
-                  
-                  this.Hide();
-                  Inicio f2 = new Inicio();
-            f2.ShowDialog();
+           
         }
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)
