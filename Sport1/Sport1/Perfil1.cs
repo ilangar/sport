@@ -42,6 +42,12 @@ namespace Sport1
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones", "Armados", "Bloqueos" };
         int[] estBask = new int[9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int[] estFut = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0, };
+        int[] estHand = new int[9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int[] estHockey = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int[] estRugby = new int[9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        int[] estTenis = new int[6] { 0, 0, 0, 0, 0, 0 };
+        int[] estVoley= new int[7] { 0, 0, 0, 0, 0, 0, 0 };
         public void lblBasket()
         {
             while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
@@ -76,9 +82,14 @@ namespace Sport1
         }
 
 
-        
+
         public void lblFutbol()
         {
+            while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+            {
+                estFut[lblEst % estFut.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                lblEst++;
+            }
             while (lbl < 8)
             {
                 Label lblFutbol = new Label();
@@ -88,14 +99,27 @@ namespace Sport1
                 lblFutbol.AutoSize = true;
                 lblFutbol.TextAlign = ContentAlignment.MiddleCenter;
                 lblFutbol.Text = arrFut[lbl];
-                lbl++;
                 posLblY += 40;
+                Label lblEstFutbol = new Label();
+                this.Controls.Add(lblEstFutbol);
+                lblEstFutbol.Location = new Point(posEstLblX, posEstLblY);
+                lblEstFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstFutbol.AutoSize = true;
+                lblEstFutbol.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstFutbol.Text = Convert.ToString(estFut[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
 
         public void lblHandball()
         {
+            while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+            {
+                estHand[lblEst % estHand.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                lblEst++;
+            }
             while (lbl < 9)
             {
                 Label lblHandball = new Label();
@@ -107,6 +131,15 @@ namespace Sport1
                 lblHandball.Text = arrHand[lbl];
                 lbl++;
                 posLblY += 40;
+                Label lblEstHand = new Label();
+                this.Controls.Add(lblEstHand);
+                lblEstHand.Location = new Point(posEstLblX, posEstLblY);
+                lblEstHand.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHand.AutoSize = true;
+                lblEstHand.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstHand.Text = Convert.ToString(estHand[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
@@ -114,6 +147,11 @@ namespace Sport1
         {
             while (lbl < 10)
             {
+                while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+                {
+                    estHockey[lblEst % estHockey.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                    lblEst++;
+                }
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
                 lblHockey.Location = new Point(posLblX, posLblY);
@@ -121,14 +159,27 @@ namespace Sport1
                 lblHockey.AutoSize = true;
                 lblHockey.TextAlign = ContentAlignment.MiddleCenter;
                 lblHockey.Text = arrHock[lbl];
-                lbl++;
                 posLblY += 40;
+                Label lblEstHockey = new Label();
+                this.Controls.Add(lblEstHockey);
+                lblEstHockey.Location = new Point(posEstLblX, posEstLblY);
+                lblEstHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHockey.AutoSize = true;
+                lblEstHockey.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstHockey.Text = Convert.ToString(estHockey[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
 
         public void lblRugby()
         {
+            while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+            {
+                estRugby[lblEst % estRugby.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                lblEst++;
+            }
             while (lbl < 9)
             {
                 Label lblRugby = new Label();
@@ -138,13 +189,26 @@ namespace Sport1
                 lblRugby.AutoSize = true;
                 lblRugby.TextAlign = ContentAlignment.MiddleCenter;
                 lblRugby.Text = arrRugby[lbl];
-                lbl++;
                 posLblY += 40;
+                Label lblEstRugby = new Label();
+                this.Controls.Add(lblEstRugby);
+                lblEstRugby.Location = new Point(posEstLblX, posEstLblY);
+                lblEstRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstRugby.AutoSize = true;
+                lblEstRugby.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstRugby.Text = Convert.ToString(estRugby[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
         public void lblTenis()
         {
+            while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+            {
+                estTenis[lblEst % estTenis.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                lblEst++;
+            }
             while (lbl < 6)
             {
                 Label lblTenis = new Label();
@@ -154,13 +218,26 @@ namespace Sport1
                 lblTenis.AutoSize = true;
                 lblTenis.TextAlign = ContentAlignment.MiddleCenter;
                 lblTenis.Text = arrTenis[lbl];
-                lbl++;
                 posLblY += 40;
+                Label lblEstTenis = new Label();
+                this.Controls.Add(lblEstTenis);
+                lblEstTenis.Location = new Point(posEstLblX, posEstLblY);
+                lblEstTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstTenis.AutoSize = true;
+                lblEstTenis.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstTenis.Text = Convert.ToString(estTenis[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
         public void lblVoley()
         {
+            while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+            {
+                estVoley[lblEst % estVoley.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
+                lblEst++;
+            }
             while (lbl < 7)
             {
                 Label lblVoley = new Label();
@@ -170,8 +247,16 @@ namespace Sport1
                 lblVoley.AutoSize = true;
                 lblVoley.TextAlign = ContentAlignment.MiddleCenter;
                 lblVoley.Text = arrVoley[lbl];
-                lbl++;
                 posLblY += 40;
+                Label lblEstVoley = new Label();
+                this.Controls.Add(lblEstVoley);
+                lblEstVoley.Location = new Point(posEstLblX, posEstLblY);
+                lblEstVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstVoley.AutoSize = true;
+                lblEstVoley.TextAlign = ContentAlignment.MiddleCenter;
+                lblEstVoley.Text = Convert.ToString(estVoley[lbl]);
+                lbl++;
+                posEstLblY += 40;
             }
         }
 
