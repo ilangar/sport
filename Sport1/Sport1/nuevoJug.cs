@@ -14,14 +14,14 @@ namespace Sport1
     public partial class nuevoJug : Form
     {
         public string nombre;
-        string i = "";
-        OleDbConnection connection = new OleDbConnection();
         perfilEnt formPerfilEnt;
-        public nuevoJug(string caller)
+        OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
+        DataSet ds = new DataSet();
+        string deporte;
+        public nuevoJug()
         {
             InitializeComponent();
-            i = caller ;
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+
         }
 
         private void BtnNuevoJug_Click(object sender, EventArgs e)
@@ -29,12 +29,12 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte) values ('" + nombre + "','" +  + "')";
+            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte) values ('" + nombre + "','" + deporte +"')";
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();
-            Inicio f2 = new Inicio();
-            f2.ShowDialog();
+            Inicio formInicio = new Inicio();
+            formInicio.Show();
 
             formPerfilEnt = new perfilEnt();
             this.Hide();
@@ -51,6 +51,11 @@ namespace Sport1
         private void NuevoJug_Load(object sender, EventArgs e)
         {
 
+            OleDbCommand info;
+            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
+            OleDbDataAdapter da = new OleDbDataAdapter(info);
+            da.Fill(ds, "Perfil");
+            deporte = Convert.ToString(ds.Tables["Perfil"].Rows[0][0]);
         }
 
         private void TxtNomJug_TextChanged(object sender, EventArgs e)
