@@ -20,7 +20,7 @@ namespace Sport1
         DataSet ds = new DataSet();
         int k = 0;
         int pos = 38;
-        public string idPerfil;
+        //public string idPerfil;
 
         public perfilEnt()
         {
@@ -29,14 +29,14 @@ namespace Sport1
 
         private void click_btn_jugador(object sender, EventArgs e)
         {
-            idPerfil = ((Button)sender).Text;
+            Program.idPerfil = ((Button)sender).Text;
             Perfil1 formPerfil1 = new Perfil1();
             this.Hide();
             formPerfil1.Show();
         }
         public string entIdPerfil()
         {
-            return idPerfil;
+            return Program.idPerfil;
         }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {

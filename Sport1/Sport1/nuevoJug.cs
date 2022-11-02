@@ -14,6 +14,7 @@ namespace Sport1
     public partial class nuevoJug : Form
     {
         public string nombre;
+        string deporte;
         perfilEnt formPerfilEnt;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
@@ -28,7 +29,7 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, NomEnt) values ('" + txtNomJug.Text + "','" + deporte + "','" + Program.idPerfil + "')";
+            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, IdEnt) values ('" + txtNomJug.Text + "','" + deporte + "'," + Program.idUser + ")";
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();
@@ -56,11 +57,6 @@ namespace Sport1
         private void TxtNomJug_TextChanged(object sender, EventArgs e)
         {
             nombre = txtNomJug.Text;
-        }
-
-        private void NuevoJug_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

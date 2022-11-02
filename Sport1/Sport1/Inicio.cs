@@ -68,8 +68,10 @@ namespace Sport1
         {
             Button btn = (Button)sender;
             Program.idPerfil = btn.Text;
-             
-            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32((btn.Tag)))][2])) == 2)
+            Program.idUser = ds.Tables["Perfil"].Rows[Convert.ToInt32(btn.Tag)][0];
+
+
+            if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[Convert.ToInt32(btn.Tag)][2])) == 2)
             {
                 formPerfil1 = new Perfil1();
                 formPerfil1.formInicio = this;
