@@ -31,6 +31,7 @@ namespace Sport1
         int posLblY = 70;
         int posEstLblX = 250;
         int posEstLblY = 70;
+        int car = 0;
         int puntos, asist, faltas, minJug, tirFal, bloq, rebotes, pelRec, amon = 0;
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
@@ -53,24 +54,59 @@ namespace Sport1
                 lblBasket.Text = arrBask[lbl];
                 lbl++;
                 posLblY += 40;
+
                 Label lblEstBasket = new Label();
                 this.Controls.Add(lblEstBasket);
                 lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
+
                 while (lbl < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                 {
+                    switch (Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]))
+                    {
+                        case 1:
+                            puntos += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(puntos);
+                            break;
+                        case 2:
+                            asist += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(asist);
+                            break;
+                        case 3:
+                            faltas += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(faltas);
+                            break;
+                        case 4:
+                            minJug += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(minJug);
+                            break;
+                        case 5:
+                            tirFal += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(tirFal);
+                            break;
+                        case 6:
+                            bloq += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(bloq);
+                            break;
+                        case 7:
+                            rebotes += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(rebotes);
+                            break;
+                        case 10:
+                            pelRec += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(pelRec);
+                            break;
+                        case 11: 
+                            amon += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                            lblEstBasket.Text = Convert.ToString(amon);
+                            break;
+                    }
 
+                   
                 }
-                if (ds2.Tables["IngresarEstadisticas"].Rows.Count > 0 && lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
-                {
-                    lblEstBasket.Text = Convert.ToString(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][0]);
-                }
-                else
-                {
-                    lblEstBasket.Text = "0";
-                }
+
                 posEstLblY += 40;
                 lblEst++;
             }
@@ -188,7 +224,7 @@ namespace Sport1
             OleDbCommand info;
             OleDbCommand info2;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            info2 = new OleDbCommand("SELECT Estd FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
+            info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
