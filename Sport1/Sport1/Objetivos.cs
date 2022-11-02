@@ -258,13 +258,13 @@ namespace Sport1
         }
         public void dbObjeFutbol()
         {
-            x = 0;
+
             while (x < 6)
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values ('" + listaTXTObjDeportes[x].Text + "', '" + listaTXTObjDeportes[x].Tag +"', '" + Program.idPerfil + "')";
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag +", " + Program.idUser + ")";
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
