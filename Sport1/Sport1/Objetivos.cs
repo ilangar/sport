@@ -269,7 +269,7 @@ namespace Sport1
                 command.ExecuteNonQuery();
                 connection.Close();
                 x++;
-                MessageBox.Show("Objetivos Guardados");
+                
             }
         }
 
