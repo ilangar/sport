@@ -52,7 +52,7 @@ namespace Sport1
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
-                lbl++;
+
                 posLblY += 40;
 
                 Label lblEstBasket = new Label();
@@ -61,54 +61,58 @@ namespace Sport1
                 lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
-
-                while (lbl < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+                if (lbl > 0)
                 {
-                    switch (Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]))
+                    while (lbl < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                     {
-                        case 1:
-                            puntos += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(puntos);
-                            break;
-                        case 2:
-                            asist += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(asist);
-                            break;
-                        case 3:
-                            faltas += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(faltas);
-                            break;
-                        case 4:
-                            minJug += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(minJug);
-                            break;
-                        case 5:
-                            tirFal += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(tirFal);
-                            break;
-                        case 6:
-                            bloq += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(bloq);
-                            break;
-                        case 7:
-                            rebotes += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(rebotes);
-                            break;
-                        case 10:
-                            pelRec += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(pelRec);
-                            break;
-                        case 11: 
-                            amon += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
-                            lblEstBasket.Text = Convert.ToString(amon);
-                            break;
+                        switch (Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]))
+                        {
+                            case 1:
+                                puntos += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(puntos);
+                                break;
+                            case 2:
+                                asist += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(asist);
+                                break;
+                            case 3:
+                                faltas += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(faltas);
+                                break;
+                            case 4:
+                                minJug += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(minJug);
+                                break;
+                            case 5:
+                                tirFal += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(tirFal);
+                                break;
+                            case 6:
+                                bloq += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(bloq);
+                                break;
+                            case 7:
+                                rebotes += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(rebotes);
+                                break;
+                            case 10:
+                                pelRec += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(pelRec);
+                                break;
+                            case 11:
+                                amon += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[1][car]);
+                                lblEstBasket.Text = Convert.ToString(amon);
+                                break;
+                            default:
+                                lblEstBasket.Text = "0";
+                                break;
+                        }
                     }
-
-                   
                 }
-
+                lbl++;
                 posEstLblY += 40;
                 lblEst++;
+                car++;
             }
             
         }

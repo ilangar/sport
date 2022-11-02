@@ -118,7 +118,7 @@ namespace Sport1
             chartProgresos.Series.Add("Goles");
             chartProgresos.Series.Add("Asistencias");
             chartProgresos.Series.Add("Faltas");
-            chartProgresos.Series.Add("Minutos Jugados");
+            chartProgresos.Series.Add("Minutos jugados");
             chartProgresos.Series.Add("Tiros al arco");
             chartProgresos.Series.Add("Tiros fallados");
             chartProgresos.Series.Add("Pelotas recuperadas");
