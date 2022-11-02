@@ -29,15 +29,11 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte) values ('" + nombre + "','" + deporte +"')";
+            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, NomEnt) values ('" + nombre + "','" + deporte + "','"+ Program.idPerfil + "')";
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();
-            Inicio formInicio = new Inicio();
-            formInicio.Show();
-
-            formPerfilEnt = new perfilEnt();
-            this.Hide();
+            perfilEnt formPerfilEnt = new perfilEnt();
             formPerfilEnt.Show();
         }
 
@@ -61,6 +57,11 @@ namespace Sport1
         private void TxtNomJug_TextChanged(object sender, EventArgs e)
         {
             nombre = txtNomJug.Text;
+        }
+
+        private void NuevoJug_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

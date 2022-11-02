@@ -82,6 +82,7 @@
             this.Controls.Add(this.txtNomJug);
             this.Name = "nuevoJug";
             this.Text = "nuevoJug";
+            this.Load += new System.EventHandler(this.NuevoJug_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
