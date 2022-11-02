@@ -40,6 +40,7 @@
             this.txtNomJug.Name = "txtNomJug";
             this.txtNomJug.Size = new System.Drawing.Size(100, 20);
             this.txtNomJug.TabIndex = 0;
+            this.txtNomJug.TextChanged += new System.EventHandler(this.txtNomJug_TextChanged);
             // 
             // lblNomJug
             // 
@@ -82,6 +83,7 @@
             this.Controls.Add(this.txtNomJug);
             this.Name = "nuevoJug";
             this.Text = "nuevoJug";
+            this.Load += new System.EventHandler(this.nuevoJug_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
