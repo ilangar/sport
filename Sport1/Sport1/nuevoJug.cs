@@ -17,7 +17,6 @@ namespace Sport1
         perfilEnt formPerfilEnt;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
-        string deporte;
         public nuevoJug()
         {
             InitializeComponent();
@@ -29,7 +28,7 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, NomEnt) values ('" + nombre + "','" + deporte + "','"+ Program.idPerfil + "')";
+            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, NomEnt) values ('" + txtNomJug.Text + "','" + deporte + "','" + Program.idPerfil + "')";
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();
