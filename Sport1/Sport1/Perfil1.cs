@@ -184,8 +184,8 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
-            info = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            info2 = new OleDbCommand("Select Estd FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
+            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
+            info2 = new OleDbCommand("SELECT Estd FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
