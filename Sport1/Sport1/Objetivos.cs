@@ -17,7 +17,7 @@ namespace Sport1
         int lbl = 0;
         int txt = 0;
         int posLblY = 120;
-        int posLblX = 90;
+        int posLblX = 45;
         int posTxtY = 120;
         int posTxtX = 250;
         int nom = 0;
@@ -79,7 +79,7 @@ namespace Sport1
                 lblObjFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblObjFutbol.AutoSize = true;
                 lblObjFutbol.TextAlign = ContentAlignment.MiddleCenter;
-                lblObjFutbol.Text = arrObjFutid[lbl];
+                lblObjFutbol.Text = arrObjFut[lbl];
                 lbl++;
                 posLblY += 40;
             }
@@ -248,7 +248,7 @@ namespace Sport1
         {
             while (x < 6)
             {
-                
+                connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + listaTXTObjDeportes[x].Tag + ", '" + Program.idPerfil + "')";
@@ -258,14 +258,16 @@ namespace Sport1
         }
         public void dbObjeFutbol()
         {
-            x = 0;
+
             while (x < 6)
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag +" , '" + Program.idPerfil + "')";
+                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + listaTXTObjDeportes[x].Text + ", " + listaTXTObjDeportes[x].Tag +", " + Program.idUser + ")";
                 command.ExecuteNonQuery();
+                connection.Close();
+                x++;
             }
         }
 
@@ -305,6 +307,7 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
+            connection.Close();
 
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
