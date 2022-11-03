@@ -29,7 +29,7 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, IdEnt) values ('" + txtNomJug.Text + "','" + deporte + "'," + Program.idUser + ")";
+            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, IdUser) values ('" + txtNomJug.Text + "','" + deporte + "'," + Program.idUser + ")";
             command.ExecuteNonQuery();
             connection.Close();
             this.Hide();

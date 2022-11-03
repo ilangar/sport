@@ -63,12 +63,13 @@
             // 
             // btnVolverAtras
             // 
+            this.btnVolverAtras.BackColor = System.Drawing.Color.Transparent;
             this.btnVolverAtras.Location = new System.Drawing.Point(117, 261);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(86, 71);
             this.btnVolverAtras.TabIndex = 3;
             this.btnVolverAtras.Text = "Volver atras";
-            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.UseVisualStyleBackColor = false;
             this.btnVolverAtras.Click += new System.EventHandler(this.Button2_Click);
             // 
             // nuevoJug

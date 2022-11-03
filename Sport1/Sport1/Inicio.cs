@@ -84,7 +84,6 @@ namespace Sport1
                 formPerfilEnt = new perfilEnt();
                 formPerfilEnt.Show();
                 this.Hide();
-                Program.idPerfil = formPerfilEnt.entIdPerfil();
             }
             
 

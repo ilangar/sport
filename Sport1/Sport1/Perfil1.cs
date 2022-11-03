@@ -276,30 +276,34 @@ namespace Sport1
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             da2.Fill(ds2, "IngresarEstadisticas");
-            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            if (Convert.ToInt32(ds.Tables["Perfil"].Rows.Count) > 0)
             {
-                case "1":
-                    lblBasket();
-                    break;
-                case "2":
-                    lblFutbol();
-                    break;
-                case "3":
-                    lblHandball();
-                    break;
-                case "4":
-                    lblHockey();
-                    break;
-                case "5":
-                    lblRugby();
-                    break;
-                case "6":
-                    lblTenis();
-                    break;
-                case "7":
-                    lblVoley();
-                    break;
+                switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+                {
+                    case "1":
+                        lblBasket();
+                        break;
+                    case "2":
+                        lblFutbol();
+                        break;
+                    case "3":
+                        lblHandball();
+                        break;
+                    case "4":
+                        lblHockey();
+                        break;
+                    case "5":
+                        lblRugby();
+                        break;
+                    case "6":
+                        lblTenis();
+                        break;
+                    case "7":
+                        lblVoley();
+                        break;
+                }
             }
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)

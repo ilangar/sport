@@ -30,6 +30,7 @@
         {
             this.btnNuevoJug = new System.Windows.Forms.Button();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.flowLayoutJug = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnNuevoJug
@@ -52,11 +53,21 @@
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.BtnVolverAtras_Click);
             // 
+            // flowLayoutJug
+            // 
+            this.flowLayoutJug.AutoScroll = true;
+            this.flowLayoutJug.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutJug.Location = new System.Drawing.Point(366, 70);
+            this.flowLayoutJug.Name = "flowLayoutJug";
+            this.flowLayoutJug.Size = new System.Drawing.Size(195, 349);
+            this.flowLayoutJug.TabIndex = 2;
+            // 
             // perfilEnt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.flowLayoutJug);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.btnNuevoJug);
             this.Name = "perfilEnt";
@@ -71,5 +82,6 @@
         private System.Windows.Forms.Button btnAgregarJug;
         public System.Windows.Forms.Button btnNuevoJug;
         private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutJug;
     }
 }

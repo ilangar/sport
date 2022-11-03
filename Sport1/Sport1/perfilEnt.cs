@@ -40,46 +40,32 @@ namespace Sport1
         }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
-            /*connection.Open();
+            connection.Open();
             OleDbCommand info;
-            info = new OleDbCommand("Select IdUser, Nombre FROM Entrenador", connection);
+            info = new OleDbCommand("Select Nombre FROM JugadorEquipo", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-            da.Fill(ds, "Entrenador");
+            da.Fill(ds, "JugadorEquipo");
             
-            for (int i = 0; i < ds.Tables["Entrenador"].Rows.Count; i++)
+            for (int i = 0; i < ds.Tables["JugadorEquipo"].Rows.Count; i++)
             {
-                while (k < 6 && k < ds.Tables["Entrenador"].Rows.Count)
+                while (k < ds.Tables["JugadorEquipo"].Rows.Count)
                 {
                     Button btnJugador = new Button();
                     btnJugador.DialogResult = DialogResult.OK;
-                    btnJugador.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
-                    btnJugador.Location = new Point(24, pos);
-                    pos += 100;
-                    btnJugador.Size = new Size(160, 70);
-                    btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
-                    Controls.Add(btnPerfil1);
-                    k++;
-
-                }
-                pos = 38;
-            
-
-                while (k >= 6 && k < ds.Tables["Entrenador"].Rows.Count)
-                {
-
-                    Button btnJugador = new Button();
-                    btnJugador.DialogResult = DialogResult.OK;
-                    btnJugador.Text = Convert.ToString(ds.Tables["Entrenador"].Rows[k][1]);
-                    btnJugador.Location = new Point(240, pos);
-                    pos += 100;
-                    btnJugador.Size = new Size(160, 70);
+                    btnJugador.Text = Convert.ToString(ds.Tables["JugadorEquipo"].Rows[k][0]);
+                    //btnJugador.Location = new Point(24, pos);
+                    pos +=20;
+                    //btnJugador.Size = new Size(160, 20);
                     btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
                     Controls.Add(btnJugador);
+                    flowLayoutJug.Controls.Add(btnJugador);
+                    
                     k++;
 
                 }
+
                 
-            }*/
+            }
         }
 
         private void BtnAgregarJug_Click(object sender, EventArgs e)
