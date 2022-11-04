@@ -63,6 +63,16 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Base {
+            get {
+                object obj = ResourceManager.GetObject("Base", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Botón {
             get {
                 object obj = ResourceManager.GetObject("Botón", resourceCulture);
@@ -86,6 +96,16 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap Botón__2_ {
             get {
                 object obj = ResourceManager.GetObject("Botón (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botón_guardar {
+            get {
+                object obj = ResourceManager.GetObject("Botón guardar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

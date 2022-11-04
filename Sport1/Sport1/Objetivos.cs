@@ -291,7 +291,7 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
