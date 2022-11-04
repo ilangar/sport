@@ -19,6 +19,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
+        DataSet ds3 = new DataSet();
         public Perfil1 formPerfil1;
         public Inicio formInicio;
         int prog = 0;
@@ -620,37 +621,68 @@ namespace Sport1
 
         private void Progresos_Load(object sender, EventArgs e)
         {
-           
+
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
+            OleDbCommand info3;
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
+            info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Program.idUser , connection);
+
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
+            OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
             da1.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
-
-            switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
+            da3.Fill(ds3, "JugadorEquipo");
+            if (Convert.ToInt32(ds2.Tables["Perfil"].Rows.Count) > 0)
             {
-                case "1": progresosBasket();
-                    break;
-                case "2": progresosFutbol();
-                    break;
-                case "3": progresosHandball();
-                    break;
-                case "4": progresosHockey();
-                    break;
-                case "5": progresosRugby();
-                    break;
-                case "6": progresosTenis();
-                    break;
-                case "7": progresosVoley();
-                    break;
+                switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
+                {
+                    case "1": progresosBasket();
+                        break;
+                    case "2": progresosFutbol();
+                        break;
+                    case "3": progresosHandball();
+                        break;
+                    case "4": progresosHockey();
+                        break;
+                    case "5": progresosRugby();
+                        break;
+                    case "6": progresosTenis();
+                        break;
+                    case "7": progresosVoley();
+                        break;
+                }
             }
-
-
-
+            if (Convert.ToInt32(ds3.Tables["JugadorEquipo"].Rows.Count) > 0)
+            {
+                switch ((Convert.ToString(ds3.Tables["JugadorEquipo"].Rows[0][0])))
+                {
+                    case "1":
+                        progresosBasket();
+                        break;
+                    case "2":
+                        progresosFutbol();
+                        break;
+                    case "3":
+                        progresosHandball();
+                        break;
+                    case "4":
+                        progresosHockey();
+                        break;
+                    case "5":
+                        progresosRugby();
+                        break;
+                    case "6":
+                        progresosTenis();
+                        break;
+                    case "7":
+                        progresosVoley();
+                        break;
+                }
+            }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
