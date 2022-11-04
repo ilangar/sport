@@ -41,7 +41,7 @@ namespace Sport1
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
             connection.Open();
-            OleDbCommand info;
+            OleDbCommand info; 
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "JugadorEquipo");

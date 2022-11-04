@@ -68,7 +68,7 @@ namespace Sport1
         {
             Button btn = (Button)sender;
             Program.idPerfil = btn.Text;
-            Program.idUser = ds.Tables["Perfil"].Rows[Convert.ToInt32(btn.Tag)][0];
+            Program.idUser = Convert.ToInt32(ds.Tables["Perfil"].Rows[Convert.ToInt32(btn.Tag)][0]);
 
 
             if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[Convert.ToInt32(btn.Tag)][2])) == 2)
