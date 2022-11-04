@@ -44,13 +44,13 @@ namespace Sport1
         {
             while (lbl < 6)
             {
-                Label lblObjBasket = new Label();
-                this.Controls.Add(lblObjBasket);
-                lblObjBasket.Location = new Point(posLblX, posLblY);
-                lblObjBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblObjBasket.AutoSize = true;
-                lblObjBasket.TextAlign = ContentAlignment.MiddleCenter;
-                lblObjBasket.Text = arrObjBask[lbl];
+                Label lblObjBask = new Label();
+                this.Controls.Add(lblObjBask);
+                lblObjBask.Location = new Point(posLblX, posLblY);
+                lblObjBask.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjBask.AutoSize = true;
+                lblObjBask.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjBask.Text = arrObjBask[lbl];
                 lbl++;
                 posLblY += 40;
             }
@@ -257,7 +257,7 @@ namespace Sport1
                 connection.Close();
             }
         }
-        public void dbObjeFutbol()
+        public void dbObjFutbol()
         {
             x = 0;
             while (x < 6)
@@ -291,7 +291,7 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
-             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
@@ -314,10 +314,12 @@ namespace Sport1
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
-                    lblObjBasket(); txtObjBasket();
+                    lblObjBasket();
+                    txtObjBasket();
                     break;
                 case "2":
-                    lblObjFutbol(); txtObjFutbol();
+                    lblObjFutbol();
+                    txtObjFutbol();
                     break;
                 case "3":
                     lblObjHandball(); txtObjHand();
@@ -367,7 +369,7 @@ namespace Sport1
                     dbObjBasket();
                     break;
                 case "2":
-                    dbObjeFutbol();
+                    dbObjFutbol();
                     break;
             }
             formPerfil1 = new Perfil1();
