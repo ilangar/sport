@@ -16,6 +16,7 @@ namespace Sport1
     public partial class IngresarEstadisticas : Form
     {
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
         int lbl = 0;
         int txt = 0;
         int posLblY = 120;
@@ -32,6 +33,7 @@ namespace Sport1
         string fecha;
         string prueba = "a";
         Perfil1 formPerfil1;
+        perfilEnt formPerfilEnt;
         public Inicio formInicio;
         List<TextBox> listaTXTDeportes = new List<TextBox>();
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
@@ -292,28 +294,67 @@ namespace Sport1
         {
 
             OleDbCommand info;
+            OleDbCommand info2;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'" , connection);
+            info2 = new OleDbCommand("SELECT Deporte FROM JugadorEquipo Where Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
-          
+            OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             da.Fill(ds, "Perfil");
-            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            da2.Fill(ds2, "JugadorEquipo");
+            if (Convert.ToInt32(ds.Tables["Perfil"].Rows.Count) > 0)
             {
-                case "1": lblBasket(); txtBasket();
-                    break;
-                case "2": lblFutbol(); txtFutbol();
-                    break;
-                case "3": lblHandball(); txtHandball();
-                    break;
-                case "4": lblHockey(); txtHockey();
-                    break;
-                case "5": lblRugby(); txtRugby();
-                    break;
-                case "6": lblTenis(); txtTenis();
-                    break;
-                case "7": lblVoley(); txtVoley();
-                    break;
+                switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+                {
+                    case "1":
+                        lblBasket(); txtBasket();
+                        break;
+                    case "2":
+                        lblFutbol(); txtFutbol();
+                        break;
+                    case "3":
+                        lblHandball(); txtHandball();
+                        break;
+                    case "4":
+                        lblHockey(); txtHockey();
+                        break;
+                    case "5":
+                        lblRugby(); txtRugby();
+                        break;
+                    case "6":
+                        lblTenis(); txtTenis();
+                        break;
+                    case "7":
+                        lblVoley(); txtVoley();
+                        break;
+                }
             }
-            
+            if (Convert.ToInt32(ds2.Tables["JugadorEquipo"].Rows.Count) > 0)
+            {
+                switch (Convert.ToString(ds2.Tables["JugadorEquipo"].Rows[0][0]))
+                {
+                    case "1":
+                        lblBasket(); txtBasket();
+                        break;
+                    case "2":
+                        lblFutbol(); txtFutbol();
+                        break;
+                    case "3":
+                        lblHandball(); txtHandball();
+                        break;
+                    case "4":
+                        lblHockey(); txtHockey();
+                        break;
+                    case "5":
+                        lblRugby(); txtRugby();
+                        break;
+                    case "6":
+                        lblTenis(); txtTenis();
+                        break;
+                    case "7":
+                        lblVoley(); txtVoley();
+                        break;
+                }
+            }
         }
 
 
@@ -321,17 +362,37 @@ namespace Sport1
         private void BtnIngresarBasket_Click(object sender, EventArgs e)
         {
             fecha = dia + "/" + mes + "/" + ano;
-            switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+            if (Convert.ToInt32(ds.Tables["Perfil"].Rows.Count) > 0)
             {
-                case "1": dbBasket();
-                    break;
-                case "2": dbFutbol();
-                    break;
+                switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
+                {
+                    case "1":
+                        dbBasket();
+                        break;
+                    case "2":
+                        dbFutbol();
+                        break;
+                }
+                formPerfil1 = formInicio.formPerfil1;
+                formPerfil1.Show();
+                this.Hide();
+            }
+            if (Convert.ToInt32(ds2.Tables["JugadorEquipo"].Rows.Count) > 0)
+            {
+                switch (Convert.ToString(ds2.Tables["JugadorEquipo"].Rows[0][0]))
+                {
+                    case "1":
+                        dbBasket();
+                        break;
+                    case "2":
+                        dbFutbol();
+                        break;
+                }
+                formPerfilEnt = new perfilEnt();
+                formPerfilEnt.Show();
+                this.Hide();
             }
 
-            formPerfil1 = formInicio.formPerfil1;
-            formPerfil1.Show();
-            this.Hide();
         }
 
         private void CmbDiaBasket_SelectedIndexChanged(object sender, EventArgs e)

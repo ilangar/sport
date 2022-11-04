@@ -82,6 +82,7 @@ namespace Sport1
             if ((Convert.ToInt32(ds.Tables["Perfil"].Rows[(Convert.ToInt32(((Button)sender).Tag))][2])) == 1)
             {
                 formPerfilEnt = new perfilEnt();
+                formPerfilEnt.formInicio = this;
                 formPerfilEnt.Show();
                 this.Hide();
             }

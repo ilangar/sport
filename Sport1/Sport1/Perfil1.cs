@@ -24,6 +24,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
+        DataSet ds3 = new DataSet();
         int lbl = 0;
         int txt = 0;
         int lblEst = 0;
@@ -270,12 +271,16 @@ namespace Sport1
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;
+            OleDbCommand info3;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
+            info3 = new OleDbCommand("SELECT Deporte FROM JugadorEquipo WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
+            OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
             da.Fill(ds, "Perfil");
             da2.Fill(ds2, "IngresarEstadisticas");
+            da3.Fill(ds3, "JugadorEquipo");
             if (Convert.ToInt32(ds.Tables["Perfil"].Rows.Count) > 0)
             {
                 switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
@@ -303,7 +308,33 @@ namespace Sport1
                         break;
                 }
             }
-            
+            if (Convert.ToInt32(ds3.Tables["JugadorEquipo"].Rows.Count) > 0)
+            {
+                switch (Convert.ToString(ds3.Tables["JugadorEquipo"].Rows[0][0]))
+                {
+                    case "1":
+                        lblBasket();
+                        break;
+                    case "2":
+                        lblFutbol();
+                        break;
+                    case "3":
+                        lblHandball();
+                        break;
+                    case "4":
+                        lblHockey();
+                        break;
+                    case "5":
+                        lblRugby();
+                        break;
+                    case "6":
+                        lblTenis();
+                        break;
+                    case "7":
+                        lblVoley();
+                        break;
+                }
+            }
         }
 
         private void Button1_Click(object sender, EventArgs e)
