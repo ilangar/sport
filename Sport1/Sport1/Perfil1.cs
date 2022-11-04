@@ -261,6 +261,24 @@ namespace Sport1
             }
         }
 
+        private void EliminarPerfil_Click(object sender, EventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("¿Estás seguro que quieres eliminar este perfil?", "Confirmar", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                MessageBox.Show("Se eliminó este perfil");
+            }
+
+        }
+
         public Perfil1()
         {
             InitializeComponent();
@@ -335,6 +353,7 @@ namespace Sport1
                         break;
                 }
             }
+            connection.Close();
         }
 
         private void Button1_Click(object sender, EventArgs e)
