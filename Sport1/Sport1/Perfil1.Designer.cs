@@ -33,6 +33,7 @@
             this.btnVerProgresos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.eliminarPerfil = new System.Windows.Forms.Button();
+            this.lblNomUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -85,11 +86,22 @@
             this.eliminarPerfil.UseVisualStyleBackColor = true;
             this.eliminarPerfil.Click += new System.EventHandler(this.EliminarPerfil_Click);
             // 
+            // lblNomUser
+            // 
+            this.lblNomUser.AutoSize = true;
+            this.lblNomUser.Location = new System.Drawing.Point(431, 22);
+            this.lblNomUser.Name = "lblNomUser";
+            this.lblNomUser.Size = new System.Drawing.Size(35, 13);
+            this.lblNomUser.TabIndex = 6;
+            this.lblNomUser.Text = "label1";
+            this.lblNomUser.Click += new System.EventHandler(this.LblNomUser_Click);
+            // 
             // Perfil1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.lblNomUser);
             this.Controls.Add(this.eliminarPerfil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVerProgresos);
@@ -100,6 +112,7 @@
             this.Text = "Perfil1";
             this.Load += new System.EventHandler(this.Perfil1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,5 +123,6 @@
         private System.Windows.Forms.Button btnVerProgresos;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button eliminarPerfil;
+        private System.Windows.Forms.Label lblNomUser;
     }
 }

@@ -273,7 +273,7 @@ namespace Sport1
                 command.Connection = connection;
                 command2.Connection = connection;
                 command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
-                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = (" + Program.idPerfil;
+                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
                 command.ExecuteNonQuery();
                 command2.ExecuteNonQuery();
                 connection.Close();
@@ -286,6 +286,11 @@ namespace Sport1
 
         }
 
+        private void LblNomUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public Perfil1()
         {
             InitializeComponent();
@@ -293,6 +298,7 @@ namespace Sport1
 
         private void Perfil1_Load(object sender, EventArgs e)
         {
+            lblNomUser.Text = Program.idPerfil;
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;

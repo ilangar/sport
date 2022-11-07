@@ -22,6 +22,7 @@ namespace Sport1
         string i = "";
         OleDbConnection connection = new OleDbConnection();
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
         int a = 0;
         bool nombreRepe = false;
         public CrearPerfil1(string caller)
@@ -33,23 +34,26 @@ namespace Sport1
 
         private void BtnAceptarPerfil_Click(object sender, EventArgs e)
         {
-            string[] nombres = new string[ds.Tables["Perfil"].Rows.Count];
-
-            for (int a = 0; a < nombres.Length; a++)
+            string[] nombresPer = new string[ds.Tables["Perfil"].Rows.Count];
+            string[] nombresJug = new string[ds2.Tables["JugadorEquipo"].Rows.Count];
+            string nom = txtNombre.Text;
+            for (int a = 0; a < nombresPer.Length; a++)
             {
-                nombres[a] = Convert.ToString(ds.Tables["Perfil"].Rows[a][0]);
-                string nom = txtNombre.Text;
-                for (int b = 0; b < nombres.Length; b++)
+                nombresPer[a] = Convert.ToString(ds.Tables["Perfil"].Rows[a][0]);
+                if (nom == nombresPer[a])
                 {
-                    if (nom == nombres[b])
-                    {
-                        nombreRepe = true;
-                    }
-
-
+                    nombreRepe = true;
                 }
-
+            } 
+            for (int c = 0; c < nombresJug.Length; c++)
+            {
+                nombresJug[c] = Convert.ToString(ds2.Tables["JugadorEquipo"].Rows[c][0]);
+                if (nom == nombresJug[c])
+                {
+                    nombreRepe = true;
+                }
             }
+
             if (nombreRepe)
             {
                 MessageBox.Show("Ya usaste este nombre");
@@ -83,7 +87,7 @@ namespace Sport1
         }
 
         private void CmbDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { 
             deporte = cmbDeporte.SelectedIndex;
             deporte++;
         }
@@ -91,9 +95,13 @@ namespace Sport1
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
             OleDbCommand info;
+            OleDbCommand info2;
             info = new OleDbCommand("Select Nombre FROM Perfil", connection);
+            info2 = new OleDbCommand("SELECT Nombre FROM JugadorEquipo", connection);
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             da1.Fill(ds, "Perfil");
+            da2.Fill(ds2, "JugadorEquipo");
 
         }
 

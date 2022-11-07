@@ -18,6 +18,8 @@ namespace Sport1
         perfilEnt formPerfilEnt;
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
+        bool nombreRepe = false;
         public nuevoJug()
         {
             InitializeComponent();
@@ -26,16 +28,45 @@ namespace Sport1
 
         private void BtnNuevoJug_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, IdUser) values ('" + txtNomJug.Text + "','" + deporte + "'," + Program.idUser + ")";
-            command.ExecuteNonQuery();
-            connection.Close();
-            this.Hide();
-            perfilEnt formPerfilEnt = new perfilEnt();
-            formPerfilEnt.Show();
+            string[] nombresPer = new string[ds.Tables["Perfil"].Rows.Count];
+            string[] nombresJug = new string[ds2.Tables["JugadorEquipo"].Rows.Count];
+            string nom = txtNomJug.Text;
+            for (int a = 0; a < nombresPer.Length; a++)
+            {
+                nombresPer[a] = Convert.ToString(ds.Tables["Perfil"].Rows[a][0]);
+                if (nom == nombresPer[a])
+                {
+                    nombreRepe = true;
+                }
+            }
+            for (int c = 0; c < nombresJug.Length; c++)
+            {
+                nombresJug[c] = Convert.ToString(ds2.Tables["JugadorEquipo"].Rows[c][0]);
+                if (nom == nombresJug[c])
+                {
+                    nombreRepe = true;
+                }
+            }
+            if (nombreRepe)
+            {
+                MessageBox.Show("Ya usaste este nombre");
+
+            }
+            if (!nombreRepe)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO JugadorEquipo (Nombre, Deporte, IdUser) values ('" + txtNomJug.Text + "','" + deporte + "'," + Program.idUser + ")";
+                command.ExecuteNonQuery();
+                connection.Close();
+                this.Hide();
+                perfilEnt formPerfilEnt = new perfilEnt();
+                formPerfilEnt.Show();
+            }
+            nombreRepe = false;
         }
+
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -48,9 +79,13 @@ namespace Sport1
         {
 
             OleDbCommand info;
-            info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            OleDbDataAdapter da = new OleDbDataAdapter(info);
-            da.Fill(ds, "Perfil");
+            OleDbCommand info2;
+            info = new OleDbCommand("Select Nombre FROM Perfil", connection);
+            info2 = new OleDbCommand("SELECT Nombre FROM JugadorEquipo", connection);
+            OleDbDataAdapter da1 = new OleDbDataAdapter(info);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
+            da1.Fill(ds, "Perfil");
+            da2.Fill(ds2, "JugadorEquipo");
             deporte = Convert.ToString(ds.Tables["Perfil"].Rows[0][0]);
         }
 
@@ -58,5 +93,6 @@ namespace Sport1
         {
             nombre = txtNomJug.Text;
         }
+
     }
-}
+}   
