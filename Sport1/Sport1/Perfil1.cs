@@ -269,9 +269,13 @@ namespace Sport1
             {
                 connection.Open();
                 OleDbCommand command = new OleDbCommand();
+                OleDbCommand command2 = new OleDbCommand();
                 command.Connection = connection;
+                command2.Connection = connection;
                 command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
+                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = (" + Program.idPerfil;
                 command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
                 connection.Close();
 
                 MessageBox.Show("Se eliminó este perfil");
