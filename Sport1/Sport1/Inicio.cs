@@ -58,10 +58,17 @@ namespace Sport1
 
         private void BtnCrearPerfil_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CrearPerfil1 formCrearPerfil = new CrearPerfil1(caller);
-            formCrearPerfil.formInicio = this;
-            formCrearPerfil.Show();
+            if (ds.Tables["Perfil"].Rows.Count < 20)
+            {
+                this.Hide();
+                CrearPerfil1 formCrearPerfil = new CrearPerfil1(caller);
+                formCrearPerfil.formInicio = this;
+                formCrearPerfil.Show();
+            }
+            if (ds.Tables["Perfil"].Rows.Count > 20)
+            {
+                MessageBox.Show("Alcanzaste el máximo de perfiles");
+            }
         }
 
         private void click_btn_perfil(object sender, EventArgs e)
@@ -166,7 +173,7 @@ namespace Sport1
                 }
                 posX = 38;
                 posY = 400;
-                while (k >= 10 && k < 15 && k < ds.Tables["Perfil"].Rows.Count)
+                while (k >= 15 && k < 20 && k < ds.Tables["Perfil"].Rows.Count)
                 {
 
                     Button btnPerfil1 = new Button();
@@ -182,6 +189,7 @@ namespace Sport1
                     x++;
                     k++;
                 }
+
             }
 
 

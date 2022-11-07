@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace Sport1
 {
@@ -20,6 +21,9 @@ namespace Sport1
         public perfilEnt formPerfilEnt;
         string i = "";
         OleDbConnection connection = new OleDbConnection();
+        string[] nombres = new string[20];
+        DataSet ds = new DataSet();
+        int a = 0;
         public CrearPerfil1(string caller)
         {
             InitializeComponent();
@@ -59,7 +63,15 @@ namespace Sport1
 
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
+            OleDbCommand info;
+            info = new OleDbCommand("Select Nombre FROM Perfil", connection);
+            OleDbDataAdapter da1 = new OleDbDataAdapter(info);
+            da1.Fill(ds, "Perfil");
+            while (a < ds.Tables["Perfil"].Rows.Count)
+            {
+                nombres[a] = Convert.ToString(ds.Tables["Perfil"].Rows[0][a]);
 
+            }
         }
 
         private void BtnVolverAEnt_Click(object sender, EventArgs e)

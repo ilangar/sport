@@ -275,6 +275,9 @@ namespace Sport1
                 connection.Close();
 
                 MessageBox.Show("Se eliminó este perfil");
+                formInicio = new Inicio();
+                this.Hide();
+                formInicio.Show();
             }
 
         }
