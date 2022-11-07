@@ -42,14 +42,15 @@ namespace Sport1
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFutId = new string[8] { "2", "3", "4", "5", "8", "9", "10", "11" };
         string[] arrHand = new string[9] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Excluciones", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas" };
-
+        string[] arrHandId = new string[9] { "8", "2", "3", "4", "11", "12", "13", "5","10"};
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas" };
-
+        string[] arrHockId = new string[10] { "8", "2", "3", "4", "13", "5", "10", "14", "15", "16" };
         string[] arrRugby = new string[9] { "Tries", "Tackles", "Minutos jugados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas" };
-
+        string[] arrRugbyId = new string[9] { "17", "18", "4", "19", "13", "20", "10", "15", "16" };
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres"};
-
+        string[] arrTenisId = new string[6] { "21", "22", "3", "23", "24", "25" };
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones","Armados", "Bloqueos" };
+        string[] arrVoleyId = new string[7] { "21", "22", "26", "27", "28", "29", "6"};
         public void lblBasket()
         {
             while (lbl < 9)
@@ -109,7 +110,6 @@ namespace Sport1
                 txtFutbol.Tag = arrFutId[txt];
                 txt++;
                 posTxtY += 40;
-                x++;
             }
         }
 
@@ -136,9 +136,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtHand);
                 this.Controls.Add(txtHand);
                 txtHand.Location = new Point(posTxtX, posTxtY);
+                txtHand.Tag = arrHandId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
             }
         }
 
@@ -165,9 +165,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtHockey);
                 this.Controls.Add(txtHockey);
                 txtHockey.Location = new Point(posTxtX, posTxtY);
+                txtHockey.Tag = arrHockId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
             }
         }
 
@@ -194,9 +194,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtRugby);
                 this.Controls.Add(txtRugby);
                 txtRugby.Location = new Point(posTxtX, posTxtY);
+                txtRugby.Tag = arrRugbyId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
             }
         }
 
@@ -223,9 +223,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtTenis);
                 this.Controls.Add(txtTenis);
                 txtTenis.Location = new Point(posTxtX, posTxtY);
+                txtTenis.Tag = arrTenisId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
             }
         }
         public void lblVoley()
@@ -251,9 +251,9 @@ namespace Sport1
                 listaTXTDeportes.Add(txtVoley);
                 this.Controls.Add(txtVoley);
                 txtVoley.Location = new Point(posTxtX, posTxtY);
+                txtVoley.Tag = arrVoleyId[txt];
                 txt++;
                 posTxtY += 40;
-                nom++;
             }
         }
 
