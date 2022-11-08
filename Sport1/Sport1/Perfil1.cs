@@ -267,16 +267,34 @@ namespace Sport1
             dr = MessageBox.Show("¿Estás seguro que quieres eliminar este perfil?", "Confirmar", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
             {
-                connection.Open();
                 OleDbCommand command = new OleDbCommand();
                 OleDbCommand command2 = new OleDbCommand();
-                command.Connection = connection;
-                command2.Connection = connection;
-                command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
-                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
-                command.ExecuteNonQuery();
-                command2.ExecuteNonQuery();
-                connection.Close();
+
+                if (Program.jugador == true)
+                {
+                    connection.Open();
+                    command.Connection = connection;
+                    command2.Connection = connection;
+                    command.CommandText = "DELETE FROM JugadorEquipo WHERE Nombre = ('" + Program.idPerfil + "')";
+                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                    command.ExecuteNonQuery();
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+
+                    formPerfilEnt = new perfilEnt();
+                    this.Hide();
+                }
+                if (!Program.jugador)
+                {
+                    connection.Open();
+                    command.Connection = connection;
+                    command2.Connection = connection;
+                    command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
+                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                    command.ExecuteNonQuery();
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                }
 
                 MessageBox.Show("Se eliminó este perfil");
                 formInicio = new Inicio();

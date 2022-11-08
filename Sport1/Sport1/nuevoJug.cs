@@ -19,6 +19,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
+        DataSet ds3 = new DataSet();
         bool nombreRepe = false;
         public nuevoJug()
         {
@@ -77,16 +78,19 @@ namespace Sport1
 
         private void NuevoJug_Load(object sender, EventArgs e)
         {
-
             OleDbCommand info;
             OleDbCommand info2;
+            OleDbCommand info3;
             info = new OleDbCommand("Select Nombre FROM Perfil", connection);
             info2 = new OleDbCommand("SELECT Nombre FROM JugadorEquipo", connection);
+            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
+            OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
             da1.Fill(ds, "Perfil");
             da2.Fill(ds2, "JugadorEquipo");
-            deporte = Convert.ToString(ds.Tables["Perfil"].Rows[0][0]);
+            da3.Fill(ds3, "Deporte");
+            deporte = Convert.ToString(ds3.Tables["Deporte"].Rows[0][0]);
         }
 
         private void TxtNomJug_TextChanged(object sender, EventArgs e)

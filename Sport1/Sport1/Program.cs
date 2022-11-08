@@ -10,6 +10,8 @@ namespace Sport1
     {
         public static string idPerfil;
         internal static int idUser;
+        public static string idJugador;
+        public static bool jugador = false;
 
         /// <summary>
         /// Punto de entrada principal para la aplicación.

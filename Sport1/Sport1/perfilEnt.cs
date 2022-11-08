@@ -29,10 +29,13 @@ namespace Sport1
 
         private void click_btn_jugador(object sender, EventArgs e)
         {
+            Program.idJugador = Program.idPerfil;
             Program.idPerfil = ((Button)sender).Text;
+            Program.jugador = true;
             Perfil1 formPerfil1 = new Perfil1();
             this.Hide();
             formPerfil1.Show();
+
         }
         public string entIdPerfil()
         {
@@ -41,7 +44,6 @@ namespace Sport1
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
             connection.Open();
-            MessageBox.Show("Select Nombre FROM JugadorEquipo WHERE IdUser = '" + Program.idUser + "'");
             OleDbCommand info; 
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
@@ -81,6 +83,30 @@ namespace Sport1
             formInicio = new Inicio();
             this.Hide();
             formInicio.Show();
+        }
+
+        private void EliminarPerfil_Click(object sender, EventArgs e)
+        {
+            DialogResult dr;
+            dr = MessageBox.Show("¿Estás seguro que quieres eliminar este perfil?", "Confirmar", MessageBoxButtons.YesNo);
+            OleDbCommand command = new OleDbCommand();
+            OleDbCommand command2 = new OleDbCommand();
+
+            if (dr == DialogResult.Yes)
+            {
+                command.Connection = connection;
+                command2.Connection = connection;
+                command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
+                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                command.ExecuteNonQuery();
+                command2.ExecuteNonQuery();
+                connection.Close(); 
+
+                MessageBox.Show("Se eliminó este perfil");
+                formInicio = new Inicio();
+                this.Hide();
+                formInicio.Show();
+            }
         }
     }
 }
