@@ -35,6 +35,7 @@ namespace Sport1
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrObjFutid= new string[6] { "2", "3", "4", "5", "8","11" };
         string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
+        string[] arrObjHandid = new string[6] { "", "", "", "", "", "" };
         string[] arrObjHock = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Pelotas recuperadas" };
         string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
         string[] arrObjTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
@@ -295,10 +296,10 @@ namespace Sport1
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + "Mauro" + "'";
+            command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + Program.idPerfil + "'", connection);
             OleDbDataReader reader = command.ExecuteReader();
-
-           // reader.Read();
+            da.Fill(ds, "Perfil");
+            // reader.Read();
             // int Deporte = int.Parse(reader["Deporte"].ToString());
 
             connection.Close();

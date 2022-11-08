@@ -20,6 +20,9 @@ namespace Sport1
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
         DataSet ds3 = new DataSet();
+        DataSet dsobj = new DataSet();
+
+
         public Perfil1 formPerfil1;
         public Inicio formInicio;
         int prog = 0;
@@ -43,6 +46,8 @@ namespace Sport1
             chartProgresos.Series.Add("Rebotes");
             chartProgresos.Series.Add("Pelotas recuperadas");
             chartProgresos.Series.Add("Amonestaciones");
+            chartProgresos.Series.Add("Objetivo puntos");
+            
             chartProgresos.Series["Puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -70,6 +75,7 @@ namespace Sport1
             chartProgresos.Series["Rebotes"].BorderWidth = 10;
             chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
             chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
+
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -611,8 +617,9 @@ namespace Sport1
                 {
                     x = 0;
                 }
-
+                
             }
+
         }
         public progresos()
         {
@@ -626,16 +633,23 @@ namespace Sport1
             OleDbCommand info;
             OleDbCommand info2;
             OleDbCommand info3;
+            OleDbCommand infobj;
+
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Program.idUser , connection);
+            infobj = new OleDbCommand("Select Objetivo, IdCar, FROM Obj WHERE Per ='" + Convert.ToInt32(Program.idUser) + "'", connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
+            OleDbDataAdapter daobj = new OleDbDataAdapter(infobj);
+
+
             da1.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
             da3.Fill(ds3, "JugadorEquipo");
+            daobj.Fill(dsobj, "Obj");
             if (Convert.ToInt32(ds2.Tables["Perfil"].Rows.Count) > 0)
             {
                 switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
