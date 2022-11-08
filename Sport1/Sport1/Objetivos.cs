@@ -250,7 +250,8 @@ namespace Sport1
         {
             while (x < 6)
             {
-                connection.Open();
+     
+
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", '" + Program.idUser + "')";
@@ -293,10 +294,17 @@ namespace Sport1
         private void Objfutbol_Load(object sender, EventArgs e)
         {
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+            OleDbCommand info;
+            info = new OleDbCommand("Select Deporte FROM Perfil", connection);
+            OleDbDataAdapter da = new OleDbDataAdapter(info);
+            da.Fill(ds, "Perfil");
+            string var = ds.Tables["Perfil"].Rows[0][0].ToString();
+            connection.Close();
+
             connection.Open();
             OleDbCommand command = new OleDbCommand();
             command.Connection = connection;
-            command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + Program.idPerfil + "'", connection);
+            command.CommandText = "(SELECT Deporte from Perfil WHERE Nombre='" + Program.idPerfil + "')";
             OleDbDataReader reader = command.ExecuteReader();
             da.Fill(ds, "Perfil");
             // reader.Read();
@@ -305,12 +313,7 @@ namespace Sport1
             connection.Close();
             connection.Open();
 
-            OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil", connection);
-            OleDbDataAdapter da = new OleDbDataAdapter(info);
-            da.Fill(ds, "Perfil");
-            string var = ds.Tables["Perfil"].Rows[0][0].ToString();
-            connection.Close();
+
 
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
