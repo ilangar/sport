@@ -39,6 +39,7 @@
             // 
             // cmbDiaBasket
             // 
+            this.cmbDiaBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDiaBasket.FormattingEnabled = true;
             this.cmbDiaBasket.Items.AddRange(new object[] {
             "1",
@@ -89,6 +90,7 @@
             // 
             // cmbAñoBasket
             // 
+            this.cmbAñoBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAñoBasket.FormattingEnabled = true;
             this.cmbAñoBasket.Items.AddRange(new object[] {
             "2022",
@@ -124,6 +126,7 @@
             // 
             // cmbMesBasket
             // 
+            this.cmbMesBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMesBasket.FormattingEnabled = true;
             this.cmbMesBasket.Items.AddRange(new object[] {
             "1",

@@ -20,6 +20,9 @@ namespace Sport1
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
         DataSet ds3 = new DataSet();
+        DataSet dsobj = new DataSet();
+
+
         public Perfil1 formPerfil1;
         public Inicio formInicio;
         int prog = 0;
@@ -31,6 +34,13 @@ namespace Sport1
         string[] arrRugby = new string[9] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas" };
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones", "Armados", "Bloqueos" };
+        string[] arrObjBask = new string[6] { " Objetivo Puntos", "Objetivos Asistencias", "Objetivos Faltas", "Objetivos minutos jugados", "Objetivos rebotes", "Objetivos pelotas recuperadas" };
+        string[] arrObjFut = new string[6] { "Objetivos goles", "Objetivos asistencias", "Objetivos faltas", "Objetivos minutos Jugados", "Objetivos pelotas recuperadas", "Objetivos amonestaciones" };
+        string[] arrObjHand = new string[7] { "Objetivos goles", "Objetivos asistencias", "Objetivos faltas", "Objetivos minutos Jugados", "Objetivos amonestaciones", "Objetivos pelotas perdidas", "Objetivos pelotas recuperadas" };
+        string[] arrObjHock = new string[6] { "Objetivos goles", " Objetivos asistencias", "Objetivos faltas", "Objetivos minutos Jugados", "Objetivos tiros fallados", "Objetivos pelotas recuperadas" };
+        string[] arrObjRugby = new string[7] { "Objetivos tries", "Objetivos tackles", "Objetivos Scrums ganados", "Objetivos lines ganados", "Objetivos pelotas perdidas", "Objetivos conversiones", "Objetivos pelotas recuperadas" };
+        string[] arrObjTenis = new string[6] { "Objetivos aces", "Objetivos errores no forzados", "Objetivos faltas", "Objetivos doble faltas", "Objetivos winners", "Objetivos quiebres" };
+        string[] arrObjVoley = new string[7] { "Objetivos aces", " Objetivos errores no forzados", "Objetivos remates logrados", " Objetivos Saques errados", "Objetivos recepciones", "Objetivos armados", "Objetivos Bloqueos" };
         List<int> estdProgresos = new List<int>();
         public void progresosBasket()
         {
@@ -43,6 +53,13 @@ namespace Sport1
             chartProgresos.Series.Add("Rebotes");
             chartProgresos.Series.Add("Pelotas recuperadas");
             chartProgresos.Series.Add("Amonestaciones");
+            chartProgresos.Series.Add("Objetivo puntos");
+            chartProgresos.Series.Add("Objetivos asistencias");
+            chartProgresos.Series.Add("Objetivos faltas");
+            chartProgresos.Series.Add("Objetivos minutos jugados");
+            chartProgresos.Series.Add("Objetivos rebotes");
+            chartProgresos.Series.Add("Objetivos pelotas recuperadas");
+            
             chartProgresos.Series["Puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -70,6 +87,25 @@ namespace Sport1
             chartProgresos.Series["Rebotes"].BorderWidth = 10;
             chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
             chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
+            chartProgresos.Series["Objetivo puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos paltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos rebotes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivo puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos rebotes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivo puntos"].BorderWidth = 10;
+            chartProgresos.Series["Objetivos asistencias"].BorderWidth = 10;
+            chartProgresos.Series["Objetivos faltas"].BorderWidth = 10;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 10;
+            chartProgresos.Series["Objetivos rebotes"].BorderWidth = 10;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderWidth = 10;
+
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -611,8 +647,9 @@ namespace Sport1
                 {
                     x = 0;
                 }
-
+                
             }
+
         }
         public progresos()
         {
@@ -626,16 +663,23 @@ namespace Sport1
             OleDbCommand info;
             OleDbCommand info2;
             OleDbCommand info3;
+            OleDbCommand infobj;
+
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Program.idUser , connection);
+            infobj = new OleDbCommand("Select Objetivo, IdCar, FROM Obj WHERE Per ='" + Convert.ToInt32(Program.idUser) + "'", connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
+            OleDbDataAdapter daobj = new OleDbDataAdapter(infobj);
+
+
             da1.Fill(ds, "IngresarEstadisticas");
             da2.Fill(ds2, "Perfil");
             da3.Fill(ds3, "JugadorEquipo");
+            daobj.Fill(dsobj, "Obj");
             if (Convert.ToInt32(ds2.Tables["Perfil"].Rows.Count) > 0)
             {
                 switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))

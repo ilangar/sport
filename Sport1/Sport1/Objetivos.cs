@@ -35,6 +35,7 @@ namespace Sport1
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrObjFutid= new string[6] { "2", "3", "4", "5", "8","11" };
         string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
+        string[] arrObjHandid = new string[6] { "", "", "", "", "", "" };
         string[] arrObjHock = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Pelotas recuperadas" };
         string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
         string[] arrObjTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
@@ -249,7 +250,8 @@ namespace Sport1
         {
             while (x < 6)
             {
-                connection.Open();
+     
+
                 OleDbCommand command = new OleDbCommand();
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", '" + Program.idUser + "')";
@@ -292,24 +294,26 @@ namespace Sport1
         private void Objfutbol_Load(object sender, EventArgs e)
         {
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "SELECT Deporte from Perfil WHERE Nombre='" + "Mauro" + "'";
-            OleDbDataReader reader = command.ExecuteReader();
-
-           // reader.Read();
-            // int Deporte = int.Parse(reader["Deporte"].ToString());
-
-            connection.Close();
-            connection.Open();
-
             OleDbCommand info;
             info = new OleDbCommand("Select Deporte FROM Perfil", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             da.Fill(ds, "Perfil");
             string var = ds.Tables["Perfil"].Rows[0][0].ToString();
             connection.Close();
+
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "(SELECT Deporte from Perfil WHERE Nombre='" + Program.idPerfil + "')";
+            OleDbDataReader reader = command.ExecuteReader();
+            da.Fill(ds, "Perfil");
+            // reader.Read();
+            // int Deporte = int.Parse(reader["Deporte"].ToString());
+
+            connection.Close();
+            connection.Open();
+
+
 
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
