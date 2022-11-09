@@ -26,6 +26,7 @@ namespace Sport1
         public Perfil1 formPerfil1;
         public Inicio formInicio;
         int prog = 0;
+        int obj = 0;
         int x = 0;
         string[] arrBask = new string[9] { "Puntos", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Bloqueos", "Rebotes", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
@@ -42,6 +43,7 @@ namespace Sport1
         string[] arrObjTenis = new string[6] { "Objetivos aces", "Objetivos errores no forzados", "Objetivos faltas", "Objetivos doble faltas", "Objetivos winners", "Objetivos quiebres" };
         string[] arrObjVoley = new string[7] { "Objetivos aces", " Objetivos errores no forzados", "Objetivos remates logrados", " Objetivos Saques errados", "Objetivos recepciones", "Objetivos armados", "Objetivos Bloqueos" };
         List<int> estdProgresos = new List<int>();
+        List<int> estObjetivos = new List<int>();
         public void progresosBasket()
         {
             chartProgresos.Series.Add("Puntos");
@@ -668,7 +670,7 @@ namespace Sport1
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Convert.ToInt32(Program.idUser) , connection);
-            infobj = new OleDbCommand("Select Objetivo, IdCar FROM Obj WHERE Per =" + Convert.ToInt32(Program.idUser), connection);
+            infobj = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per ='" + Program.idUser + "'", connection) ;
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
