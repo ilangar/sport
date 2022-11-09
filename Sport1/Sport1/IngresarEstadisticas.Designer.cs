@@ -82,10 +82,10 @@
             // lblFechaBasket
             // 
             this.lblFechaBasket.AutoSize = true;
-            this.lblFechaBasket.Font = new System.Drawing.Font("Montserrat Alternates Black", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaBasket.Font = new System.Drawing.Font("Montserrat Alternates Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaBasket.Location = new System.Drawing.Point(90, 55);
             this.lblFechaBasket.Name = "lblFechaBasket";
-            this.lblFechaBasket.Size = new System.Drawing.Size(44, 15);
+            this.lblFechaBasket.Size = new System.Drawing.Size(54, 18);
             this.lblFechaBasket.TabIndex = 14;
             this.lblFechaBasket.Text = "Fecha";
             // 

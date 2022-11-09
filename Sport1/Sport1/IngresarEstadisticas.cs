@@ -59,7 +59,7 @@ namespace Sport1
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
                 lblBasket.Location = new Point(posLblX, posLblY);
-                lblBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask [lbl];
