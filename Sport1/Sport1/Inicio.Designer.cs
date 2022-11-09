@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.btnCrearPerfil = new System.Windows.Forms.Button();
-            this.lblCrearPerfil = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCrearPerfil
@@ -46,37 +49,50 @@
             this.btnCrearPerfil.UseVisualStyleBackColor = false;
             this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
             // 
-            // lblCrearPerfil
+            // pictureBox1
             // 
-            this.lblCrearPerfil.AutoSize = true;
-            this.lblCrearPerfil.BackColor = System.Drawing.Color.White;
-            this.lblCrearPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCrearPerfil.Location = new System.Drawing.Point(477, 248);
-            this.lblCrearPerfil.Name = "lblCrearPerfil";
-            this.lblCrearPerfil.Size = new System.Drawing.Size(393, 33);
-            this.lblCrearPerfil.TabIndex = 1;
-            this.lblCrearPerfil.Text = "Crea un perfil para comenzar";
-            this.lblCrearPerfil.Visible = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Sport1.Properties.Resources.Crea_un_perfil_para_comenzar;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(0, 0);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(549, 312);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Inicio_sesión;
-            this.ClientSize = new System.Drawing.Size(1354, 749);
-            this.Controls.Add(this.lblCrearPerfil);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCrearPerfil);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Inicio";
-            this.Text = "Inicio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Inicio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnCrearPerfil;
-        private System.Windows.Forms.Label lblCrearPerfil;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

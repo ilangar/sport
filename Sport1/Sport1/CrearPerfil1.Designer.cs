@@ -31,13 +31,15 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAceptarPerfil = new System.Windows.Forms.Button();
-            this.lblRol = new System.Windows.Forms.Label();
             this.cmbDeporte = new System.Windows.Forms.ComboBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.lblDeporte = new System.Windows.Forms.Label();
             this.btnVolverAEnt = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -53,9 +55,9 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(130, 256);
+            this.txtNombre.Location = new System.Drawing.Point(121, 276);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(250, 20);
+            this.txtNombre.Size = new System.Drawing.Size(278, 20);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
@@ -69,23 +71,12 @@
             this.btnAceptarPerfil.FlatAppearance.BorderSize = 0;
             this.btnAceptarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarPerfil.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAceptarPerfil.Location = new System.Drawing.Point(468, 566);
+            this.btnAceptarPerfil.Location = new System.Drawing.Point(399, 370);
             this.btnAceptarPerfil.Name = "btnAceptarPerfil";
             this.btnAceptarPerfil.Size = new System.Drawing.Size(227, 77);
             this.btnAceptarPerfil.TabIndex = 2;
             this.btnAceptarPerfil.UseVisualStyleBackColor = false;
             this.btnAceptarPerfil.Click += new System.EventHandler(this.BtnAceptarPerfil_Click);
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.BackColor = System.Drawing.Color.Transparent;
-            this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblRol.Location = new System.Drawing.Point(127, 296);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(29, 17);
-            this.lblRol.TabIndex = 3;
-            this.lblRol.Text = "Rol";
             // 
             // cmbDeporte
             // 
@@ -98,9 +89,9 @@
             "Rugby",
             "Tenis",
             "Voleyball"});
-            this.cmbDeporte.Location = new System.Drawing.Point(133, 408);
+            this.cmbDeporte.Location = new System.Drawing.Point(121, 521);
             this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(201, 21);
+            this.cmbDeporte.Size = new System.Drawing.Size(214, 21);
             this.cmbDeporte.TabIndex = 4;
             this.cmbDeporte.SelectedIndexChanged += new System.EventHandler(this.CmbDeporte_SelectedIndexChanged);
             // 
@@ -110,22 +101,11 @@
             this.cmbRol.Items.AddRange(new object[] {
             "Equipo",
             "Jugador"});
-            this.cmbRol.Location = new System.Drawing.Point(133, 327);
+            this.cmbRol.Location = new System.Drawing.Point(121, 401);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(201, 21);
+            this.cmbRol.Size = new System.Drawing.Size(214, 21);
             this.cmbRol.TabIndex = 5;
             this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.CmbRol_SelectedIndexChanged);
-            // 
-            // lblDeporte
-            // 
-            this.lblDeporte.AutoSize = true;
-            this.lblDeporte.BackColor = System.Drawing.Color.Transparent;
-            this.lblDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblDeporte.Location = new System.Drawing.Point(130, 375);
-            this.lblDeporte.Name = "lblDeporte";
-            this.lblDeporte.Size = new System.Drawing.Size(59, 17);
-            this.lblDeporte.TabIndex = 6;
-            this.lblDeporte.Text = "Deporte";
             // 
             // btnVolverAEnt
             // 
@@ -136,9 +116,9 @@
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1246, 26);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1061, 9);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
-            this.btnVolverAEnt.Size = new System.Drawing.Size(53, 50);
+            this.btnVolverAEnt.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAEnt.TabIndex = 7;
             this.btnVolverAEnt.UseVisualStyleBackColor = false;
             this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);
@@ -146,27 +126,52 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Sport1.Properties.Resources.Nombre___1_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 213);
+            this.pictureBox1.BackgroundImage = global::Sport1.Properties.Resources.Nombre_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(121, 229);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(154, 36);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::Sport1.Properties.Resources.Rol___3_;
+            this.pictureBox2.Location = new System.Drawing.Point(121, 354);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(154, 36);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Sport1.Properties.Resources.Deporte_;
+            this.pictureBox3.Location = new System.Drawing.Point(121, 479);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(154, 36);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // CrearPerfil1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1386, 720);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolverAEnt);
-            this.Controls.Add(this.lblDeporte);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.cmbDeporte);
-            this.Controls.Add(this.lblRol);
             this.Controls.Add(this.btnAceptarPerfil);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
@@ -177,6 +182,8 @@
             this.Text = " ";
             this.Load += new System.EventHandler(this.CrearPerfil1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,12 +193,12 @@
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Button btnAceptarPerfil;
-        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.ComboBox cmbDeporte;
         private System.Windows.Forms.ComboBox cmbRol;
-        private System.Windows.Forms.Label lblDeporte;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnVolverAEnt;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

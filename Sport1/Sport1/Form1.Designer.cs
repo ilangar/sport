@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.btnComenzar = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // btnComenzar
             // 
             this.btnComenzar.BackColor = System.Drawing.Color.Transparent;
             this.btnComenzar.BackgroundImage = global::Sport1.Properties.Resources.Botón;
-            this.btnComenzar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnComenzar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComenzar.FlatAppearance.BorderSize = 0;
             this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -43,7 +44,7 @@
             this.btnComenzar.Location = new System.Drawing.Point(451, 454);
             this.btnComenzar.Margin = new System.Windows.Forms.Padding(0);
             this.btnComenzar.Name = "btnComenzar";
-            this.btnComenzar.Size = new System.Drawing.Size(388, 100);
+            this.btnComenzar.Size = new System.Drawing.Size(378, 91);
             this.btnComenzar.TabIndex = 0;
             this.btnComenzar.UseVisualStyleBackColor = false;
             this.btnComenzar.Click += new System.EventHandler(this.Button1_Click);
@@ -69,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnComenzar;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

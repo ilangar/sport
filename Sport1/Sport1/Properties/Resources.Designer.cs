@@ -123,6 +123,26 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Crea_un_perfil_para_comenzar {
+            get {
+                object obj = ResourceManager.GetObject("Crea un perfil para comenzar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Deporte_ {
+            get {
+                object obj = ResourceManager.GetObject("Deporte_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FONDO {
             get {
                 object obj = ResourceManager.GetObject("FONDO", resourceCulture);
@@ -173,6 +193,16 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nombre_ {
+            get {
+                object obj = ResourceManager.GetObject("Nombre_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nombre___1_ {
             get {
                 object obj = ResourceManager.GetObject("Nombre_ (1)", resourceCulture);
@@ -186,6 +216,56 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap Pantalla_de_inicio {
             get {
                 object obj = ResourceManager.GetObject("Pantalla de inicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_24 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rol_ {
+            get {
+                object obj = ResourceManager.GetObject("Rol_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rol___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Rol_ (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rol___2_ {
+            get {
+                object obj = ResourceManager.GetObject("Rol_ (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rol___3_ {
+            get {
+                object obj = ResourceManager.GetObject("Rol_ (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

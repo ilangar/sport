@@ -219,5 +219,29 @@
   <ItemGroup>
     <None Include="Resources\Botón guardar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombre_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rol_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rol_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rol_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rol_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deporte_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crea un perfil para comenzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
