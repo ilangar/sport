@@ -42,7 +42,7 @@
             this.btnCrearPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrearPerfil.FlatAppearance.BorderSize = 0;
             this.btnCrearPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearPerfil.Location = new System.Drawing.Point(500, 600);
+            this.btnCrearPerfil.Location = new System.Drawing.Point(519, 610);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
             this.btnCrearPerfil.Size = new System.Drawing.Size(319, 77);
             this.btnCrearPerfil.TabIndex = 0;

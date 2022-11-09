@@ -15,7 +15,7 @@ namespace Sport1
     public partial class Inicio : Form
     {
         int posX = 38;
-        int posY = 100;
+        int posY = 125;
         int cantPerfiles;
         string[] nombres = new string[1000];
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
@@ -123,10 +123,17 @@ namespace Sport1
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
                     btnPerfil1.Location = new Point(posX, posY);
-                    posX += 250;
-                    btnPerfil1.Size = new Size(160, 70);
+                    posX += 270;
+                    btnPerfil1.Font = new Font("Montserrat Alternate Medium", 20f);
+                    btnPerfil1.ForeColor = Color.White;
+                    btnPerfil1.Size = new Size(210, 77);
                     btnPerfil1.Click += new System.EventHandler(this.click_btn_perfil);
                     btnPerfil1.Tag = x;
+                    btnPerfil1.BackgroundImage = Image.FromFile("BotonPerfil.png");
+                    btnPerfil1.BackColor = Color.Transparent;
+                    btnPerfil1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    btnPerfil1.FlatAppearance.BorderSize = 0;
+                    btnPerfil1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                     Controls.Add(btnPerfil1);
                     x++;
                     k++;

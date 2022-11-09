@@ -258,5 +258,8 @@
   <ItemGroup>
     <None Include="Resources\Frame 1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BotonPerfil.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
