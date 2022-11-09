@@ -243,5 +243,20 @@
   <ItemGroup>
     <None Include="Resources\Rectangle 24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pantalla basia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Botón Verde agua claro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barra de arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frame 1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

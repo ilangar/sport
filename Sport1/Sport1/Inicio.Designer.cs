@@ -38,13 +38,13 @@
             // btnCrearPerfil
             // 
             this.btnCrearPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnCrearPerfil.BackgroundImage = global::Sport1.Properties.Resources.Botón_Verde_agua_claro;
+            this.btnCrearPerfil.BackgroundImage = global::Sport1.Properties.Resources.Botón_Verde_agua_claro1;
             this.btnCrearPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrearPerfil.FlatAppearance.BorderSize = 0;
             this.btnCrearPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearPerfil.Location = new System.Drawing.Point(498, 556);
+            this.btnCrearPerfil.Location = new System.Drawing.Point(479, 564);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(278, 79);
+            this.btnCrearPerfil.Size = new System.Drawing.Size(319, 77);
             this.btnCrearPerfil.TabIndex = 0;
             this.btnCrearPerfil.UseVisualStyleBackColor = false;
             this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
@@ -61,19 +61,23 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(549, 312);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Sport1.Properties.Resources.Cartel;
+            this.pictureBox2.Location = new System.Drawing.Point(290, 205);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(680, 200);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Sport1.Properties.Resources.Inicio_sesión;
+            this.BackgroundImage = global::Sport1.Properties.Resources.Frame_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1278, 718);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

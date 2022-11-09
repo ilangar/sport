@@ -121,17 +121,20 @@
   <data name="Rol_ (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rol_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Botón" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Botón.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Inicio sesión" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inicio sesión.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Pantalla de inicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pantalla de inicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Botón Verde agua claro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Botón Verde agua claro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pantalla basia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pantalla basia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FONDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FONDO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cartel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cartel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Botón Verde agua claro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Botón Verde agua claro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +148,12 @@
   <data name="image 9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Rectangle 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectangle 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nombre_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nombre_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Botón guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Botón guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +162,9 @@
   </data>
   <data name="Crea un perfil para comenzar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crea un perfil para comenzar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Botón" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Botón.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rol_ (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rol_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,22 +175,25 @@
   <data name="Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Inicio sesión" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inicio sesión.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Barra de arriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Barra de arriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Botón (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Botón (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image 9 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 9 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Nombre_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Nombre_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image 9 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 9 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Deporte_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Deporte_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rectangle 24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rectangle 24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Frame 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Frame 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

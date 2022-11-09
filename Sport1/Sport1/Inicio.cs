@@ -113,7 +113,7 @@ namespace Sport1
 
             if(ds.Tables["Perfil"].Rows.Count == 0)
             {
-                lblCrearPerfil.Visible = true;
+                pictureBox2.Visible = true;
             }
             for (int i = 0; i<ds.Tables["Perfil"].Rows.Count; i++)
             {
@@ -195,6 +195,14 @@ namespace Sport1
 
 
 
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            if (ds.Tables["Perfil"].Rows.Count >= 0)
+            {
+                pictureBox2.Visible = true;
+            }
         }
     }
 }

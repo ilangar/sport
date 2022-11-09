@@ -63,6 +63,16 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Barra_de_arriba {
+            get {
+                object obj = ResourceManager.GetObject("Barra de arriba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Base {
             get {
                 object obj = ResourceManager.GetObject("Base", resourceCulture);
@@ -123,6 +133,26 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Botón_Verde_agua_claro1 {
+            get {
+                object obj = ResourceManager.GetObject("Botón Verde agua claro1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cartel {
+            get {
+                object obj = ResourceManager.GetObject("Cartel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crea_un_perfil_para_comenzar {
             get {
                 object obj = ResourceManager.GetObject("Crea un perfil para comenzar", resourceCulture);
@@ -146,6 +176,16 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap FONDO {
             get {
                 object obj = ResourceManager.GetObject("FONDO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Frame_1 {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +246,16 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap Nombre___1_ {
             get {
                 object obj = ResourceManager.GetObject("Nombre_ (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pantalla_basia {
+            get {
+                object obj = ResourceManager.GetObject("Pantalla basia", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
