@@ -275,7 +275,7 @@ namespace Sport1
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
                     command.Connection = connection;
-                    command.CommandText = "UPDATE Obj SET Objetivo, IdCar, Per = (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Convert.ToInt32(Program.idUser) + ")";
+                    command.CommandText = "UPDATE Obj SET Objetivo =" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", WHERE Per =" + Convert.ToInt32(Program.idUser) + ")";
                     command.ExecuteNonQuery();
                     connection.Close();
                     x++;
@@ -287,7 +287,7 @@ namespace Sport1
         {
             x = 0;
 
-            if (ds2.Tables["Obj"].Rows.Count == 0)
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
             {
                 while (x < 6)
                 {
@@ -301,7 +301,7 @@ namespace Sport1
 
                 }
             }
-            if (ds2.Tables["Obj"].Rows.Count > 0)
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
             {
                 while (x < 6)
                 {
@@ -340,7 +340,7 @@ namespace Sport1
             OleDbCommand info2;
 
             info = new OleDbCommand("Select Deporte From Perfil WHERE  Nombre ='" + Convert.ToString(Program.idPerfil) + "'", connection);
-            info2 = new OleDbCommand("Select Objetivo FROM Obj WHERE Nombre = " +  Convert.ToInt32(Program.idUser) , connection);
+            info2 = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per = '" + Program.idUser + "'" , connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);

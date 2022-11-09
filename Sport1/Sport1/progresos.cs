@@ -670,7 +670,7 @@ namespace Sport1
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Convert.ToInt32(Program.idUser) , connection);
-            infobj = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per ='" + Program.idUser + "'", connection) ;
+            infobj = new OleDbCommand("Select Objetivo, IdCar FROM Obj WHERE Per =" + Program.idUser + "'", connection) ;
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
