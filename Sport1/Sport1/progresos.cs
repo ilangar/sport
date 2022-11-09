@@ -89,7 +89,7 @@ namespace Sport1
             chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
             chartProgresos.Series["Objetivo puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            chartProgresos.Series["Objetivos paltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos rebotes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -667,8 +667,8 @@ namespace Sport1
 
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Program.idUser , connection);
-            infobj = new OleDbCommand("Select Objetivo, IdCar, FROM Obj WHERE Per ='" + Convert.ToInt32(Program.idUser) + "'", connection);
+            info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Convert.ToInt32(Program.idUser) , connection);
+            infobj = new OleDbCommand("Select Objetivo, IdCar FROM Obj WHERE Per =" + Convert.ToInt32(Program.idUser), connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);

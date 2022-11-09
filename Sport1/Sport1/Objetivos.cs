@@ -29,18 +29,22 @@ namespace Sport1
         string FechaLimite;
         Perfil1 formPerfil1;
         DataSet ds = new DataSet();
+        DataSet ds2 = new DataSet();
         List<TextBox> listaTXTObjDeportes = new List<TextBox>();
         string[] arrObjBask = new string[6] { "Puntos", "Asistencias", "Faltas", "Minutos jugados", "Rebotes", "Pelotas recuperadas" };
         string[] arrObjBaskid = new string[6] { "1", "2", "3", "4", "7", "10" };
         string[] arrObjFut = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas recuperadas", "Amonestaciones" };
-        string[] arrObjFutid= new string[6] { "2", "3", "4", "5", "8","11" };
+        string[] arrObjFutid= new string[6] { "2", "3", "4", "8", "10","11" };
         string[] arrObjHand = new string[7] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Pelotas perdidas", "Pelotas recuperadas" };
-        string[] arrObjHandid = new string[6] { "", "", "", "", "", "" };
+        string[] arrObjHandid = new string[7] { "2", "3", "4", "8", "10", "11","13" };
         string[] arrObjHock = new string[6] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros fallados", "Pelotas recuperadas" };
-        string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Scrums ganados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
+        string[] arrObjHockid = new string[6] { "2", "3", "4", "5", "8", "10"};
+        string[] arrObjRugby = new string[7] { "Tries", "Tackles", "Minutos Jugados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas" };
+        string[] arrObjRugbyid = new string[7] { "17", "18", "4", "19", "13", "20", "10" };
         string[] arrObjTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres" };
+        string[] arrObjTenisid = new string[6] { "21", "22", "3", "23", "24", "25" };
         string[] arrObjVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones", "Armados", "Bloqueos" };
-
+        string[] arrObjVoleyid = new string[7] { "21", "22", "26", "27", "28", "29", "6" };
         public void lblObjBasket()
         {
             while (lbl < 6)
@@ -248,30 +252,68 @@ namespace Sport1
          
         public void dbObjBasket()
         {
-            while (x < 6)
-            {
-     
+            x = 0;
 
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) values (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", '" + Program.idUser + "')";
-                command.ExecuteNonQuery();
-                connection.Close();
+            if (ds2.Tables["Obj"].Rows.Count == 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (ds2.Tables["Obj"].Rows.Count > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo, IdCar, Per = (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Convert.ToInt32(Program.idUser) + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
             }
         }
         public void dbObjFutbol()
         {
             x = 0;
-            while (x < 6)
+
+            if (ds2.Tables["Obj"].Rows.Count == 0)
             {
-                connection.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) +", " + Program.idUser + ")";
-                command.ExecuteNonQuery();
-                connection.Close();
-                x++;
-                
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (ds2.Tables["Obj"].Rows.Count > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo, IdCar, Per = (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Convert.ToInt32(Program.idUser) + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
             }
         }
 
@@ -293,25 +335,26 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb";
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Sport1-DB.accdb";
             OleDbCommand info;
-            info = new OleDbCommand("Select Deporte FROM Perfil", connection);
-            OleDbDataAdapter da = new OleDbDataAdapter(info);
-            da.Fill(ds, "Perfil");
-            string var = ds.Tables["Perfil"].Rows[0][0].ToString();
-            connection.Close();
+            OleDbCommand info2;
 
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "(SELECT Deporte from Perfil WHERE Nombre='" + Program.idPerfil + "')";
-            OleDbDataReader reader = command.ExecuteReader();
-            da.Fill(ds, "Perfil");
+            info = new OleDbCommand("Select Deporte From Perfil WHERE  Nombre ='" + Convert.ToString(Program.idPerfil) + "'", connection);
+            info2 = new OleDbCommand("Select Objetivo FROM Obj WHERE Nombre = " +  Convert.ToInt32(Program.idUser) , connection);
+
+            OleDbDataAdapter da1 = new OleDbDataAdapter(info);
+            OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
+
+
+            da1.Fill(ds, "Perfil");
+            da2.Fill(ds2, "Obj");
+
+
+
             // reader.Read();
             // int Deporte = int.Parse(reader["Deporte"].ToString());
 
             connection.Close();
-            connection.Open();
 
 
 
