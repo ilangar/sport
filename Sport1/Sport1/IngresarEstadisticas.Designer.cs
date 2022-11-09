@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresarEstadisticas));
             this.cmbDiaBasket = new System.Windows.Forms.ComboBox();
             this.lblFechaBasket = new System.Windows.Forms.Label();
             this.cmbAñoBasket = new System.Windows.Forms.ComboBox();
@@ -73,7 +74,7 @@
             "29",
             "30",
             "31"});
-            this.cmbDiaBasket.Location = new System.Drawing.Point(173, 52);
+            this.cmbDiaBasket.Location = new System.Drawing.Point(163, 145);
             this.cmbDiaBasket.Name = "cmbDiaBasket";
             this.cmbDiaBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbDiaBasket.TabIndex = 13;
@@ -82,8 +83,9 @@
             // lblFechaBasket
             // 
             this.lblFechaBasket.AutoSize = true;
+            this.lblFechaBasket.BackColor = System.Drawing.Color.Transparent;
             this.lblFechaBasket.Font = new System.Drawing.Font("Montserrat Alternates Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaBasket.Location = new System.Drawing.Point(90, 55);
+            this.lblFechaBasket.Location = new System.Drawing.Point(80, 146);
             this.lblFechaBasket.Name = "lblFechaBasket";
             this.lblFechaBasket.Size = new System.Drawing.Size(54, 18);
             this.lblFechaBasket.TabIndex = 14;
@@ -99,7 +101,7 @@
             "2024",
             "2025",
             "2026"});
-            this.cmbAñoBasket.Location = new System.Drawing.Point(396, 52);
+            this.cmbAñoBasket.Location = new System.Drawing.Point(358, 145);
             this.cmbAñoBasket.Name = "cmbAñoBasket";
             this.cmbAñoBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbAñoBasket.TabIndex = 16;
@@ -109,7 +111,7 @@
             // 
             this.lblBarra1.AutoSize = true;
             this.lblBarra1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarra1.Location = new System.Drawing.Point(253, 53);
+            this.lblBarra1.Location = new System.Drawing.Point(243, 145);
             this.lblBarra1.Name = "lblBarra1";
             this.lblBarra1.Size = new System.Drawing.Size(13, 20);
             this.lblBarra1.TabIndex = 19;
@@ -119,7 +121,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(361, 55);
+            this.label4.Location = new System.Drawing.Point(339, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 20);
             this.label4.TabIndex = 20;
@@ -142,7 +144,7 @@
             "10",
             "11",
             "12"});
-            this.cmbMesBasket.Location = new System.Drawing.Point(284, 54);
+            this.cmbMesBasket.Location = new System.Drawing.Point(261, 145);
             this.cmbMesBasket.Name = "cmbMesBasket";
             this.cmbMesBasket.Size = new System.Drawing.Size(71, 21);
             this.cmbMesBasket.TabIndex = 21;
@@ -150,19 +152,25 @@
             // 
             // btnIngresarEst
             // 
-            this.btnIngresarEst.Location = new System.Drawing.Point(565, 211);
+            this.btnIngresarEst.BackColor = System.Drawing.Color.Transparent;
+            this.btnIngresarEst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIngresarEst.BackgroundImage")));
+            this.btnIngresarEst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIngresarEst.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngresarEst.FlatAppearance.BorderSize = 0;
+            this.btnIngresarEst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngresarEst.Location = new System.Drawing.Point(952, 573);
             this.btnIngresarEst.Name = "btnIngresarEst";
-            this.btnIngresarEst.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresarEst.Size = new System.Drawing.Size(226, 77);
             this.btnIngresarEst.TabIndex = 22;
-            this.btnIngresarEst.Text = "Listo";
-            this.btnIngresarEst.UseVisualStyleBackColor = true;
+            this.btnIngresarEst.UseVisualStyleBackColor = false;
             this.btnIngresarEst.Click += new System.EventHandler(this.BtnIngresarBasket_Click);
             // 
             // IngresarEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 432);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.btnIngresarEst);
             this.Controls.Add(this.cmbMesBasket);
             this.Controls.Add(this.label4);
