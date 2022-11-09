@@ -164,8 +164,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1386, 720);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -179,6 +179,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrearPerfil1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.CrearPerfil1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

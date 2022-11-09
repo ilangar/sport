@@ -284,6 +284,76 @@ namespace Sport1
                 x++;
             }
         }
+        public void dbHandball()
+        {
+            x = 0;
+            while (x < 9)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbHock()
+        {
+            x = 0;
+            while (x < 10)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbRugby()
+        {
+            x = 0;
+            while (x < 9)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbTenis()
+        {
+            x = 0;
+            while (x < 6)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
+        public void dbVoley()
+        {
+            x = 0;
+            while (x < 7)
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO IngresarEstadisticas (Estd, IdCar, Per, Fecha) values (" + listaTXTDeportes[x].Text + ", " + listaTXTDeportes[x].Tag + ", '" + Program.idPerfil + "', '" + fecha + "')";
+                command.ExecuteNonQuery();
+                connection.Close();
+                x++;
+            }
+        }
 
         public IngresarEstadisticas()
         {
@@ -372,6 +442,21 @@ namespace Sport1
                     case "2":
                         dbFutbol();
                         break;
+                    case "3":
+                        dbHandball();
+                        break;
+                    case "4":
+                        dbHock();
+                        break;
+                    case "5":
+                        dbRugby();
+                        break;
+                    case "6":
+                        dbTenis();
+                        break;
+                    case "7":
+                        dbVoley();
+                        break;
                 }
                 formPerfil1 = formInicio.formPerfil1;
                 formPerfil1.Show();
@@ -386,6 +471,21 @@ namespace Sport1
                         break;
                     case "2":
                         dbFutbol();
+                        break;
+                    case "3":
+                        dbHandball();
+                        break;
+                    case "4":
+                        dbHock();
+                        break;
+                    case "5":
+                        dbRugby();
+                        break;
+                    case "6":
+                        dbTenis();
+                        break;
+                    case "7":
+                        dbVoley();
                         break;
                 }
                 formPerfilEnt = new perfilEnt();

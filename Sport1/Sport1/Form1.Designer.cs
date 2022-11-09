@@ -35,16 +35,16 @@
             // btnComenzar
             // 
             this.btnComenzar.BackColor = System.Drawing.Color.Transparent;
-            this.btnComenzar.BackgroundImage = global::Sport1.Properties.Resources.Botón;
             this.btnComenzar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComenzar.FlatAppearance.BorderSize = 0;
             this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComenzar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnComenzar.Location = new System.Drawing.Point(451, 454);
+            this.btnComenzar.Image = global::Sport1.Properties.Resources.Botón;
+            this.btnComenzar.Location = new System.Drawing.Point(489, 500);
             this.btnComenzar.Margin = new System.Windows.Forms.Padding(0);
             this.btnComenzar.Name = "btnComenzar";
-            this.btnComenzar.Size = new System.Drawing.Size(378, 91);
+            this.btnComenzar.Size = new System.Drawing.Size(390, 100);
             this.btnComenzar.TabIndex = 0;
             this.btnComenzar.UseVisualStyleBackColor = false;
             this.btnComenzar.Click += new System.EventHandler(this.Button1_Click);
@@ -54,13 +54,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.FONDO;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1278, 718);
             this.ControlBox = false;
             this.Controls.Add(this.btnComenzar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
