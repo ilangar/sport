@@ -66,12 +66,12 @@
             this.btnAceptarPerfil.BackColor = System.Drawing.Color.Transparent;
             this.btnAceptarPerfil.BackgroundImage = global::Sport1.Properties.Resources.Botón_Verde_agua_claro;
             this.btnAceptarPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAceptarPerfil.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnAceptarPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptarPerfil.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAceptarPerfil.FlatAppearance.BorderSize = 0;
             this.btnAceptarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptarPerfil.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAceptarPerfil.Location = new System.Drawing.Point(399, 370);
+            this.btnAceptarPerfil.Location = new System.Drawing.Point(436, 370);
             this.btnAceptarPerfil.Name = "btnAceptarPerfil";
             this.btnAceptarPerfil.Size = new System.Drawing.Size(227, 77);
             this.btnAceptarPerfil.TabIndex = 2;
@@ -80,6 +80,7 @@
             // 
             // cmbDeporte
             // 
+            this.cmbDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDeporte.FormattingEnabled = true;
             this.cmbDeporte.Items.AddRange(new object[] {
             "Basketball",
@@ -97,6 +98,7 @@
             // 
             // cmbRol
             // 
+            this.cmbRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
             "Equipo",
@@ -112,11 +114,12 @@
             this.btnVolverAEnt.BackColor = System.Drawing.Color.Transparent;
             this.btnVolverAEnt.BackgroundImage = global::Sport1.Properties.Resources.image_9__1_;
             this.btnVolverAEnt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolverAEnt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverAEnt.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1061, 9);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1237, 12);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
             this.btnVolverAEnt.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAEnt.TabIndex = 7;
@@ -165,7 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -176,7 +179,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CrearPerfil1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

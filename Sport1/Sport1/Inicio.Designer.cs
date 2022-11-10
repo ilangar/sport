@@ -43,9 +43,9 @@
             this.btnCrearPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrearPerfil.FlatAppearance.BorderSize = 0;
             this.btnCrearPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearPerfil.Location = new System.Drawing.Point(519, 610);
+            this.btnCrearPerfil.Location = new System.Drawing.Point(533, 610);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(319, 77);
+            this.btnCrearPerfil.Size = new System.Drawing.Size(320, 77);
             this.btnCrearPerfil.TabIndex = 0;
             this.btnCrearPerfil.UseVisualStyleBackColor = false;
             this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
@@ -64,7 +64,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Sport1.Properties.Resources.Cartel;
-            this.pictureBox2.Location = new System.Drawing.Point(290, 205);
+            this.pictureBox2.Location = new System.Drawing.Point(353, 205);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(680, 200);
             this.pictureBox2.TabIndex = 2;
@@ -76,11 +76,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImage = global::Sport1.Properties.Resources.Frame_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1278, 718);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCrearPerfil);
