@@ -38,47 +38,55 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(72, 511);
+            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BackgroundImage = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
+            this.btnVolver.Location = new System.Drawing.Point(1185, 8);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(169, 107);
+            this.btnVolver.Size = new System.Drawing.Size(80, 80);
             this.btnVolver.TabIndex = 0;
-            this.btnVolver.Text = "Volver a inicio";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnIngresarEstadisticas
             // 
-            this.btnIngresarEstadisticas.Location = new System.Drawing.Point(696, 73);
+            this.btnIngresarEstadisticas.BackColor = System.Drawing.Color.Transparent;
+            this.btnIngresarEstadisticas.BackgroundImage = global::Sport1.Properties.Resources.Botón_Añadir_estadisticas__1_;
+            this.btnIngresarEstadisticas.Location = new System.Drawing.Point(475, 110);
             this.btnIngresarEstadisticas.Name = "btnIngresarEstadisticas";
-            this.btnIngresarEstadisticas.Size = new System.Drawing.Size(138, 157);
+            this.btnIngresarEstadisticas.Size = new System.Drawing.Size(420, 90);
             this.btnIngresarEstadisticas.TabIndex = 2;
-            this.btnIngresarEstadisticas.Text = "Ingresar estadisticas";
-            this.btnIngresarEstadisticas.UseVisualStyleBackColor = true;
+            this.btnIngresarEstadisticas.UseVisualStyleBackColor = false;
             this.btnIngresarEstadisticas.Click += new System.EventHandler(this.BtnIngresarEstadisticas_Click);
             // 
             // btnVerProgresos
             // 
-            this.btnVerProgresos.Location = new System.Drawing.Point(373, 62);
+            this.btnVerProgresos.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerProgresos.Image = global::Sport1.Properties.Resources.Botón_ver_progreso;
+            this.btnVerProgresos.Location = new System.Drawing.Point(700, 250);
             this.btnVerProgresos.Name = "btnVerProgresos";
-            this.btnVerProgresos.Size = new System.Drawing.Size(94, 72);
+            this.btnVerProgresos.Size = new System.Drawing.Size(420, 90);
             this.btnVerProgresos.TabIndex = 3;
-            this.btnVerProgresos.Text = "Ver progresos";
-            this.btnVerProgresos.UseVisualStyleBackColor = true;
+            this.btnVerProgresos.UseVisualStyleBackColor = false;
             this.btnVerProgresos.Click += new System.EventHandler(this.BtnVerProgresos_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(696, 327);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Image = global::Sport1.Properties.Resources.Metas;
+            this.button1.Location = new System.Drawing.Point(915, 110);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 167);
+            this.button1.Size = new System.Drawing.Size(420, 90);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Ingresar Objetivos.";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // eliminarPerfil
             // 
-            this.eliminarPerfil.Location = new System.Drawing.Point(859, 22);
+            this.eliminarPerfil.Location = new System.Drawing.Point(1007, 426);
             this.eliminarPerfil.Name = "eliminarPerfil";
             this.eliminarPerfil.Size = new System.Drawing.Size(120, 23);
             this.eliminarPerfil.TabIndex = 5;
@@ -89,7 +97,7 @@
             // lblNomUser
             // 
             this.lblNomUser.AutoSize = true;
-            this.lblNomUser.Location = new System.Drawing.Point(431, 22);
+            this.lblNomUser.Location = new System.Drawing.Point(702, 27);
             this.lblNomUser.Name = "lblNomUser";
             this.lblNomUser.Size = new System.Drawing.Size(35, 13);
             this.lblNomUser.TabIndex = 6;
@@ -100,13 +108,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.BackgroundImage = global::Sport1.Properties.Resources.Base_pagina_principal;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.lblNomUser);
             this.Controls.Add(this.eliminarPerfil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVerProgresos);
             this.Controls.Add(this.btnIngresarEstadisticas);
             this.Controls.Add(this.btnVolver);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "Perfil1";
             this.Text = "Perfil1";
