@@ -458,7 +458,7 @@ namespace Sport1
                         dbVoley();
                         break;
                 }
-                formPerfil1 = formInicio.formPerfil1;
+                formPerfil1 = new Perfil1();
                 formPerfil1.Show();
                 this.Hide();
             }
