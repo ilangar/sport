@@ -83,6 +83,16 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Base_pagina_principal {
+            get {
+                object obj = ResourceManager.GetObject("Base pagina principal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Botón {
             get {
                 object obj = ResourceManager.GetObject("Botón", resourceCulture);
@@ -113,9 +123,39 @@ namespace Sport1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Botón_Añadir_estadisticas {
+            get {
+                object obj = ResourceManager.GetObject("Botón Añadir estadisticas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botón_Añadir_estadisticas__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Botón Añadir estadisticas (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Botón_guardar {
             get {
                 object obj = ResourceManager.GetObject("Botón guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botón_ver_progreso {
+            get {
+                object obj = ResourceManager.GetObject("Botón ver progreso", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,16 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap Botón_Verde_agua_claro1 {
             get {
                 object obj = ResourceManager.GetObject("Botón Verde agua claro1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Botón_volver_a_la_pagina_anterior {
+            get {
+                object obj = ResourceManager.GetObject("Botón volver a la pagina anterior", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +276,16 @@ namespace Sport1.Properties {
         internal static System.Drawing.Bitmap Inicio_sesión {
             get {
                 object obj = ResourceManager.GetObject("Inicio sesión", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Metas {
+            get {
+                object obj = ResourceManager.GetObject("Metas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
