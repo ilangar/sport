@@ -80,15 +80,15 @@ namespace Sport1
             chartProgresos.Series["Rebotes"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Amonestaciones"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Puntos"].BorderWidth = 10;
-            chartProgresos.Series["Asistencias"].BorderWidth = 10;
-            chartProgresos.Series["Faltas"].BorderWidth = 10;
-            chartProgresos.Series["Minutos jugados"].BorderWidth = 10;
-            chartProgresos.Series["Tiros fallados"].BorderWidth = 10;
-            chartProgresos.Series["Bloqueos"].BorderWidth = 10;
-            chartProgresos.Series["Rebotes"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
-            chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
+            chartProgresos.Series["Puntos"].BorderWidth = 7;
+            chartProgresos.Series["Asistencias"].BorderWidth = 7;
+            chartProgresos.Series["Faltas"].BorderWidth = 7;
+            chartProgresos.Series["Minutos jugados"].BorderWidth = 7;
+            chartProgresos.Series["Tiros fallados"].BorderWidth = 7;
+            chartProgresos.Series["Bloqueos"].BorderWidth = 7;
+            chartProgresos.Series["Rebotes"].BorderWidth = 7;
+            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 7;
+            chartProgresos.Series["Amonestaciones"].BorderWidth = 7;
             chartProgresos.Series["Objetivo puntos"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -178,14 +178,14 @@ namespace Sport1
             chartProgresos.Series["Tiros fallados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Amonestaciones"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Goles"].BorderWidth = 10;
-            chartProgresos.Series["Asistencias"].BorderWidth = 10;
-            chartProgresos.Series["Faltas"].BorderWidth = 10;
-            chartProgresos.Series["Minutos jugados"].BorderWidth = 10;
-            chartProgresos.Series["Tiros al arco"].BorderWidth = 10;
-            chartProgresos.Series["Tiros fallados"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
-            chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
+            chartProgresos.Series["Goles"].BorderWidth = 7;
+            chartProgresos.Series["Asistencias"].BorderWidth = 7;
+            chartProgresos.Series["Faltas"].BorderWidth = 7;
+            chartProgresos.Series["Minutos jugados"].BorderWidth = 7;
+            chartProgresos.Series["Tiros al arco"].BorderWidth = 7;
+            chartProgresos.Series["Tiros fallados"].BorderWidth = 7;
+            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 7;
+            chartProgresos.Series["Amonestaciones"].BorderWidth = 7;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -264,15 +264,15 @@ namespace Sport1
             chartProgresos.Series["Pelotas perdidas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Tiros fallados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Goles"].BorderWidth = 10;
-            chartProgresos.Series["Asistencias"].BorderWidth = 10;
-            chartProgresos.Series["Faltas"].BorderWidth = 10;
-            chartProgresos.Series["Minutos jugados"].BorderWidth = 10;
-            chartProgresos.Series["Amonestaciones"].BorderWidth = 10;
-            chartProgresos.Series["Exclusiones"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 10;
-            chartProgresos.Series["Tiros fallados"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
+            chartProgresos.Series["Goles"].BorderWidth = 7;
+            chartProgresos.Series["Asistencias"].BorderWidth = 7;
+            chartProgresos.Series["Faltas"].BorderWidth = 7;
+            chartProgresos.Series["Minutos jugados"].BorderWidth = 7;
+            chartProgresos.Series["Amonestaciones"].BorderWidth = 7;
+            chartProgresos.Series["Exclusiones"].BorderWidth = 7;
+            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 7;
+            chartProgresos.Series["Tiros fallados"].BorderWidth = 7;
+            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 7;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -357,16 +357,16 @@ namespace Sport1
             chartProgresos.Series["Tarjetas verdes"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Tarjetas amarillas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Tarjetas rojas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Goles"].BorderWidth = 10;
-            chartProgresos.Series["Asistencias"].BorderWidth = 10;
-            chartProgresos.Series["Faltas"].BorderWidth = 10;
-            chartProgresos.Series["Minutos jugados"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 10;
-            chartProgresos.Series["Tiros fallados"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
-            chartProgresos.Series["Tarjetas verdes"].BorderWidth = 10;
-            chartProgresos.Series["Tarjetas amarillas"].BorderWidth = 10;
-            chartProgresos.Series["Tarjetas rojas"].BorderWidth = 10;
+            chartProgresos.Series["Goles"].BorderWidth = 5;
+            chartProgresos.Series["Asistencias"].BorderWidth = 5;
+            chartProgresos.Series["Faltas"].BorderWidth = 5;
+            chartProgresos.Series["Minutos jugados"].BorderWidth = 5;
+            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 5;
+            chartProgresos.Series["Tiros fallados"].BorderWidth = 5;
+            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 5;
+            chartProgresos.Series["Tarjetas verdes"].BorderWidth = 5;
+            chartProgresos.Series["Tarjetas amarillas"].BorderWidth = 5;
+            chartProgresos.Series["Tarjetas rojas"].BorderWidth = 5;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -451,15 +451,15 @@ namespace Sport1
             chartProgresos.Series["Pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Tarjetas amarillas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Tarjetas rojas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Tries"].BorderWidth = 10;
-            chartProgresos.Series["Tackles"].BorderWidth = 10;
-            chartProgresos.Series["Minutos jugados"].BorderWidth = 10;
-            chartProgresos.Series["Lines ganados"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 10;
-            chartProgresos.Series["Conversiones"].BorderWidth = 10;
-            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 10;
-            chartProgresos.Series["Tarjetas amarillas"].BorderWidth = 10;
-            chartProgresos.Series["Tarjetas rojas"].BorderWidth = 10;
+            chartProgresos.Series["Tries"].BorderWidth = 5;
+            chartProgresos.Series["Tackles"].BorderWidth = 5;
+            chartProgresos.Series["Minutos jugados"].BorderWidth = 5;
+            chartProgresos.Series["Lines ganados"].BorderWidth = 5;
+            chartProgresos.Series["Pelotas perdidas"].BorderWidth = 5;
+            chartProgresos.Series["Conversiones"].BorderWidth = 5;
+            chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 5;
+            chartProgresos.Series["Tarjetas amarillas"].BorderWidth = 5;
+            chartProgresos.Series["Tarjetas rojas"].BorderWidth = 5;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -532,12 +532,12 @@ namespace Sport1
             chartProgresos.Series["Doble faltas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Winners"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Quiebres"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Aces"].BorderWidth = 10;
-            chartProgresos.Series["Errores no forzados"].BorderWidth = 10;
-            chartProgresos.Series["Faltas"].BorderWidth = 10;
-            chartProgresos.Series["Doble faltas"].BorderWidth = 10;
-            chartProgresos.Series["Winners"].BorderWidth = 10;
-            chartProgresos.Series["Quiebres"].BorderWidth = 10;
+            chartProgresos.Series["Aces"].BorderWidth = 5;
+            chartProgresos.Series["Errores no forzados"].BorderWidth = 5;
+            chartProgresos.Series["Faltas"].BorderWidth = 5;
+            chartProgresos.Series["Doble faltas"].BorderWidth = 5;
+            chartProgresos.Series["Winners"].BorderWidth = 5;
+            chartProgresos.Series["Quiebres"].BorderWidth = 5;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -603,13 +603,13 @@ namespace Sport1
             chartProgresos.Series["Recepciones"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Armados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Bloqueos"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
-            chartProgresos.Series["Aces"].BorderWidth = 10;
-            chartProgresos.Series["Errores no forzados"].BorderWidth = 10;
-            chartProgresos.Series["Remates logrados"].BorderWidth = 10;
-            chartProgresos.Series["Saques errados"].BorderWidth = 10;
-            chartProgresos.Series["Recepciones"].BorderWidth = 10;
-            chartProgresos.Series["Armados"].BorderWidth = 10;
-            chartProgresos.Series["Bloqueos"].BorderWidth = 10;
+            chartProgresos.Series["Aces"].BorderWidth = 5;
+            chartProgresos.Series["Errores no forzados"].BorderWidth = 5;
+            chartProgresos.Series["Remates logrados"].BorderWidth = 5;
+            chartProgresos.Series["Saques errados"].BorderWidth = 5;
+            chartProgresos.Series["Recepciones"].BorderWidth = 5;
+            chartProgresos.Series["Armados"].BorderWidth = 5;
+            chartProgresos.Series["Bloqueos"].BorderWidth = 5;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -670,7 +670,7 @@ namespace Sport1
             info = new OleDbCommand("Select Estd, IdCar, Fecha FROM IngresarEstadisticas WHERE Per ='" + Convert.ToString(Program.idPerfil) + "'", connection);
             info2 = new OleDbCommand("Select Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
             info3 = new OleDbCommand("Select Deporte FROM JugadorEquipo Where IdUser= " + Convert.ToInt32(Program.idUser) , connection);
-            infobj = new OleDbCommand("Select Objetivo, IdCar FROM Obj WHERE Per =" + Program.idUser + "'", connection) ;
+            infobj = new OleDbCommand("Select Objetivo, IdCar FROM Obj WHERE Per ='" + Program.idUser + "'", connection) ;
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
