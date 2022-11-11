@@ -253,7 +253,7 @@ namespace Sport1
         public void dbObjBasket()
         {
             x = 0;
-
+            
             if (ds2.Tables["Obj"].Rows.Count == 0)
             {
                 while (x < 6)
@@ -274,9 +274,14 @@ namespace Sport1
                 {
                     connection.Open();
                     OleDbCommand command = new OleDbCommand();
+                    OleDbCommand command2 = new OleDbCommand();
                     command.Connection = connection;
-                    command.CommandText = "UPDATE Obj SET Objetivo =" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", WHERE Per =" + Convert.ToInt32(Program.idUser) + ")";
+                    command.CommandText = "UPDATE Obj SET Objetivo = " + Convert.ToInt32(listaTXTObjDeportes[x].Text) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
                     command.ExecuteNonQuery();
+
+                    command2.Connection = connection;
+                    command2.CommandText = "UPDATE Obj SET IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command2.ExecuteNonQuery();
                     connection.Close();
                     x++;
 
@@ -340,16 +345,13 @@ namespace Sport1
             OleDbCommand info2;
 
             info = new OleDbCommand("Select Deporte From Perfil WHERE  Nombre ='" + Convert.ToString(Program.idPerfil) + "'", connection);
-            info2 = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per = '" + Program.idUser + "'" , connection);
+            info2 = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per = " + Program.idUser , connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
 
-
             da1.Fill(ds, "Perfil");
             da2.Fill(ds2, "Obj");
-
-
 
             // reader.Read();
             // int Deporte = int.Parse(reader["Deporte"].ToString());
@@ -357,7 +359,7 @@ namespace Sport1
             connection.Close();
 
 
-
+           
             switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
             {
                 case "1":
@@ -369,19 +371,24 @@ namespace Sport1
                     txtObjFutbol();
                     break;
                 case "3":
-                    lblObjHandball(); txtObjHand();
+                    lblObjHandball();
+                    txtObjHand();
                     break;
                 case "4":
-                    lblObjHockey(); txtObjHockey();
+                    lblObjHockey();
+                    txtObjHockey();
                     break;
                 case "5":
-                    lblObjRugby(); txtObjRugby();
+                    lblObjRugby();
+                    txtObjRugby();
                     break;
                 case "6":
-                    lblObjTenis(); txtObjTenis();
+                    lblObjTenis();
+                    txtObjTenis();
                     break;
                 case "7":
-                    lblObjVoley(); txtObjVoley();
+                    lblObjVoley();
+                    txtObjVoley();
                     break;
             }
 
