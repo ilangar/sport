@@ -30,6 +30,7 @@
         {
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnVolverAEnt = new System.Windows.Forms.Button();
+            this.btncumplObj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -61,6 +62,16 @@
             this.btnVolverAEnt.UseVisualStyleBackColor = false;
             this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);
             // 
+            // btncumplObj
+            // 
+            this.btncumplObj.Location = new System.Drawing.Point(916, 255);
+            this.btncumplObj.Name = "btncumplObj";
+            this.btncumplObj.Size = new System.Drawing.Size(148, 23);
+            this.btncumplObj.TabIndex = 9;
+            this.btncumplObj.Text = "Cumpli mis objetivos ";
+            this.btncumplObj.UseVisualStyleBackColor = true;
+            this.btncumplObj.Click += new System.EventHandler(this.BtncumplObj_Click);
+            // 
             // Objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -68,6 +79,7 @@
             this.BackgroundImage = global::Sport1.Properties.Resources.Base;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1188, 681);
+            this.Controls.Add(this.btncumplObj);
             this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.btnguardar);
             this.DoubleBuffered = true;
@@ -82,5 +94,6 @@
 
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnVolverAEnt;
+        private System.Windows.Forms.Button btncumplObj;
     }
 }

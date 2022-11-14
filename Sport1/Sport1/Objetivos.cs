@@ -254,7 +254,7 @@ namespace Sport1
         {
             x = 0;
             
-            if (ds2.Tables["Obj"].Rows.Count == 0)
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
             {
                 while (x < 6)
                 {
@@ -268,7 +268,7 @@ namespace Sport1
 
                 }
             }
-            if (ds2.Tables["Obj"].Rows.Count > 0)
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
             {
                 while (x < 6)
                 {
@@ -444,7 +444,33 @@ namespace Sport1
             formPerfil1.Show();
         }
 
-        
+        private void BtncumplObj_Click(object sender, EventArgs e)
+        {
+            {
+                DialogResult dr;
+                dr = MessageBox.Show("¿Estás seguro que cumpliste tus objetivos?", "Confirmar", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    OleDbCommand command = new OleDbCommand();
+
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "DELETE FROM Obj WHERE Per = " + Program.idUser;
+                    command.ExecuteNonQuery();
+                    connection.Close();
+
+                    formPerfil1 = new Perfil1();
+                    this.Hide();
+                }
+
+                    MessageBox.Show("Se cumplieron los objetivos");
+                    formInicio = new Inicio();
+                    this.Hide();
+                    formInicio.Show();
+                
+
+            }
+        }
     }
 }
     
