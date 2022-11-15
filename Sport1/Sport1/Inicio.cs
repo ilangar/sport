@@ -102,7 +102,8 @@ namespace Sport1
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.Open(); 
 
             OleDbCommand info;

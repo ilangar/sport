@@ -362,7 +362,8 @@ namespace Sport1
 
         private void IngresarEstadisticas_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             OleDbCommand info;
             OleDbCommand info2;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'" , connection);

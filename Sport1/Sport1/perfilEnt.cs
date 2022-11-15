@@ -43,6 +43,8 @@ namespace Sport1
         }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.Open();
             OleDbCommand info; 
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);

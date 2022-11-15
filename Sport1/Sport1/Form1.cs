@@ -19,7 +19,8 @@ namespace Sport1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
         }
 
         private void Button1_Click(object sender, EventArgs e)

@@ -28,10 +28,10 @@ namespace Sport1
         int lbl = 0;
         int txt = 0;
         int lblEst = 0;
-        int posLblX = 30;
-        int posLblY = 70;
-        int posEstLblX = 250;
-        int posEstLblY = 70;
+        int posLblX = 60;
+        int posLblY = 200;
+        int posEstLblX = 320;
+        int posEstLblY = 200;
         int x = 0;
         int car = 0;
         int puntos, asist, faltas, minJug, tirFal, bloq, rebotes, pelRec, amon = 0;
@@ -62,22 +62,22 @@ namespace Sport1
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
                 lblBasket.Location = new Point(posLblX, posLblY);
-                lblBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblBasket.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblBasket.AutoSize = true;
                 lblBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblBasket.Text = arrBask[lbl];
 
-                posLblY += 40;
+                posLblY += 50;
 
                 Label lblEstBasket = new Label();
                 this.Controls.Add(lblEstBasket);
                 lblEstBasket.Location = new Point(posEstLblX, posEstLblY);
-                lblEstBasket.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstBasket.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstBasket.AutoSize = true;
                 lblEstBasket.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstBasket.Text = Convert.ToString(estBask[lbl]);
                 lbl++;
-                posEstLblY += 40;
+                posEstLblY += 50;
             }
 
         }
@@ -126,7 +126,7 @@ namespace Sport1
                 Label lblHandball = new Label();
                 this.Controls.Add(lblHandball);
                 lblHandball.Location = new Point(posLblX, posLblY);
-                lblHandball.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblHandball.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHandball.AutoSize = true;
                 lblHandball.TextAlign = ContentAlignment.MiddleCenter;
                 lblHandball.Text = arrHand[lbl];
@@ -135,7 +135,7 @@ namespace Sport1
                 Label lblEstHand = new Label();
                 this.Controls.Add(lblEstHand);
                 lblEstHand.Location = new Point(posEstLblX, posEstLblY);
-                lblEstHand.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHand.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstHand.AutoSize = true;
                 lblEstHand.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstHand.Text = Convert.ToString(estHand[lbl]);
@@ -156,7 +156,7 @@ namespace Sport1
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
                 lblHockey.Location = new Point(posLblX, posLblY);
-                lblHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblHockey.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHockey.AutoSize = true;
                 lblHockey.TextAlign = ContentAlignment.MiddleCenter;
                 lblHockey.Text = arrHock[lbl];
@@ -164,7 +164,7 @@ namespace Sport1
                 Label lblEstHockey = new Label();
                 this.Controls.Add(lblEstHockey);
                 lblEstHockey.Location = new Point(posEstLblX, posEstLblY);
-                lblEstHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHockey.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstHockey.AutoSize = true;
                 lblEstHockey.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstHockey.Text = Convert.ToString(estHockey[lbl]);
@@ -186,7 +186,7 @@ namespace Sport1
                 Label lblRugby = new Label();
                 this.Controls.Add(lblRugby);
                 lblRugby.Location = new Point(posLblX, posLblY);
-                lblRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblRugby.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblRugby.AutoSize = true;
                 lblRugby.TextAlign = ContentAlignment.MiddleCenter;
                 lblRugby.Text = arrRugby[lbl];
@@ -194,7 +194,7 @@ namespace Sport1
                 Label lblEstRugby = new Label();
                 this.Controls.Add(lblEstRugby);
                 lblEstRugby.Location = new Point(posEstLblX, posEstLblY);
-                lblEstRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstRugby.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstRugby.AutoSize = true;
                 lblEstRugby.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstRugby.Text = Convert.ToString(estRugby[lbl]);
@@ -215,7 +215,7 @@ namespace Sport1
                 Label lblTenis = new Label();
                 this.Controls.Add(lblTenis);
                 lblTenis.Location = new Point(posLblX, posLblY);
-                lblTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblTenis.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblTenis.AutoSize = true;
                 lblTenis.TextAlign = ContentAlignment.MiddleCenter;
                 lblTenis.Text = arrTenis[lbl];
@@ -223,7 +223,7 @@ namespace Sport1
                 Label lblEstTenis = new Label();
                 this.Controls.Add(lblEstTenis);
                 lblEstTenis.Location = new Point(posEstLblX, posEstLblY);
-                lblEstTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstTenis.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstTenis.AutoSize = true;
                 lblEstTenis.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstTenis.Text = Convert.ToString(estTenis[lbl]);
@@ -244,7 +244,7 @@ namespace Sport1
                 Label lblVoley = new Label();
                 this.Controls.Add(lblVoley);
                 lblVoley.Location = new Point(posLblX, posLblY);
-                lblVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblVoley.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblVoley.AutoSize = true;
                 lblVoley.TextAlign = ContentAlignment.MiddleCenter;
                 lblVoley.Text = arrVoley[lbl];
@@ -252,7 +252,7 @@ namespace Sport1
                 Label lblEstVoley = new Label();
                 this.Controls.Add(lblEstVoley);
                 lblEstVoley.Location = new Point(posEstLblX, posEstLblY);
-                lblEstVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstVoley.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstVoley.AutoSize = true;
                 lblEstVoley.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstVoley.Text = Convert.ToString(estVoley[lbl]);
@@ -316,6 +316,8 @@ namespace Sport1
 
         private void Perfil1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             lblNomUser.Text = Program.idPerfil;
             connection.Open();
             OleDbCommand info;

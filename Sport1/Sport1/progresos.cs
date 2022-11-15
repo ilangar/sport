@@ -660,7 +660,8 @@ namespace Sport1
 
         private void Progresos_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.Open();
             OleDbCommand info;
             OleDbCommand info2;

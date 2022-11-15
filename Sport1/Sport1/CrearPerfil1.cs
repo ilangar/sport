@@ -94,6 +94,8 @@ namespace Sport1
 
         private void CrearPerfil1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             OleDbCommand info;
             OleDbCommand info2;
             info = new OleDbCommand("Select Nombre FROM Perfil", connection);

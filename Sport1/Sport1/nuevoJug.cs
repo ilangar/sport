@@ -78,6 +78,8 @@ namespace Sport1
 
         private void NuevoJug_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             OleDbCommand info;
             OleDbCommand info2;
             OleDbCommand info3;
