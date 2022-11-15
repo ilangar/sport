@@ -345,6 +345,8 @@ namespace Sport1
 
         private void Objfutbol_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Sport1-DB.accdb";
             OleDbCommand info;
             OleDbCommand info2;
