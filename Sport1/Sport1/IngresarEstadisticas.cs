@@ -19,14 +19,15 @@ namespace Sport1
         DataSet ds2 = new DataSet();
         int lbl = 0;
         int txt = 0;
-        int posLblY = 120;
+        int posLblY = 200;
         int posLblX = 90;
-        int posTxtY = 120;
+        int posTxtY = 200;
         int posTxtX = 250;
         int nom = 0;
         int x = 0;
         int d = 0;
         int j = 0;
+        int p = 0;
         string dia;
         string mes;
         string ano;
@@ -55,33 +56,38 @@ namespace Sport1
         {
             while (lbl < 9)
             {
-
-                Label lblBasket = new Label();
-                this.Controls.Add(lblBasket);
-                lblBasket.Location = new Point(posLblX, posLblY);
-                lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
-                lblBasket.AutoSize = true;
-                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
-                lblBasket.Text = arrBask [lbl];
+                while (p < 2)
+                {
+                    Label lblBasket = new Label();
+                    this.Controls.Add(lblBasket);
+                    lblBasket.Location = new Point(posLblX, posLblY);
+                    lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                    lblBasket.AutoSize = true;
+                    lblBasket.TextAlign = ContentAlignment.MiddleCenter;
+                    lblBasket.Text = arrBask[lbl];
+                    TextBox txtBasket = new TextBox();
+                    listaTXTDeportes.Add(txtBasket);
+                    this.Controls.Add(txtBasket);
+                    txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                    txtBasket.Location = new Point(posTxtX, posTxtY);
+                    txtBasket.Tag = arrBaskId[lbl];
+                    txt++;
+                    posLblX += 100;
+                    posTxtX += 150;
+                    p++;
+                }
+                p = 0;
+                posTxtX = 250;
+                posTxtY += 60; 
                 lbl++;
-                posLblY += 40;
+
             }
         }
 
 
         public void txtBasket()
         {
-            while (txt < 9)
-            {
-                TextBox txtBasket = new TextBox();
-                listaTXTDeportes.Add(txtBasket);
-                this.Controls.Add(txtBasket);
-                txtBasket.Location = new Point(posTxtX, posTxtY);
-                txtBasket.Tag = arrBaskId[txt];
-                txt++;
-                posTxtY += 40;
-                
-            }
+     
 
         }
         public void lblFutbol()
