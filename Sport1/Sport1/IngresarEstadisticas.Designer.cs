@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbMesBasket = new System.Windows.Forms.ComboBox();
             this.btnIngresarEst = new System.Windows.Forms.Button();
+            this.flowLayoutPanelEst = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // cmbDiaBasket
@@ -165,12 +166,20 @@
             this.btnIngresarEst.UseVisualStyleBackColor = false;
             this.btnIngresarEst.Click += new System.EventHandler(this.BtnIngresarBasket_Click);
             // 
+            // flowLayoutPanelEst
+            // 
+            this.flowLayoutPanelEst.Location = new System.Drawing.Point(83, 183);
+            this.flowLayoutPanelEst.Name = "flowLayoutPanelEst";
+            this.flowLayoutPanelEst.Size = new System.Drawing.Size(1095, 384);
+            this.flowLayoutPanelEst.TabIndex = 23;
+            // 
             // IngresarEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.flowLayoutPanelEst);
             this.Controls.Add(this.btnIngresarEst);
             this.Controls.Add(this.cmbMesBasket);
             this.Controls.Add(this.label4);
@@ -194,5 +203,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbMesBasket;
         private System.Windows.Forms.Button btnIngresarEst;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEst;
     }
 }

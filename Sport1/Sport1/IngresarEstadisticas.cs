@@ -56,23 +56,27 @@ namespace Sport1
         {
             while (lbl < 9)
             {
-                TextBox txtBasket = new TextBox();
-                listaTXTDeportes.Add(txtBasket);
-                txtBasket.Tag = arrBaskId[lbl];
+
                 Label lblBasket = new Label();
                 this.Controls.Add(lblBasket);
                 lblBasket.Text = arrBask[lbl];
-
-                while (p < 2)
+                flowLayoutPanelEst.Controls.Add(lblBasket);
+                lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                lblBasket.AutoSize = true;
+                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
+                TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
+                this.Controls.Add(txtBasket);
+                flowLayoutPanelEst.Controls.Add(txtBasket);
+                txtBasket.Tag = arrBaskId[lbl];
+                txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                /*while (p < 2)
                 {
 
                     lblBasket.Location = new Point(posLblX, posLblY);
                     lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                     lblBasket.AutoSize = true;
                     lblBasket.TextAlign = ContentAlignment.MiddleCenter;
-
-
-                    this.Controls.Add(txtBasket);
                     txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                     txtBasket.Location = new Point(posTxtX, posTxtY);
                     p++;
@@ -82,7 +86,7 @@ namespace Sport1
                     posTxtX += 150;
                     
                     
-                }
+                }*/
                 p = 0;
                 posTxtX = 220;
                 posTxtY += 60;
