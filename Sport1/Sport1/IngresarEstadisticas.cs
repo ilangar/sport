@@ -20,9 +20,9 @@ namespace Sport1
         int lbl = 0;
         int txt = 0;
         int posLblY = 200;
-        int posLblX = 90;
+        int posLblX = 60;
         int posTxtY = 200;
-        int posTxtX = 250;
+        int posTxtX = 220;
         int nom = 0;
         int x = 0;
         int d = 0;
@@ -56,29 +56,38 @@ namespace Sport1
         {
             while (lbl < 9)
             {
+                TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
+                txtBasket.Tag = arrBaskId[lbl];
+                Label lblBasket = new Label();
+                this.Controls.Add(lblBasket);
+                lblBasket.Text = arrBask[lbl];
+
                 while (p < 2)
                 {
-                    Label lblBasket = new Label();
-                    this.Controls.Add(lblBasket);
+
                     lblBasket.Location = new Point(posLblX, posLblY);
                     lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                     lblBasket.AutoSize = true;
                     lblBasket.TextAlign = ContentAlignment.MiddleCenter;
-                    lblBasket.Text = arrBask[lbl];
-                    TextBox txtBasket = new TextBox();
-                    listaTXTDeportes.Add(txtBasket);
+
+
                     this.Controls.Add(txtBasket);
                     txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                     txtBasket.Location = new Point(posTxtX, posTxtY);
-                    txtBasket.Tag = arrBaskId[lbl];
-                    txt++;
+                    p++;
+                    
+                    
                     posLblX += 100;
                     posTxtX += 150;
-                    p++;
+                    
+                    
                 }
                 p = 0;
-                posTxtX = 250;
-                posTxtY += 60; 
+                posTxtX = 220;
+                posTxtY += 60;
+                posLblX = 60;
+                posLblY += 60;
                 lbl++;
 
             }
