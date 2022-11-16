@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbMesBasket = new System.Windows.Forms.ComboBox();
             this.btnIngresarEst = new System.Windows.Forms.Button();
-            this.flowLayoutPanelEst = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanelEst = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // cmbDiaBasket
@@ -166,20 +166,31 @@
             this.btnIngresarEst.UseVisualStyleBackColor = false;
             this.btnIngresarEst.Click += new System.EventHandler(this.BtnIngresarBasket_Click);
             // 
-            // flowLayoutPanelEst
+            // tableLayoutPanelEst
             // 
-            this.flowLayoutPanelEst.Location = new System.Drawing.Point(83, 183);
-            this.flowLayoutPanelEst.Name = "flowLayoutPanelEst";
-            this.flowLayoutPanelEst.Size = new System.Drawing.Size(1095, 384);
-            this.flowLayoutPanelEst.TabIndex = 23;
+            this.tableLayoutPanelEst.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelEst.ColumnCount = 4;
+            this.tableLayoutPanelEst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelEst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelEst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelEst.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelEst.Location = new System.Drawing.Point(60, 192);
+            this.tableLayoutPanelEst.Name = "tableLayoutPanelEst";
+            this.tableLayoutPanelEst.RowCount = 2;
+            this.tableLayoutPanelEst.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelEst.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanelEst.Size = new System.Drawing.Size(1130, 375);
+            this.tableLayoutPanelEst.TabIndex = 23;
             // 
             // IngresarEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.flowLayoutPanelEst);
+            this.ControlBox = false;
+            this.Controls.Add(this.tableLayoutPanelEst);
             this.Controls.Add(this.btnIngresarEst);
             this.Controls.Add(this.cmbMesBasket);
             this.Controls.Add(this.label4);
@@ -187,8 +198,9 @@
             this.Controls.Add(this.cmbAñoBasket);
             this.Controls.Add(this.lblFechaBasket);
             this.Controls.Add(this.cmbDiaBasket);
+            this.DoubleBuffered = true;
             this.Name = "IngresarEstadisticas";
-            this.Text = "IngresarEstadisticas";
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.IngresarEstadisticas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,6 +215,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbMesBasket;
         private System.Windows.Forms.Button btnIngresarEst;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEst;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelEst;
     }
 }
