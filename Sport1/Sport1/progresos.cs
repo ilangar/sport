@@ -149,6 +149,7 @@ namespace Sport1
                 }
 
             }
+            prog = 0;
             while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
             {
                 estObjetivos.Add(Convert.ToInt32((dsobj.Tables["Obj"].Rows[prog][0])));
@@ -161,7 +162,7 @@ namespace Sport1
                 switch (x)
                 {
                     case 0:
-                        chartProgresos.Series["Objetivo puntos"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivo puntos"].Points.AddXY((Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[0][2])), estObjetivos[prog]);
                         break;
                     case 1:
                         chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
@@ -313,22 +314,22 @@ namespace Sport1
                 switch (x)
                 {
                     case 0:
-                        chartProgresos.Series["Objetivos goles"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos goles"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 1:
-                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 2:
-                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 3:
-                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 4:
-                        chartProgresos.Series["Objetivos rebotes"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos rebotes"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 5:
-                        chartProgresos.Series["Objetivos amonestaciones"].Points.AddY(estdProgresos[prog]);
+                        chartProgresos.Series["Objetivos amonestaciones"].Points.AddY(estObjetivos[prog]);
                         break;
                     
 
