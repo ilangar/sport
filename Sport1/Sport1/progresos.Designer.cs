@@ -30,9 +30,12 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(progresos));
             this.chartProgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartProgresos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // chartProgresos
@@ -47,6 +50,7 @@
             this.chartProgresos.Size = new System.Drawing.Size(1178, 466);
             this.chartProgresos.TabIndex = 0;
             this.chartProgresos.Text = "chart1";
+            this.chartProgresos.Visible = false;
             this.chartProgresos.Click += new System.EventHandler(this.chartProgresos_Click);
             // 
             // btnVolver
@@ -59,17 +63,28 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(441, 221);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(640, 163);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // progresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.chartProgresos);
             this.Name = "progresos";
             this.Text = "progresos";
             this.Load += new System.EventHandler(this.Progresos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartProgresos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -78,5 +93,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProgresos;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

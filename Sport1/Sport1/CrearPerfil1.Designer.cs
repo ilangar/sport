@@ -55,9 +55,10 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(121, 276);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(278, 20);
+            this.txtNombre.Size = new System.Drawing.Size(278, 31);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
@@ -81,6 +82,8 @@
             // cmbDeporte
             // 
             this.cmbDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDeporte.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDeporte.FormattingEnabled = true;
             this.cmbDeporte.Items.AddRange(new object[] {
             "Basketball",
@@ -92,20 +95,23 @@
             "Voleyball"});
             this.cmbDeporte.Location = new System.Drawing.Point(121, 521);
             this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(214, 21);
+            this.cmbDeporte.Size = new System.Drawing.Size(214, 34);
             this.cmbDeporte.TabIndex = 4;
             this.cmbDeporte.SelectedIndexChanged += new System.EventHandler(this.CmbDeporte_SelectedIndexChanged);
             // 
             // cmbRol
             // 
+            this.cmbRol.BackColor = System.Drawing.Color.White;
             this.cmbRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
             "Equipo",
             "Jugador"});
             this.cmbRol.Location = new System.Drawing.Point(121, 401);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(214, 21);
+            this.cmbRol.Size = new System.Drawing.Size(214, 34);
             this.cmbRol.TabIndex = 5;
             this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.CmbRol_SelectedIndexChanged);
             // 
