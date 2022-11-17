@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.eliminarPerfil = new System.Windows.Forms.Button();
             this.lblNomUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -98,21 +97,14 @@
             // lblNomUser
             // 
             this.lblNomUser.AutoSize = true;
-            this.lblNomUser.Location = new System.Drawing.Point(702, 27);
+            this.lblNomUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomUser.Font = new System.Drawing.Font("Montserrat Alternates Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomUser.Location = new System.Drawing.Point(633, 21);
             this.lblNomUser.Name = "lblNomUser";
-            this.lblNomUser.Size = new System.Drawing.Size(35, 13);
+            this.lblNomUser.Size = new System.Drawing.Size(138, 51);
             this.lblNomUser.TabIndex = 6;
             this.lblNomUser.Text = "label1";
             this.lblNomUser.Click += new System.EventHandler(this.LblNomUser_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
             // 
             // Perfil1
             // 
@@ -121,7 +113,6 @@
             this.BackgroundImage = global::Sport1.Properties.Resources.Base_pagina_principal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNomUser);
             this.Controls.Add(this.eliminarPerfil);
             this.Controls.Add(this.button1);
@@ -148,6 +139,5 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button eliminarPerfil;
         private System.Windows.Forms.Label lblNomUser;
-        private System.Windows.Forms.Label label1;
     }
 }

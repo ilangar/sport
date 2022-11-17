@@ -86,56 +86,44 @@ namespace Sport1
             {
                 Label lblFutbol = new Label();
                 this.Controls.Add(lblFutbol);
-                lblFutbol.Location = new Point(posLblX, posLblY);
-                lblFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblFutbol.Text = arrFut[lbl];
+                tableLayoutPanelEst.Controls.Add(lblFutbol);
+                lblFutbol.Font = new Font("Montserrat Alternate Medium", 16f);
                 lblFutbol.AutoSize = true;
                 lblFutbol.TextAlign = ContentAlignment.MiddleCenter;
-                lblFutbol.Text = arrFut[lbl];
-                lbl++;
-                posLblY += 40;
-            }
-        }
-        public void txtFutbol()
-        {
-            while (txt < 8)
-            {
                 TextBox txtFutbol = new TextBox();
                 listaTXTDeportes.Add(txtFutbol);
                 this.Controls.Add(txtFutbol);
-                txtFutbol.Location = new Point(posTxtX, posTxtY);
-                txtFutbol.Tag = arrFutId[txt];
-                txt++;
-                posTxtY += 40;
+                tableLayoutPanelEst.Controls.Add(txtFutbol);
+                txtFutbol.Tag = arrFutId[lbl];
+                txtFutbol.Font = new Font("Montserrat Alternate Medium", 16f);
+                lbl++;
             }
         }
+
 
         public void lblHandball()
         {
             while (lbl < 9)
             {
-                Label lblHandball = new Label();
-                this.Controls.Add(lblHandball);
-                lblHandball.Location = new Point(posLblX, posLblY);
-                lblHandball.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblHandball.AutoSize = true;
-                lblHandball.TextAlign = ContentAlignment.MiddleCenter;
-                lblHandball.Text = arrHand[lbl];
+                Label lblHand = new Label();
+                this.Controls.Add(lblHand);
+                lblHand.Text = arrBask[lbl];
+                tableLayoutPanelEst.Controls.Add(lblHand);
+                lblHand.Font = new Font("Montserrat Alternate Medium", 16f);
+                lblHand.AutoSize = true;
+                lblHand.TextAlign = ContentAlignment.MiddleCenter;
+                TextBox txtHand = new TextBox();
+                listaTXTDeportes.Add(txtHand);
+                this.Controls.Add(txtHand);
+                tableLayoutPanelEst.Controls.Add(txtHand);
+                txtHand.Tag = arrBaskId[lbl];
+                txtHand.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
-                posLblY += 40;
             }
         }
         public void txtHandball()
         {
-            while (txt < 9)
-            {
-                TextBox txtHand = new TextBox();
-                listaTXTDeportes.Add(txtHand);
-                this.Controls.Add(txtHand);
-                txtHand.Location = new Point(posTxtX, posTxtY);
-                txtHand.Tag = arrHandId[txt];
-                txt++;
-                posTxtY += 40;
-            }
         }
 
         public void lblHockey()
@@ -144,27 +132,24 @@ namespace Sport1
             {
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
-                lblHockey.Location = new Point(posLblX, posLblY);
-                lblHockey.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblHockey.Text = arrBask[lbl];
+                tableLayoutPanelEst.Controls.Add(lblHockey);
+                lblHockey.Font = new Font("Montserrat Alternate Medium", 16f);
                 lblHockey.AutoSize = true;
                 lblHockey.TextAlign = ContentAlignment.MiddleCenter;
-                lblHockey.Text = arrHock[lbl];
+                TextBox txtHockey = new TextBox();
+                listaTXTDeportes.Add(txtHockey);
+                this.Controls.Add(txtHockey);
+                tableLayoutPanelEst.Controls.Add(txtHockey);
+                txtHockey.Tag = arrBaskId[lbl];
+                txtHockey.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
-                posLblY += 40;
+
             }
         }
         public void txtHockey()
         {
-            while (txt < 10)
-            {
-                TextBox txtHockey = new TextBox();
-                listaTXTDeportes.Add(txtHockey);
-                this.Controls.Add(txtHockey);
-                txtHockey.Location = new Point(posTxtX, posTxtY);
-                txtHockey.Tag = arrHockId[txt];
-                txt++;
-                posTxtY += 40;
-            }
+
         }
 
         public void lblRugby()
@@ -173,84 +158,69 @@ namespace Sport1
             {
                 Label lblRugby = new Label();
                 this.Controls.Add(lblRugby);
-                lblRugby.Location = new Point(posLblX, posLblY);
-                lblRugby.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblRugby.Text = arrBask[lbl];
+                tableLayoutPanelEst.Controls.Add(lblRugby);
+                lblRugby.Font = new Font("Montserrat Alternate Medium", 16f);
                 lblRugby.AutoSize = true;
                 lblRugby.TextAlign = ContentAlignment.MiddleCenter;
-                lblRugby.Text = arrRugby[lbl];
+                TextBox txtRugby = new TextBox();
+                listaTXTDeportes.Add(txtRugby);
+                this.Controls.Add(txtRugby);
+                tableLayoutPanelEst.Controls.Add(txtRugby);
+                txtRugby.Tag = arrBaskId[lbl];
+                txtRugby.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
-                posLblY += 40;
             }
         }
         public void txtRugby()
         {
-            while (txt < 9)
-            {
-                TextBox txtRugby = new TextBox();
-                listaTXTDeportes.Add(txtRugby);
-                this.Controls.Add(txtRugby);
-                txtRugby.Location = new Point(posTxtX, posTxtY);
-                txtRugby.Tag = arrRugbyId[txt];
-                txt++;
-                posTxtY += 40;
-            }
+ 
         }
 
         public void lblTenis()
         {
             while (lbl < 6)
             {
-                Label lblTenis = new Label();
-                this.Controls.Add(lblTenis);
-                lblTenis.Location = new Point(posLblX, posLblY);
-                lblTenis.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblTenis.AutoSize = true;
-                lblTenis.TextAlign = ContentAlignment.MiddleCenter;
-                lblTenis.Text = arrTenis[lbl];
+                Label lblBasket = new Label();
+                this.Controls.Add(lblBasket);
+                lblBasket.Text = arrBask[lbl];
+                tableLayoutPanelEst.Controls.Add(lblBasket);
+                lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                lblBasket.AutoSize = true;
+                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
+                TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
+                this.Controls.Add(txtBasket);
+                tableLayoutPanelEst.Controls.Add(txtBasket);
+                txtBasket.Tag = arrBaskId[lbl];
+                txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
-                posLblY += 40;
             }
         }
-        public void txtTenis()
-        {
-            while (txt < 6) 
-            {
-                TextBox txtTenis = new TextBox();
-                listaTXTDeportes.Add(txtTenis);
-                this.Controls.Add(txtTenis);
-                txtTenis.Location = new Point(posTxtX, posTxtY);
-                txtTenis.Tag = arrTenisId[txt];
-                txt++;
-                posTxtY += 40;
-            }
-        }
+
         public void lblVoley()
         {
             while (lbl < 7)
             {
-                Label lblVoley = new Label();
-                this.Controls.Add(lblVoley);
-                lblVoley.Location = new Point(posLblX, posLblY);
-                lblVoley.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblVoley.AutoSize = true;
-                lblVoley.TextAlign = ContentAlignment.MiddleCenter;
-                lblVoley.Text = arrVoley[lbl];
+                Label lblBasket = new Label();
+                this.Controls.Add(lblBasket);
+                lblBasket.Text = arrBask[lbl];
+                tableLayoutPanelEst.Controls.Add(lblBasket);
+                lblBasket.Font = new Font("Montserrat Alternate Medium", 16f);
+                lblBasket.AutoSize = true;
+                lblBasket.TextAlign = ContentAlignment.MiddleCenter;
+                TextBox txtBasket = new TextBox();
+                listaTXTDeportes.Add(txtBasket);
+                this.Controls.Add(txtBasket);
+                tableLayoutPanelEst.Controls.Add(txtBasket);
+                txtBasket.Tag = arrBaskId[lbl];
+                txtBasket.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
-                posLblY += 40;
             }
         }
         public void txtVoley()
         {
-            while (txt < 7)
-            {
-                TextBox txtVoley = new TextBox();
-                listaTXTDeportes.Add(txtVoley);
-                this.Controls.Add(txtVoley);
-                txtVoley.Location = new Point(posTxtX, posTxtY);
-                txtVoley.Tag = arrVoleyId[txt];
-                txt++;
-                posTxtY += 40;
-            }
+            
         }
 
         public void dbBasket()
@@ -373,25 +343,25 @@ namespace Sport1
                 switch (Convert.ToString(ds.Tables["Perfil"].Rows[0][0]))
                 {
                     case "1":
-                        lblBasket(); txtBasket();
+                        lblBasket(); 
                         break;
                     case "2":
-                        lblFutbol(); txtFutbol();
+                        lblFutbol(); 
                         break;
                     case "3":
-                        lblHandball(); txtHandball();
+                        lblHandball();
                         break;
                     case "4":
-                        lblHockey(); txtHockey();
+                        lblHockey(); 
                         break;
                     case "5":
-                        lblRugby(); txtRugby();
+                        lblRugby();
                         break;
                     case "6":
-                        lblTenis(); txtTenis();
+                        lblTenis(); 
                         break;
                     case "7":
-                        lblVoley(); txtVoley();
+                        lblVoley();
                         break;
                 }
             }
@@ -403,7 +373,7 @@ namespace Sport1
                         lblBasket(); txtBasket();
                         break;
                     case "2":
-                        lblFutbol(); txtFutbol();
+                        lblFutbol(); 
                         break;
                     case "3":
                         lblHandball(); txtHandball();
@@ -415,7 +385,7 @@ namespace Sport1
                         lblRugby(); txtRugby();
                         break;
                     case "6":
-                        lblTenis(); txtTenis();
+                        lblTenis();
                         break;
                     case "7":
                         lblVoley(); txtVoley();
