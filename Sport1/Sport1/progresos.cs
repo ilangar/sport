@@ -304,7 +304,7 @@ namespace Sport1
             }
             while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
             {
-                estObjetivos.Add(Convert.ToInt32((ds.Tables["Obj"].Rows[prog][0])));
+                estObjetivos.Add(Convert.ToInt32((dsobj.Tables["Obj"].Rows[prog][0])));
                 prog++;
             }
             prog = 0;
