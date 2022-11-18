@@ -38,12 +38,16 @@
             // 
             // btnNuevoJug
             // 
-            this.btnNuevoJug.Location = new System.Drawing.Point(770, 388);
+            this.btnNuevoJug.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoJug.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoJug.BackgroundImage")));
+            this.btnNuevoJug.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevoJug.FlatAppearance.BorderSize = 0;
+            this.btnNuevoJug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoJug.Location = new System.Drawing.Point(909, 115);
             this.btnNuevoJug.Name = "btnNuevoJug";
-            this.btnNuevoJug.Size = new System.Drawing.Size(136, 98);
+            this.btnNuevoJug.Size = new System.Drawing.Size(406, 77);
             this.btnNuevoJug.TabIndex = 0;
-            this.btnNuevoJug.Text = "Agregar jugador";
-            this.btnNuevoJug.UseVisualStyleBackColor = true;
+            this.btnNuevoJug.UseVisualStyleBackColor = false;
             this.btnNuevoJug.Click += new System.EventHandler(this.BtnAgregarJug_Click);
             // 
             // btnVolverAtras
@@ -54,7 +58,7 @@
             this.btnVolverAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverAtras.FlatAppearance.BorderSize = 0;
             this.btnVolverAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverAtras.Location = new System.Drawing.Point(1192, 12);
+            this.btnVolverAtras.Location = new System.Drawing.Point(1248, 12);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAtras.TabIndex = 1;
@@ -66,21 +70,25 @@
             this.flowLayoutJug.AutoScroll = true;
             this.flowLayoutJug.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutJug.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutJug.Location = new System.Drawing.Point(474, 180);
+            this.flowLayoutJug.Location = new System.Drawing.Point(508, 194);
             this.flowLayoutJug.Name = "flowLayoutJug";
-            this.flowLayoutJug.Size = new System.Drawing.Size(256, 448);
+            this.flowLayoutJug.Size = new System.Drawing.Size(256, 489);
             this.flowLayoutJug.TabIndex = 2;
             this.flowLayoutJug.WrapContents = false;
             this.flowLayoutJug.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutJug_Paint);
             // 
             // EliminarPerfil
             // 
-            this.EliminarPerfil.Location = new System.Drawing.Point(1065, 388);
+            this.EliminarPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.EliminarPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPerfil.FlatAppearance.BorderSize = 0;
+            this.EliminarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarPerfil.Image = ((System.Drawing.Image)(resources.GetObject("EliminarPerfil.Image")));
+            this.EliminarPerfil.Location = new System.Drawing.Point(1110, 653);
             this.EliminarPerfil.Name = "EliminarPerfil";
-            this.EliminarPerfil.Size = new System.Drawing.Size(75, 23);
+            this.EliminarPerfil.Size = new System.Drawing.Size(228, 64);
             this.EliminarPerfil.TabIndex = 3;
-            this.EliminarPerfil.Text = "Eliminar perfil";
-            this.EliminarPerfil.UseVisualStyleBackColor = true;
+            this.EliminarPerfil.UseVisualStyleBackColor = false;
             this.EliminarPerfil.Click += new System.EventHandler(this.EliminarPerfil_Click);
             // 
             // lblNomUser
@@ -88,7 +96,7 @@
             this.lblNomUser.AutoSize = true;
             this.lblNomUser.BackColor = System.Drawing.Color.Transparent;
             this.lblNomUser.Font = new System.Drawing.Font("Montserrat Alternates Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUser.Location = new System.Drawing.Point(731, 12);
+            this.lblNomUser.Location = new System.Drawing.Point(654, 12);
             this.lblNomUser.Name = "lblNomUser";
             this.lblNomUser.Size = new System.Drawing.Size(138, 51);
             this.lblNomUser.TabIndex = 7;
@@ -100,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.lblNomUser);
             this.Controls.Add(this.EliminarPerfil);
             this.Controls.Add(this.flowLayoutJug);

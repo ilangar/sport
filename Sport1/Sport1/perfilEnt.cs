@@ -19,6 +19,7 @@ namespace Sport1
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Sport1-DB.accdb");
         DataSet ds = new DataSet();
         DataSet ds2 = new DataSet();
+        DataSet ds3 = new DataSet();
         int k = 0;
         int pos = 38;
         //public string idPerfil;
@@ -46,10 +47,10 @@ namespace Sport1
         public void lblEnt()
         {
 
-            switch (Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[0][8]))
+            switch (Convert.ToInt32(ds3.Tables["Perfil"].Rows[0][0]))
             {
                 case 1:
-                     while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+                    while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                     {
                         estBask[lblEst % estBask.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][1]);
                         lblEst++;
@@ -60,6 +61,7 @@ namespace Sport1
                         this.Controls.Add(lblDep);
                         lblDep.Location = new Point(posLblX, posLblY);
                         lblDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                        lblDep.BackColor = Color.Transparent;
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
                         lblDep.Text = arrBask[lbl];
@@ -71,8 +73,16 @@ namespace Sport1
                         lblEstDep.Location = new Point(posEstLblX, posEstLblY);
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
+                        lblEstDep.BackColor = Color.Transparent;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        if(ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -91,6 +101,7 @@ namespace Sport1
                         lblDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
+                        lblDep.BackColor = Color.Transparent;
                         lblDep.Text = arrFut[lbl];
 
                         posLblY += 50;
@@ -100,8 +111,16 @@ namespace Sport1
                         lblEstDep.Location = new Point(posEstLblX, posEstLblY);
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
+                        lblEstDep.BackColor = Color.Transparent;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estFut[lbl]);
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -121,6 +140,7 @@ namespace Sport1
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
                         lblDep.Text = arrHand[lbl];
+                        lblDep.BackColor = Color.Transparent;
 
                         posLblY += 50;
 
@@ -130,7 +150,16 @@ namespace Sport1
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estHand[lbl]);
+                        lblEstDep.BackColor = Color.Transparent;
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
+
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -150,6 +179,7 @@ namespace Sport1
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
                         lblDep.Text = arrHock[lbl];
+                        lblDep.BackColor = Color.Transparent;
 
                         posLblY += 50;
 
@@ -159,7 +189,15 @@ namespace Sport1
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estHockey[lbl]);
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
+                        lblEstDep.BackColor = Color.Transparent;
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -179,7 +217,7 @@ namespace Sport1
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
                         lblDep.Text = arrRugby[lbl];
-
+                        lblDep.BackColor = Color.Transparent;
                         posLblY += 50;
 
                         Label lblEstDep = new Label();
@@ -188,7 +226,15 @@ namespace Sport1
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estRugby[lbl]);
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
+                        lblEstDep.BackColor = Color.Transparent;
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -207,6 +253,7 @@ namespace Sport1
                         lblDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblDep.AutoSize = true;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
+                        lblDep.BackColor = Color.Transparent;
                         lblDep.Text = arrTenis[lbl];
 
                         posLblY += 50;
@@ -217,7 +264,15 @@ namespace Sport1
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estTenis[lbl]);
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
+                        lblEstDep.BackColor = Color.Transparent;
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -235,6 +290,7 @@ namespace Sport1
                         lblDep.Location = new Point(posLblX, posLblY);
                         lblDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblDep.AutoSize = true;
+                        lblDep.BackColor = Color.Transparent;
                         lblDep.TextAlign = ContentAlignment.MiddleCenter;
                         lblDep.Text = arrVoley[lbl];
 
@@ -246,7 +302,15 @@ namespace Sport1
                         lblEstDep.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                         lblEstDep.AutoSize = true;
                         lblEstDep.TextAlign = ContentAlignment.MiddleCenter;
-                        lblEstDep.Text = Convert.ToString(estVoley[lbl]);
+                        if (ds2.Tables["IngresarEstadisticas"].Rows.Count == 0)
+                        {
+                            lblEstDep.Text = "0";
+                        }
+                        else
+                        {
+                            lblEstDep.Text = Convert.ToString(estBask[lbl]);
+                        }
+                        lblEstDep.BackColor = Color.Transparent;
                         lbl++;
                         posEstLblY += 50;
                     }
@@ -281,12 +345,16 @@ namespace Sport1
             lblNomUser.Text = Program.idPerfil;
             OleDbCommand info;
             OleDbCommand info2;
+            OleDbCommand info3;
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);
             info2 = new OleDbCommand("SELECT *  FROM IngresarEstadisticas INNER JOIN JugadorEquipo ON IngresarEstadisticas.Per = JugadorEquipo.Nombre WHERE JugadorEquipo.IdUser =" + Program.idUser, connection);
+            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre ='" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
+            OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
             da.Fill(ds, "JugadorEquipo");
             da2.Fill(ds2, "IngresarEstadisticas");
+            da3.Fill(ds3, "Perfil");
             
             for (int i = 0; i < ds.Tables["JugadorEquipo"].Rows.Count; i++)
             {
@@ -299,6 +367,10 @@ namespace Sport1
                     pos +=20;
                     btnJugador.Size = new Size(220, 35);
                     btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
+                    btnJugador.BackColor = Color.Transparent;
+                    btnJugador.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                    btnJugador.FlatStyle = FlatStyle.Flat;
+                    btnJugador.FlatAppearance.BorderSize = 0; 
                     Controls.Add(btnJugador);
                     flowLayoutJug.Controls.Add(btnJugador);
                     

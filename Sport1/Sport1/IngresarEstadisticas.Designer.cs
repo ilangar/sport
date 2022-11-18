@@ -37,6 +37,7 @@
             this.cmbMesBasket = new System.Windows.Forms.ComboBox();
             this.btnIngresarEst = new System.Windows.Forms.Button();
             this.tableLayoutPanelEst = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbDiaBasket
@@ -182,6 +183,19 @@
             this.tableLayoutPanelEst.Size = new System.Drawing.Size(1130, 375);
             this.tableLayoutPanelEst.TabIndex = 23;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1159, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 69);
+            this.button1.TabIndex = 24;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // IngresarEstadisticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +204,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanelEst);
             this.Controls.Add(this.btnIngresarEst);
             this.Controls.Add(this.cmbMesBasket);
@@ -216,5 +231,6 @@
         private System.Windows.Forms.ComboBox cmbMesBasket;
         private System.Windows.Forms.Button btnIngresarEst;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelEst;
+        private System.Windows.Forms.Button button1;
     }
 }
