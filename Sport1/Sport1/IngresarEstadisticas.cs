@@ -117,7 +117,7 @@ namespace Sport1
                 listaTXTDeportes.Add(txtHand);
                 this.Controls.Add(txtHand);
                 tableLayoutPanelEst.Controls.Add(txtHand);
-                txtHand.Tag = arrBaskId[lbl];
+                txtHand.Tag = arrHandkId[lbl];
                 txtHand.Font = new Font("Montserrat Alternate Medium", 16f);
                 lbl++;
             }
@@ -132,7 +132,7 @@ namespace Sport1
             {
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
-                lblHockey.Text = arrBask[lbl];
+                lblHockey.Text = arrHock[lbl];
                 tableLayoutPanelEst.Controls.Add(lblHockey);
                 lblHockey.Font = new Font("Montserrat Alternate Medium", 16f);
                 lblHockey.AutoSize = true;
