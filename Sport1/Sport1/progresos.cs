@@ -209,8 +209,8 @@ namespace Sport1
             chartProgresos.Series.Add("Objetivos asistencias");
             chartProgresos.Series.Add("Objetivos faltas");
             chartProgresos.Series.Add("Objetivos minutos jugados");
-            chartProgresos.Series.Add("Objetivo rebotes");
-            chartProgresos.Series.Add("Objetivos amonestacion");
+            chartProgresos.Series.Add("Objetivos rebotes");
+            chartProgresos.Series.Add("Objetivos amonestaciones");
 
             chartProgresos.Series["Goles"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -252,7 +252,7 @@ namespace Sport1
             chartProgresos.Series["Objetivos asistencias"].BorderWidth = 7;
             chartProgresos.Series["Objetivos faltas"].BorderWidth = 7;
             chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 7;
-            chartProgresos.Series["Objetivos rebotes "].BorderWidth = 7;
+            chartProgresos.Series["Objetivos rebotes"].BorderWidth = 7;
             chartProgresos.Series["Objetivos amonestaciones"].BorderWidth = 7;
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
@@ -302,7 +302,7 @@ namespace Sport1
                 }
 
             }
-            while (prog < Convert.ToInt32((ds.Tables["Obj"].Rows.Count)))
+            while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
             {
                 estObjetivos.Add(Convert.ToInt32((ds.Tables["Obj"].Rows[prog][0])));
                 prog++;
@@ -793,7 +793,7 @@ namespace Sport1
             da2.Fill(ds2, "Perfil");
             da3.Fill(ds3, "JugadorEquipo");
             daobj.Fill(dsobj, "Obj");
-            if (ds.Tables["IngresarEstadisticas"].Rows.Count >= 2)
+            if (ds.Tables["IngresarEstadisticas"].Rows.Count >= 12)
             {
                 chartProgresos.Visible = true;
                 pictureBox1.Visible = false;

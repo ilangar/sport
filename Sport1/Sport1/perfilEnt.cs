@@ -49,7 +49,7 @@ namespace Sport1
             switch (Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[0][8]))
             {
                 case 1:
-                    while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
+                     while (lblEst < ds2.Tables["IngresarEstadisticas"].Rows.Count)
                     {
                         estBask[lblEst % estBask.Length] += Convert.ToInt32(ds2.Tables["IngresarEstadisticas"].Rows[lblEst][1]);
                         lblEst++;
