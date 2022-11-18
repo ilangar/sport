@@ -793,6 +793,11 @@ namespace Sport1
             da2.Fill(ds2, "Perfil");
             da3.Fill(ds3, "JugadorEquipo");
             daobj.Fill(dsobj, "Obj");
+            if (ds.Tables["IngresarEstadisticas"].Rows.Count >= 2)
+            {
+                chartProgresos.Visible = true;
+                pictureBox1.Visible = false;
+            }
             if (Convert.ToInt32(ds2.Tables["Perfil"].Rows.Count) > 0)
             {
                 switch ((Convert.ToString(ds2.Tables["Perfil"].Rows[0][0])))
@@ -850,6 +855,11 @@ namespace Sport1
         }
 
         private void chartProgresos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
 
         }

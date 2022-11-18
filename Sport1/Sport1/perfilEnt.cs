@@ -278,6 +278,7 @@ namespace Sport1
             this.FormBorderStyle = FormBorderStyle.None;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.Open();
+            lblNomUser.Text = Program.idPerfil;
             OleDbCommand info;
             OleDbCommand info2;
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);
@@ -296,7 +297,7 @@ namespace Sport1
                     btnJugador.Text = Convert.ToString(ds.Tables["JugadorEquipo"].Rows[k][0]);
                     //btnJugador.Location = new Point(24, pos);
                     pos +=20;
-                    //btnJugador.Size = new Size(160, 20);
+                    btnJugador.Size = new Size(220, 35);
                     btnJugador.Click += new System.EventHandler(this.click_btn_jugador);
                     Controls.Add(btnJugador);
                     flowLayoutJug.Controls.Add(btnJugador);
@@ -346,6 +347,11 @@ namespace Sport1
                 this.Hide();
                 formInicio.Show();
             }
+        }
+
+        private void FlowLayoutJug_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
