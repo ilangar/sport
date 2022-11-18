@@ -130,7 +130,6 @@ namespace Sport1
                 lblHandball.AutoSize = true;
                 lblHandball.TextAlign = ContentAlignment.MiddleCenter;
                 lblHandball.Text = arrHand[lbl];
-                lbl++;
                 posLblY += 40;
                 Label lblEstHand = new Label();
                 this.Controls.Add(lblEstHand);

@@ -95,6 +95,12 @@ namespace Sport1
             chartProgresos.Series["Objetivos minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos rebotes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Objetivos pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivo puntos"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos asistencias"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos faltas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos minutos jugados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos rebotes"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Bloqueos"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Objetivo puntos"].BorderWidth = 7;
             chartProgresos.Series["Objetivos asistencias"].BorderWidth = 7;
             chartProgresos.Series["Objetivos faltas"].BorderWidth = 7;
@@ -107,6 +113,7 @@ namespace Sport1
             chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos rebotes"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos pelotas recuperadas"].BorderDashStyle = ChartDashStyle.Dash;
+
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -254,6 +261,13 @@ namespace Sport1
             chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 7;
             chartProgresos.Series["Objetivos rebotes"].BorderWidth = 7;
             chartProgresos.Series["Objetivos amonestaciones"].BorderWidth = 7;
+            chartProgresos.Series["Objetivo goles"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos asistencias"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos rebotes"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos amonestaciones"].BorderDashStyle = ChartDashStyle.Dash;
+
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -350,12 +364,21 @@ namespace Sport1
             chartProgresos.Series.Add("Goles");
             chartProgresos.Series.Add("Asistencias");
             chartProgresos.Series.Add("Faltas");
-            chartProgresos.Series.Add("Minutos Jugados");
+            chartProgresos.Series.Add("Minutos jugados");
             chartProgresos.Series.Add("Amonestaciones");
             chartProgresos.Series.Add("Exclusiones");
             chartProgresos.Series.Add("Pelotas perdidas");
             chartProgresos.Series.Add("Tiros fallados");
             chartProgresos.Series.Add("Pelotas recuperadas");
+            chartProgresos.Series.Add("Objetivos goles");
+            chartProgresos.Series.Add("Objetivos asistencias");
+            chartProgresos.Series.Add("Objetivos faltas");
+            chartProgresos.Series.Add("Objetivos minutos jugados");
+            chartProgresos.Series.Add("Objetivos amonestaciones");
+            chartProgresos.Series.Add("Objetivos pelotas perdidas");
+            chartProgresos.Series.Add("Objetivos pelotas recuperadas");
+
+
             chartProgresos.Series["Goles"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chartProgresos.Series["Faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -383,6 +406,37 @@ namespace Sport1
             chartProgresos.Series["Pelotas perdidas"].BorderWidth = 7;
             chartProgresos.Series["Tiros fallados"].BorderWidth = 7;
             chartProgresos.Series["Pelotas recuperadas"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos goles"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos asistencias"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos faltas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos minutos jugados"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos amonestaciones"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos pelotas perdidas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType. Line;
+            chartProgresos.Series["Objetivos goles"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos asistencias"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos faltas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos minutos jugados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos amonestaciones"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos pelotas perdidas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos goles"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos asistencias"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos faltas"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos amonestaciones"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos pelotas perdidas"].BorderWidth = 7;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderWidth = 7;
+            chartProgresos.Series["Objetivo goles"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos asistencias"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos amonestaciones"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos pelotas perdidas"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderDashStyle = ChartDashStyle.Dash;
+
+
+
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
@@ -434,7 +488,52 @@ namespace Sport1
                 }
 
             }
+            while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
+            {
+                estObjetivos.Add(Convert.ToInt32((dsobj.Tables["Obj"].Rows[prog][0])));
+                prog++;
+            }
+            prog = 0;
+
+            while (prog < estObjetivos.Count)
+            {
+                switch (x)
+                {
+                    case 0:
+                        chartProgresos.Series["Objetivos goles"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 1:
+                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 2:
+                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 3:
+                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 4:
+                        chartProgresos.Series["Objetivos amonestaciones"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 5:
+                        chartProgresos.Series["Objetivos pelotas perdidas"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 6:
+                        chartProgresos.Series["Objetivos pelotas recuperadas"].Points.AddY(estObjetivos[prog]);
+                        break;
+
+                }
+
+                x++;
+
+                prog++;
+                if (x == 6)
+                {
+                    x = 0;
+                }
+
+            }
         }
+    
         public void progresosHockey()
         {
             chartProgresos.Series.Add("Goles");
