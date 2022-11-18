@@ -326,6 +326,158 @@ namespace Sport1
                 }
             }
         }
+        public void dbObjHandball()
+        {
+            x = 0;
+
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo = " + Convert.ToInt32(listaTXTObjDeportes[x].Text) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command.ExecuteNonQuery();
+
+                    command2.Connection = connection;
+                    command2.CommandText = "UPDATE Obj SET IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+        }
+        public void dbObjHockey()
+        {
+            x = 0;
+
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo = " + Convert.ToInt32(listaTXTObjDeportes[x].Text) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command.ExecuteNonQuery();
+
+                    command2.Connection = connection;
+                    command2.CommandText = "UPDATE Obj SET IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+        }
+        public void dbObjTenis()
+        {
+            x = 0;
+
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo = " + Convert.ToInt32(listaTXTObjDeportes[x].Text) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command.ExecuteNonQuery();
+
+                    command2.Connection = connection;
+                    command2.CommandText = "UPDATE Obj SET IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+        }
+        public void dbObjVoley()
+        {
+            x = 0;
+
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) == 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Obj (Objetivo, IdCar, Per) VALUES (" + Convert.ToInt32(listaTXTObjDeportes[x].Text) + ", " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + ", " + Program.idUser + ")";
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+            if (Convert.ToInt32(ds2.Tables["Obj"].Rows[0][0]) > 0)
+            {
+                while (x < 6)
+                {
+                    connection.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Obj SET Objetivo = " + Convert.ToInt32(listaTXTObjDeportes[x].Text) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command.ExecuteNonQuery();
+
+                    command2.Connection = connection;
+                    command2.CommandText = "UPDATE Obj SET IdCar = " + Convert.ToInt32(listaTXTObjDeportes[x].Tag) + " WHERE Per =" + Convert.ToInt32(Program.idUser);
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                    x++;
+
+                }
+            }
+        }
 
         private OleDbConnection connection = new OleDbConnection();
         public Objetivos()
