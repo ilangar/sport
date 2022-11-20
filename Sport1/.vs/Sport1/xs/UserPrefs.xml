@@ -1,7 +1,5 @@
-﻿<Properties>
-  <MultiItemStartupConfigurations />
+﻿<Properties DisableMonoRequiredInfoBar="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Sport1/progresos.cs">
     <Files>
       <File FileName="Sport1/Objetivos.cs" Line="44" Column="54" />
@@ -19,7 +17,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
 </Properties>

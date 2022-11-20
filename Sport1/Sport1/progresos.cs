@@ -107,12 +107,12 @@ namespace Sport1
             chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 7;
             chartProgresos.Series["Objetivos rebotes"].BorderWidth = 7;
             chartProgresos.Series["Objetivos pelotas recuperadas"].BorderWidth = 7;
-            /*chartProgresos.Series["Objetivo puntos"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivo puntos"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos asistencias"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos rebotes"].BorderDashStyle = ChartDashStyle.Dash;
-            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderDashStyle = ChartDashStyle.Dash;*/
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderDashStyle = ChartDashStyle.Dash;
 
 
             while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
@@ -169,7 +169,7 @@ namespace Sport1
                 switch (x)
                 {
                     case 0:
-                        chartProgresos.Series["Objetivo puntos"].Points.AddXY((Convert.ToString(ds.Tables["IngresarEstadisticas"].Rows[0][2])), estObjetivos[prog]);
+                        chartProgresos.Series["Objetivo puntos"].Points.AddY(estObjetivos[prog]);
                         break;
                     case 1:
                         chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
@@ -186,18 +186,18 @@ namespace Sport1
                     case 5:
                         chartProgresos.Series["Objetivos pelotas recuperadas"].Points.AddY(estObjetivos[prog]);
                         break;
-                    
+
 
                 }
-
 
                 x++;
 
                 prog++;
-
-
+                if (x == 9)
+                {
+                    x = 0;
+                }
             }
-        }
 
         public void progresosFutbol()
         {
@@ -533,7 +533,6 @@ namespace Sport1
     
         public void progresosHockey()
         {
-            string[] arrObjHock = new string[6] { "Objetivos goles", " Objetivos asistencias", "Objetivos faltas", "Objetivos minutos Jugados", "Objetivos tiros fallados", "Objetivos pelotas recuperadas" };
 
             chartProgresos.Series.Add("Goles");
             chartProgresos.Series.Add("Asistencias");
@@ -593,9 +592,21 @@ namespace Sport1
             chartProgresos.Series["Objetivos minutos jugados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Objetivos tiros fallados"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
             chartProgresos.Series["Objetivos pelotas recuperadas"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+            chartProgresos.Series["Objetivos goles"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos asistencias"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos faltas"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos tiros fallados"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderWidth = 5;
+            chartProgresos.Series["Objetivos goles"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos asistencias"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos tiros fallados"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos pelotas recuperadas"].BorderDashStyle = ChartDashStyle.Dash;
 
 
-            while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
+                while (prog < Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows.Count)))
             {
                 estdProgresos.Add(Convert.ToInt32((ds.Tables["IngresarEstadisticas"].Rows[prog][0])));
                 prog++;
@@ -643,6 +654,48 @@ namespace Sport1
 
                 prog++;
                 if (x == 10)
+                {
+                    x = 0;
+                }
+
+            }
+        }
+            while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
+            {
+                estObjetivos.Add(Convert.ToInt32((dsobj.Tables["Obj"].Rows[prog][0])));
+                prog++;
+            }
+            prog = 0;
+
+            while (prog < estObjetivos.Count)
+            {
+                switch (x)
+                {
+                    case 0:
+                        chartProgresos.Series["Objetivos goles"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 1:
+                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 2:
+                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 3:
+                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 4:
+                        chartProgresos.Series["Objetivos tiros fallados"].Points.AddY(estObjetivos[prog]);
+                        break;
+                    case 5:
+                        chartProgresos.Series["Objetivos pelotas recuperadas"].Points.AddY(estObjetivos[prog]);
+                        break;
+
+                }
+
+                x++;
+
+                prog++;
+                if (x == 6)
                 {
                     x = 0;
                 }
