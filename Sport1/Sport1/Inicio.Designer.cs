@@ -43,9 +43,10 @@
             this.btnCrearPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrearPerfil.FlatAppearance.BorderSize = 0;
             this.btnCrearPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearPerfil.Location = new System.Drawing.Point(533, 610);
+            this.btnCrearPerfil.Location = new System.Drawing.Point(800, 938);
+            this.btnCrearPerfil.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCrearPerfil.Name = "btnCrearPerfil";
-            this.btnCrearPerfil.Size = new System.Drawing.Size(320, 77);
+            this.btnCrearPerfil.Size = new System.Drawing.Size(480, 118);
             this.btnCrearPerfil.TabIndex = 0;
             this.btnCrearPerfil.UseVisualStyleBackColor = false;
             this.btnCrearPerfil.Click += new System.EventHandler(this.BtnCrearPerfil_Click);
@@ -54,7 +55,8 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Sport1.Properties.Resources.Crea_un_perfil_para_comenzar;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(66, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(0, 0);
             this.pictureBox1.TabIndex = 1;
@@ -64,9 +66,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Sport1.Properties.Resources.Cartel;
-            this.pictureBox2.Location = new System.Drawing.Point(353, 205);
+            this.pictureBox2.Location = new System.Drawing.Point(411, 273);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(680, 200);
+            this.pictureBox2.Size = new System.Drawing.Size(666, 192);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
@@ -74,17 +77,18 @@
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Frame_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(1360, 762);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCrearPerfil);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Inicio";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

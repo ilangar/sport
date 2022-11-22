@@ -492,7 +492,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -667,7 +667,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -829,7 +829,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -971,7 +971,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -1123,7 +1123,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
