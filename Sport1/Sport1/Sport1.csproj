@@ -259,6 +259,7 @@
     <None Include="Resources\Frame 1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Botón objetivo logrrrado.png" />
     <None Include="Resources\Botón volver a la pagina anterior.png" />
     <None Include="Resources\Botón Añadir estadisticas %281%29.png" />
     <None Include="Resources\Metas.png" />
