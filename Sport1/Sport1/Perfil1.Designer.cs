@@ -38,6 +38,19 @@
             eliminarPerfil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // eliminarPerfil
+            // 
+            eliminarPerfil.BackColor = System.Drawing.Color.Transparent;
+            eliminarPerfil.FlatAppearance.BorderSize = 0;
+            eliminarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            eliminarPerfil.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPerfil.Image")));
+            eliminarPerfil.Location = new System.Drawing.Point(1110, 663);
+            eliminarPerfil.Name = "eliminarPerfil";
+            eliminarPerfil.Size = new System.Drawing.Size(228, 64);
+            eliminarPerfil.TabIndex = 5;
+            eliminarPerfil.UseVisualStyleBackColor = false;
+            eliminarPerfil.Click += new System.EventHandler(this.EliminarPerfil_Click);
+            // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Transparent;
@@ -47,7 +60,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
             this.btnVolver.Image = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
-            this.btnVolver.Location = new System.Drawing.Point(1192, 12);
+            this.btnVolver.Location = new System.Drawing.Point(1213, 10);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(67, 69);
@@ -102,27 +115,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // eliminarPerfil
-            // 
-            eliminarPerfil.BackColor = System.Drawing.Color.Transparent;
-            eliminarPerfil.FlatAppearance.BorderSize = 0;
-            eliminarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            eliminarPerfil.Image = ((System.Drawing.Image)(resources.GetObject("eliminarPerfil.Image")));
-            eliminarPerfil.Location = new System.Drawing.Point(1110, 663);
-            eliminarPerfil.Name = "eliminarPerfil";
-            eliminarPerfil.Size = new System.Drawing.Size(228, 64);
-            eliminarPerfil.TabIndex = 5;
-            eliminarPerfil.UseVisualStyleBackColor = false;
-            eliminarPerfil.Click += new System.EventHandler(this.EliminarPerfil_Click);
-            // 
             // lblNomUser
             // 
             this.lblNomUser.AutoSize = true;
             this.lblNomUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomUser.Font = new System.Drawing.Font("Montserrat Alternates Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUser.Location = new System.Drawing.Point(633, 21);
+            this.lblNomUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomUser.Location = new System.Drawing.Point(664, 25);
             this.lblNomUser.Name = "lblNomUser";
-            this.lblNomUser.Size = new System.Drawing.Size(138, 51);
+            this.lblNomUser.Size = new System.Drawing.Size(124, 42);
             this.lblNomUser.TabIndex = 6;
             this.lblNomUser.Text = "label1";
             this.lblNomUser.Click += new System.EventHandler(this.LblNomUser_Click);

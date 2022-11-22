@@ -64,12 +64,16 @@
             // 
             // btncumplObj
             // 
-            this.btncumplObj.Location = new System.Drawing.Point(916, 255);
+            this.btncumplObj.BackColor = System.Drawing.Color.Transparent;
+            this.btncumplObj.BackgroundImage = global::Sport1.Properties.Resources.Botón_objetivo_logrrrado;
+            this.btncumplObj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncumplObj.FlatAppearance.BorderSize = 0;
+            this.btncumplObj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncumplObj.Location = new System.Drawing.Point(623, 511);
             this.btncumplObj.Name = "btncumplObj";
-            this.btncumplObj.Size = new System.Drawing.Size(148, 23);
+            this.btncumplObj.Size = new System.Drawing.Size(237, 87);
             this.btncumplObj.TabIndex = 9;
-            this.btncumplObj.Text = "Cumpli mis objetivos ";
-            this.btncumplObj.UseVisualStyleBackColor = true;
+            this.btncumplObj.UseVisualStyleBackColor = false;
             this.btncumplObj.Click += new System.EventHandler(this.BtncumplObj_Click);
             // 
             // Objetivos

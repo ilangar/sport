@@ -160,7 +160,7 @@
             this.btnIngresarEst.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIngresarEst.FlatAppearance.BorderSize = 0;
             this.btnIngresarEst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresarEst.Location = new System.Drawing.Point(952, 573);
+            this.btnIngresarEst.Location = new System.Drawing.Point(974, 598);
             this.btnIngresarEst.Name = "btnIngresarEst";
             this.btnIngresarEst.Size = new System.Drawing.Size(226, 77);
             this.btnIngresarEst.TabIndex = 22;
@@ -189,7 +189,7 @@
             this.button1.BackgroundImage = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1159, 12);
+            this.button1.Location = new System.Drawing.Point(1213, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(67, 69);
             this.button1.TabIndex = 24;
@@ -202,7 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1350, 752);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanelEst);

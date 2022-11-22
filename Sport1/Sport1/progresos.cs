@@ -492,7 +492,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -667,7 +667,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -829,7 +829,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -919,7 +919,7 @@ namespace Sport1
             chartProgresos.Series["Objetivos quiebres"].BorderWidth = 7;
             chartProgresos.Series["Objetivos aces"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos errores no forzados"].BorderDashStyle = ChartDashStyle.Dash;
-            chartProgresos.Series["Objetivos faltas "].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos doble faltas"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos winners"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos quiebres"].BorderDashStyle = ChartDashStyle.Dash;
@@ -962,8 +962,9 @@ namespace Sport1
                 {
                     x = 0;
                 }
-
+                
             }
+            prog = 0;
             while (prog < Convert.ToInt32(dsobj.Tables["Obj"].Rows.Count))
             {
                 estObjetivos.Add(Convert.ToInt32(dsobj.Tables["Obj"].Rows[prog][0]));
@@ -971,7 +972,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
@@ -979,10 +980,10 @@ namespace Sport1
                         chartProgresos.Series["Objetivos aces"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 1:
-                        chartProgresos.Series["Objetivos errores no forzaods "].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
+                        chartProgresos.Series["Objetivos errores no forzaods"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 2:
-                        chartProgresos.Series["Objetivos faltas "].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
+                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 3:
                         chartProgresos.Series["Objetivos doble faltas"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
@@ -1123,7 +1124,7 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estProgresos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {

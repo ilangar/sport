@@ -58,7 +58,7 @@
             this.btnVolverAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverAtras.FlatAppearance.BorderSize = 0;
             this.btnVolverAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverAtras.Location = new System.Drawing.Point(1248, 12);
+            this.btnVolverAtras.Location = new System.Drawing.Point(1213, 10);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAtras.TabIndex = 1;
@@ -95,10 +95,10 @@
             // 
             this.lblNomUser.AutoSize = true;
             this.lblNomUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomUser.Font = new System.Drawing.Font("Montserrat Alternates Medium", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUser.Location = new System.Drawing.Point(654, 12);
+            this.lblNomUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomUser.Location = new System.Drawing.Point(621, 25);
             this.lblNomUser.Name = "lblNomUser";
-            this.lblNomUser.Size = new System.Drawing.Size(138, 51);
+            this.lblNomUser.Size = new System.Drawing.Size(124, 42);
             this.lblNomUser.TabIndex = 7;
             this.lblNomUser.Text = "label1";
             // 
