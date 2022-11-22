@@ -176,7 +176,7 @@ namespace Sport1
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
                     btnPerfil1.Location = new Point(posX, posY);
-                    posX += 250;
+                    posX += 270;
                     btnPerfil1.Font = new Font("Montserrat Alternate Medium", 20f);
                     btnPerfil1.ForeColor = Color.White;
                     btnPerfil1.BackgroundImage = Image.FromFile("BotonPerfil.png");
@@ -202,7 +202,7 @@ namespace Sport1
                     btnPerfil1.DialogResult = DialogResult.OK;
                     btnPerfil1.Text = Convert.ToString(ds.Tables["Perfil"].Rows[k][1]);
                     btnPerfil1.Location = new Point(posX, posY);
-                    posX += 250;
+                    posX += 270;
                     btnPerfil1.Font = new Font("Montserrat Alternate Medium", 20f);
                     btnPerfil1.ForeColor = Color.White;
                     btnPerfil1.BackgroundImage = Image.FromFile("BotonPerfil.png");

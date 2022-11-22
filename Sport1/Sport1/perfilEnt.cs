@@ -347,8 +347,8 @@ namespace Sport1
             OleDbCommand info2;
             OleDbCommand info3;
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);
-            info2 = new OleDbCommand("SELECT *  FROM IngresarEstadisticas INNER JOIN JugadorEquipo ON IngresarEstadisticas.Per = JugadorEquipo.Nombre WHERE JugadorEquipo.IdUser =" + Program.idUser, connection);
-            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre ='" + Program.idPerfil + "'", connection);
+            info2 = new OleDbCommand("SELECT *  FROM IngresarEstadisticas INNER JOIN JugadorEquipo ON IngresarEstadisticas.Per = JugadorEquipo.Nombre WHERE JugadorEquipo.IdUser =" + Program.idUser + " ORDER BY IngresarEstadisticas.IdIngreEst", connection);
+            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE IdUser =" + Program.idUser , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da3 = new OleDbDataAdapter(info3);

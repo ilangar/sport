@@ -503,7 +503,7 @@ namespace Sport1
             OleDbCommand info;
             OleDbCommand info2;
 
-            info = new OleDbCommand("Select Deporte From Perfil WHERE  Nombre ='" + Convert.ToString(Program.idPerfil) + "'", connection);
+            info = new OleDbCommand("Select Deporte From Perfil WHERE IdUser =" + Program.idUser, connection);
             info2 = new OleDbCommand("Select Count(Objetivo) From Obj WHERE Per = " + Program.idUser , connection);
 
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);

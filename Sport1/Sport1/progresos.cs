@@ -164,27 +164,27 @@ namespace Sport1
             }
             prog = 0;
 
-            while (prog < estObjetivos.Count)
+            while (prog < estdProgresos.Count)
             {
                 switch (x)
                 {
                     case 0:
-                        chartProgresos.Series["Objetivo puntos"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivo puntos"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 1:
-                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivos asistencias"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 2:
-                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivos faltas"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 3:
-                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivos minutos jugados"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 4:
-                        chartProgresos.Series["Objetivos rebotes"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivos rebotes"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
                     case 5:
-                        chartProgresos.Series["Objetivos pelotas recuperadas"].Points.AddY(estObjetivos[prog]);
+                        chartProgresos.Series["Objetivos pelotas recuperadas"].Points.AddY(estObjetivos[prog % estObjetivos.Count]);
                         break;
 
 
@@ -193,12 +193,12 @@ namespace Sport1
                 x++;
 
                 prog++;
-                if (x == 9)
+                if (x == 6)
                 {
                     x = 0;
                 }
             }
-
+        }
         public void progresosFutbol()
         {
             chartProgresos.Series.Add("Goles");
@@ -659,10 +659,10 @@ namespace Sport1
                 }
 
             }
-        }
-            while (prog < Convert.ToInt32((dsobj.Tables["Obj"].Rows.Count)))
+        
+            while (prog < Convert.ToInt32(dsobj.Tables["Obj"].Rows.Count))
             {
-                estObjetivos.Add(Convert.ToInt32((dsobj.Tables["Obj"].Rows[prog][0])));
+                estObjetivos.Add(Convert.ToInt32(dsobj.Tables["Obj"].Rows[prog][0]));
                 prog++;
             }
             prog = 0;
