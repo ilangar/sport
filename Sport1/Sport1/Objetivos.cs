@@ -179,7 +179,7 @@ namespace Sport1
         }
         public void txtObjRugby()
         {
-            while (txt < 9)
+            while (txt < 6)
             {
                 TextBox txtObjRugby = new TextBox();
                 this.Controls.Add(txtObjRugby);
