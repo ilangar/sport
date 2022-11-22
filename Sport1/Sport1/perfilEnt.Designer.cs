@@ -45,7 +45,7 @@
             this.btnNuevoJug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoJug.Location = new System.Drawing.Point(909, 115);
             this.btnNuevoJug.Name = "btnNuevoJug";
-            this.btnNuevoJug.Size = new System.Drawing.Size(406, 77);
+            this.btnNuevoJug.Size = new System.Drawing.Size(406, 87);
             this.btnNuevoJug.TabIndex = 0;
             this.btnNuevoJug.UseVisualStyleBackColor = false;
             this.btnNuevoJug.Click += new System.EventHandler(this.BtnAgregarJug_Click);
@@ -84,7 +84,7 @@
             this.EliminarPerfil.FlatAppearance.BorderSize = 0;
             this.EliminarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EliminarPerfil.Image = ((System.Drawing.Image)(resources.GetObject("EliminarPerfil.Image")));
-            this.EliminarPerfil.Location = new System.Drawing.Point(1110, 653);
+            this.EliminarPerfil.Location = new System.Drawing.Point(1110, 663);
             this.EliminarPerfil.Name = "EliminarPerfil";
             this.EliminarPerfil.Size = new System.Drawing.Size(228, 64);
             this.EliminarPerfil.TabIndex = 3;

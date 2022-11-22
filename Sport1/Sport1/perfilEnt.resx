@@ -121,7 +121,7 @@
   <data name="btnNuevoJug.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAaoAAABhCAYAAACH1+U1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAMBRJREFUeF7tnWuUZUWV55XKzMp6JAUFRVk8SygFUVBAEBGlBEQFVEbFB9LaPdq9
+        EQAACxEBf2RfkQAAMBRJREFUeF7tnWuUZUWV55XKzMp6JAUFRVk8SygFUVBAEBGlBEQFVEbFB9LaPdq9
         nLW61XYc7V62MwiOg4ziA7CRR5WvYXWjQmOLgg9EClBR24IP0996tTNrzXRPf5ixe/VnZv937X+wz777
         3HsyKzOpqtyx1i8jYseOfeLEPTd2Rpw45z5jXwxPPvnkM4UWm0zzmnGBMtNr+j6YDut6G9BvmEyDs+Pr
         erkGy/v6HTsx9OnRrpW3MspjoB3qu/yIjRhMp6XHBV8Ou4BpFY4G6LBep10MVh7rj9ijnkFZ06MMwact
@@ -332,7 +332,7 @@
   <data name="EliminarPerfil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOQAAAAsCAYAAAB17BRUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAB41JREFUeF7tnbFuFUcUhnkBPwB+AdMjUbtwmTRQUeKC3uYJoHaDO7cUPAChp4MG
+        EQAACxEBf2RfkQAAB41JREFUeF7tnbFuFUcUhnkBPwB+AdMjUbtwmTRQUeKC3uYJoHaDO7cUPAChp4MG
         KVGiBCJFIkqUKAGkSJESBQmJzGffXxyPz8zu+u7dO/aelT5578yZmbMz55+d3bvXe2WZ7dOnTxuJ7cS9
         xEHiSeJZ4mUQzABi/XHiKIEG0MLGQh7TbanR6wsnQnxBcBZOTtsLuaxuo5EEZ0HPiSAIToNWvljIZ7wt
         VXo1wRnRazQIgjosa68u5LTcliq6nYilaRAsBxq6vZDV+bZUwV1TYRAEy3N3Ia9hGwWzioIgGIdhoqRA
@@ -370,7 +370,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABQAAAALWCAYAAAAZJD5LAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAA/7JJREFUeF7svYefZllV7z1/xVVhhjgDE0hDVFFQEF/Uq4KKXgUBxQRXxSx6VcAA
+        EQAACxEBf2RfkQAA/7JJREFUeF7svYefZllV7z1/xVVhhjgDE0hDVFFQEF/Uq4KKXgUBxQRXxSx6VcAA
         BhCByTOdc5rQ0zMdKqeu6so551xPzqmq+/eu3zrPeVI91V3dVdWJ9Zn59nnqnJ3OPnuvs9c6a+99z2Oe
         kzAMwzAMwzAMwzAMwzAM4+7EDICGYRiGYRiGYRiGYRiGcRdjBkDDMAzDMAzDMAzDMAzDuIsxA6BhGIZh
         GIZhGIZhGIZh3MWYAdAwDMMwDMMwDMMwDMMw7mLMAGgYhmEYhmEYhmEYhmEYdzFmADQMwzAMwzAMwzAM
