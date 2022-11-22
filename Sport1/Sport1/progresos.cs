@@ -427,7 +427,7 @@ namespace Sport1
             chartProgresos.Series["Objetivos amonestaciones"].BorderWidth = 7;
             chartProgresos.Series["Objetivos pelotas perdidas"].BorderWidth = 7;
             chartProgresos.Series["Objetivos pelotas recuperadas"].BorderWidth = 7;
-            chartProgresos.Series["Objetivo goles"].BorderDashStyle = ChartDashStyle.Dash;
+            chartProgresos.Series["Objetivos goles"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos asistencias"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos faltas"].BorderDashStyle = ChartDashStyle.Dash;
             chartProgresos.Series["Objetivos minutos jugados"].BorderDashStyle = ChartDashStyle.Dash;
