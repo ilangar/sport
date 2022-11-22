@@ -467,5 +467,12 @@ namespace Sport1
         {
             ano = cmbAñoBasket.Text;
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Perfil1 formPerfil1 = new Perfil1();
+            this.Hide();
+            formPerfil1.Show();
+        }
     }
 }

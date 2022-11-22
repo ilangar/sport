@@ -46,19 +46,19 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Adobe Arabic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(127, 224);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(0, 14);
+            this.lblNombre.Size = new System.Drawing.Size(0, 16);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Click += new System.EventHandler(this.LblNombre_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(121, 276);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(121, 226);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(278, 31);
+            this.txtNombre.Size = new System.Drawing.Size(278, 29);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
@@ -83,7 +83,7 @@
             // 
             this.cmbDeporte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDeporte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDeporte.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDeporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDeporte.FormattingEnabled = true;
             this.cmbDeporte.Items.AddRange(new object[] {
             "Basketball",
@@ -93,9 +93,9 @@
             "Rugby",
             "Tenis",
             "Voleyball"});
-            this.cmbDeporte.Location = new System.Drawing.Point(121, 521);
+            this.cmbDeporte.Location = new System.Drawing.Point(121, 471);
             this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(214, 34);
+            this.cmbDeporte.Size = new System.Drawing.Size(214, 32);
             this.cmbDeporte.TabIndex = 4;
             this.cmbDeporte.SelectedIndexChanged += new System.EventHandler(this.CmbDeporte_SelectedIndexChanged);
             // 
@@ -104,14 +104,14 @@
             this.cmbRol.BackColor = System.Drawing.Color.White;
             this.cmbRol.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRol.Font = new System.Drawing.Font("Montserrat Alternates Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
             "Equipo",
             "Jugador"});
-            this.cmbRol.Location = new System.Drawing.Point(121, 401);
+            this.cmbRol.Location = new System.Drawing.Point(121, 350);
             this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(214, 34);
+            this.cmbRol.Size = new System.Drawing.Size(214, 32);
             this.cmbRol.TabIndex = 5;
             this.cmbRol.SelectedIndexChanged += new System.EventHandler(this.CmbRol_SelectedIndexChanged);
             // 
@@ -125,7 +125,7 @@
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1237, 12);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1213, 9);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
             this.btnVolverAEnt.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAEnt.TabIndex = 7;
@@ -137,7 +137,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::Sport1.Properties.Resources.Nombre_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 229);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 178);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(154, 36);
@@ -150,7 +150,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::Sport1.Properties.Resources.Rol___3_;
-            this.pictureBox2.Location = new System.Drawing.Point(121, 354);
+            this.pictureBox2.Location = new System.Drawing.Point(121, 304);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(154, 36);
@@ -162,7 +162,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::Sport1.Properties.Resources.Deporte_;
-            this.pictureBox3.Location = new System.Drawing.Point(121, 479);
+            this.pictureBox3.Location = new System.Drawing.Point(121, 428);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(154, 36);
             this.pictureBox3.TabIndex = 10;
@@ -174,7 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Group_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);

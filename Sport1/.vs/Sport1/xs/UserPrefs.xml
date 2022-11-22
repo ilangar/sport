@@ -1,27 +1,26 @@
-﻿<Properties>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sport1/Objetivos.cs">
+﻿<Properties DisableMonoRequiredInfoBar="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sport1/progresos.cs">
     <Files>
-      <File FileName="Sport1/Objetivos.cs" Line="328" Column="27" />
+      <File FileName="Sport1/Objetivos.cs" Line="44" Column="54" />
+      <File FileName="Sport1/progresos.cs" Line="608" Column="1" />
+      <File FileName="Sport1/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Sport1" expanded="True">
             <Node name="Sport1" expanded="True">
-              <Node name="Objetivos.cs" selected="True" />
+              <Node name="progresos.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
