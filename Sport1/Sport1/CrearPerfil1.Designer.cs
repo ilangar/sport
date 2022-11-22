@@ -125,7 +125,7 @@
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1213, 9);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1213, 10);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
             this.btnVolverAEnt.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAEnt.TabIndex = 7;

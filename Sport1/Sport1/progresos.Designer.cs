@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(progresos));
             this.chartProgresos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnVolver = new System.Windows.Forms.Button();
@@ -41,12 +41,12 @@
             // chartProgresos
             // 
             this.chartProgresos.BackColor = System.Drawing.Color.Transparent;
-            chartArea8.Name = "ChartArea1";
-            this.chartProgresos.ChartAreas.Add(chartArea8);
-            legend8.Font = new System.Drawing.Font("Montserrat Alternates Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend8.IsTextAutoFit = false;
-            legend8.Name = "Legend1";
-            this.chartProgresos.Legends.Add(legend8);
+            chartArea1.Name = "ChartArea1";
+            this.chartProgresos.ChartAreas.Add(chartArea1);
+            legend1.Font = new System.Drawing.Font("Montserrat Alternates Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartProgresos.Legends.Add(legend1);
             this.chartProgresos.Location = new System.Drawing.Point(55, 127);
             this.chartProgresos.Margin = new System.Windows.Forms.Padding(2);
             this.chartProgresos.Name = "chartProgresos";
@@ -65,7 +65,7 @@
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolver.Location = new System.Drawing.Point(1192, 12);
+            this.btnVolver.Location = new System.Drawing.Point(1213, 10);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(67, 69);
@@ -75,6 +75,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(378, 213);
@@ -90,7 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.chartProgresos);

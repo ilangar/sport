@@ -60,7 +60,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
             this.btnVolver.Image = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
-            this.btnVolver.Location = new System.Drawing.Point(1213, 9);
+            this.btnVolver.Location = new System.Drawing.Point(1213, 10);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(67, 69);
@@ -120,16 +120,16 @@
             this.lblNomUser.AutoSize = true;
             this.lblNomUser.BackColor = System.Drawing.Color.Transparent;
             this.lblNomUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUser.Location = new System.Drawing.Point(599, 17);
+            this.lblNomUser.Location = new System.Drawing.Point(664, 25);
             this.lblNomUser.Name = "lblNomUser";
-            this.lblNomUser.Size = new System.Drawing.Size(183, 64);
+            this.lblNomUser.Size = new System.Drawing.Size(124, 42);
             this.lblNomUser.TabIndex = 6;
             this.lblNomUser.Text = "label1";
             this.lblNomUser.Click += new System.EventHandler(this.LblNomUser_Click);
             // 
             // Perfil1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
