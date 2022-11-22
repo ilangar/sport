@@ -42,7 +42,6 @@
             // 
             // cmbDiaBasket
             // 
-            this.cmbDiaBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDiaBasket.FormattingEnabled = true;
             this.cmbDiaBasket.Items.AddRange(new object[] {
             "1",
@@ -86,16 +85,15 @@
             // 
             this.lblFechaBasket.AutoSize = true;
             this.lblFechaBasket.BackColor = System.Drawing.Color.Transparent;
-            this.lblFechaBasket.Font = new System.Drawing.Font("Montserrat Alternates Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaBasket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaBasket.Location = new System.Drawing.Point(80, 146);
             this.lblFechaBasket.Name = "lblFechaBasket";
-            this.lblFechaBasket.Size = new System.Drawing.Size(54, 18);
+            this.lblFechaBasket.Size = new System.Drawing.Size(50, 16);
             this.lblFechaBasket.TabIndex = 14;
             this.lblFechaBasket.Text = "Fecha";
             // 
             // cmbAñoBasket
             // 
-            this.cmbAñoBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAñoBasket.FormattingEnabled = true;
             this.cmbAñoBasket.Items.AddRange(new object[] {
             "2022",
@@ -131,7 +129,6 @@
             // 
             // cmbMesBasket
             // 
-            this.cmbMesBasket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMesBasket.FormattingEnabled = true;
             this.cmbMesBasket.Items.AddRange(new object[] {
             "1",

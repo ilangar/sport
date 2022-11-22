@@ -317,7 +317,7 @@ namespace Sport1
                     command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
                     command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
                     command3.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
-                    command4.CommandText = "DELETE FROM JugadorEuipo WHERE IdUser = (" + Program.idUser + ")";
+                    command4.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = (" + Program.idUser + ")";
                     command.ExecuteNonQuery();
                     command2.ExecuteNonQuery();
                     command3.ExecuteNonQuery();
