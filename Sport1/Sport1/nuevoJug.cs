@@ -85,7 +85,7 @@ namespace Sport1
             OleDbCommand info3;
             info = new OleDbCommand("Select Nombre FROM Perfil", connection);
             info2 = new OleDbCommand("SELECT Nombre FROM JugadorEquipo", connection);
-            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
+            info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE IdUser = " + Program.idUser , connection);
             OleDbDataAdapter da1 = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da3 = new OleDbDataAdapter(info3);
