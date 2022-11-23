@@ -404,17 +404,21 @@ namespace Sport1
             OleDbCommand command = new OleDbCommand();
             OleDbCommand command2 = new OleDbCommand();
             OleDbCommand command3 = new OleDbCommand();
+            OleDbCommand command4 = new OleDbCommand();
             if (dr == DialogResult.Yes)
             {
                 command.Connection = connection;
                 command2.Connection = connection;
                 command3.Connection = connection;
+                command4.Connection = connection;
                 command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
                 command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
-                command3.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = " + Program.idUser;
+                command3.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = (" + Program.idUser + ")";
+                command4.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
                 command.ExecuteNonQuery();
                 command2.ExecuteNonQuery();
                 command3.ExecuteNonQuery();
+                command4.ExecuteNonQuery();
                 connection.Close(); 
 
                 MessageBox.Show("Se eliminó este perfil");
