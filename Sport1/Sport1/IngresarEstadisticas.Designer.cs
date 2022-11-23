@@ -88,7 +88,7 @@
             this.lblFechaBasket.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaBasket.Location = new System.Drawing.Point(80, 146);
             this.lblFechaBasket.Name = "lblFechaBasket";
-            this.lblFechaBasket.Size = new System.Drawing.Size(50, 16);
+            this.lblFechaBasket.Size = new System.Drawing.Size(51, 16);
             this.lblFechaBasket.TabIndex = 14;
             this.lblFechaBasket.Text = "Fecha";
             // 
@@ -181,6 +181,7 @@
             this.tableLayoutPanelEst.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelEst.Size = new System.Drawing.Size(1130, 375);
             this.tableLayoutPanelEst.TabIndex = 23;
+            this.tableLayoutPanelEst.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelEst_Paint);
             // 
             // button1
             // 

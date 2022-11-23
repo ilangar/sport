@@ -474,5 +474,10 @@ namespace Sport1
             this.Hide();
             formPerfil1.Show();
         }
+
+        private void TableLayoutPanelEst_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

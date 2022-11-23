@@ -47,29 +47,29 @@ namespace Sport1
         string[] arrObjVoleyid = new string[7] { "21", "22", "26", "27", "28", "29", "6" };
         public void lblObjBasket()
         {
-            while (lbl < 6)
-            {
-                Label lblObjBask = new Label();
-                this.Controls.Add(lblObjBask);
-                lblObjBask.Location = new Point(posLblX, posLblY);
-                lblObjBask.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
-                lblObjBask.AutoSize = true;
-                lblObjBask.TextAlign = ContentAlignment.MiddleCenter;
-                lblObjBask.Text = arrObjBask[lbl];
-                lbl++;
-                posLblY += 40;
-            }
+            
 
         }
         public void txtObjBasket()
         {
             while (txt < 6)
             {
+                Label lblObjBask = new Label();
+                this.Controls.Add(lblObjBask);
+                lblObjBask.Location = new Point(posLblX, posLblY);
+                tableLayoutPanelObj.Controls.Add(lblObjBask);
+                lblObjBask.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblObjBask.AutoSize = true;
+                lblObjBask.TextAlign = ContentAlignment.MiddleCenter;
+                lblObjBask.Text = arrObjBask[txt];
                 TextBox txtObjBasket = new TextBox();
                 this.Controls.Add(txtObjBasket);
                 listaTXTObjDeportes.Add(txtObjBasket);
                 txtObjBasket.Location = new Point(posTxtX, posTxtY);
                 txtObjBasket.Tag = arrObjBaskid[txt];
+                tableLayoutPanelObj.Controls.Add(txtObjBasket);
+                
+                posLblY += 40;
                 txt++;
                 posTxtY += 40;
             }
@@ -662,6 +662,11 @@ namespace Sport1
                 
 
             }
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

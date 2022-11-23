@@ -31,6 +31,7 @@
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnVolverAEnt = new System.Windows.Forms.Button();
             this.btncumplObj = new System.Windows.Forms.Button();
+            this.tableLayoutPanelObj = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // btnguardar
@@ -55,9 +56,9 @@
             this.btnVolverAEnt.FlatAppearance.BorderSize = 0;
             this.btnVolverAEnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverAEnt.ForeColor = System.Drawing.Color.Transparent;
-            this.btnVolverAEnt.Location = new System.Drawing.Point(1123, 24);
+            this.btnVolverAEnt.Location = new System.Drawing.Point(1213, 10);
             this.btnVolverAEnt.Name = "btnVolverAEnt";
-            this.btnVolverAEnt.Size = new System.Drawing.Size(53, 50);
+            this.btnVolverAEnt.Size = new System.Drawing.Size(67, 69);
             this.btnVolverAEnt.TabIndex = 8;
             this.btnVolverAEnt.UseVisualStyleBackColor = false;
             this.btnVolverAEnt.Click += new System.EventHandler(this.BtnVolverAEnt_Click);
@@ -76,13 +77,31 @@
             this.btncumplObj.UseVisualStyleBackColor = false;
             this.btncumplObj.Click += new System.EventHandler(this.BtncumplObj_Click);
             // 
+            // tableLayoutPanelObj
+            // 
+            this.tableLayoutPanelObj.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanelObj.ColumnCount = 4;
+            this.tableLayoutPanelObj.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelObj.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelObj.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelObj.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanelObj.Location = new System.Drawing.Point(112, 169);
+            this.tableLayoutPanelObj.Name = "tableLayoutPanelObj";
+            this.tableLayoutPanelObj.RowCount = 2;
+            this.tableLayoutPanelObj.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelObj.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelObj.Size = new System.Drawing.Size(995, 282);
+            this.tableLayoutPanelObj.TabIndex = 10;
+            this.tableLayoutPanelObj.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
+            // 
             // Objetivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Sport1.Properties.Resources.Base;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1188, 681);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.tableLayoutPanelObj);
             this.Controls.Add(this.btncumplObj);
             this.Controls.Add(this.btnVolverAEnt);
             this.Controls.Add(this.btnguardar);
@@ -99,5 +118,6 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnVolverAEnt;
         private System.Windows.Forms.Button btncumplObj;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelObj;
     }
 }

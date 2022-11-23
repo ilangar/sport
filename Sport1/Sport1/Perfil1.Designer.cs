@@ -58,7 +58,7 @@
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.ForeColor = System.Drawing.Color.Transparent;
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.Window;
             this.btnVolver.Image = global::Sport1.Properties.Resources.Botón_volver_a_la_pagina_anterior;
             this.btnVolver.Location = new System.Drawing.Point(1213, 10);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(0);
