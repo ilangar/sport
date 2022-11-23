@@ -339,6 +339,7 @@ namespace Sport1
         }
         private void PerfilEnt_Load(object sender, EventArgs e)
         {
+            Program.jugador = false;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Bounds = Screen.PrimaryScreen.Bounds;
             connection.Open();
@@ -347,7 +348,7 @@ namespace Sport1
             OleDbCommand info2;
             OleDbCommand info3;
             info = new OleDbCommand("Select Nombre FROM JugadorEquipo WHERE IdUser = " + Program.idUser, connection);
-            info2 = new OleDbCommand("SELECT *  FROM IngresarEstadisticas INNER JOIN JugadorEquipo ON IngresarEstadisticas.Per = JugadorEquipo.Nombre WHERE JugadorEquipo.IdUser =" + Program.idUser + " ORDER BY IngresarEstadisticas.IdIngreEst", connection);
+            info2 = new OleDbCommand("SELECT *  FROM IngresarEstadisticas INNER JOIN JugadorEquipo ON IngresarEstadisticas.IdJugadorEquipo = JugadorEquipo.Nombre WHERE JugadorEquipo.IdUser =" + Program.idUser + " ORDER BY IngresarEstadisticas.IdIngreEst", connection);
             info3 = new OleDbCommand("SELECT Deporte FROM Perfil WHERE IdUser =" + Program.idUser , connection);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
@@ -412,7 +413,7 @@ namespace Sport1
                 command3.Connection = connection;
                 command4.Connection = connection;
                 command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
-                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = (" + Program.idUser + ")";
                 command3.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = (" + Program.idUser + ")";
                 command4.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
                 command.ExecuteNonQuery();

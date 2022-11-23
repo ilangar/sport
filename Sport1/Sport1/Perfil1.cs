@@ -295,7 +295,7 @@ namespace Sport1
                     command3.Connection = connection;
                     command4.Connection = connection;
                     command.CommandText = "DELETE FROM JugadorEquipo WHERE Nombre = ('" + Program.idPerfil + "')";
-                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE IdJugadorEquipo = ('" + Program.idPerfil + "')";
                     command3.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
                     command4.CommandText = "DELETE FROM JugadorEquipo WHERE Nombre = ('" + Program.idPerfil + "')";
                     command.ExecuteNonQuery();
@@ -314,7 +314,7 @@ namespace Sport1
                     command2.Connection = connection;
                     command3.Connection = connection;
                     command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
-                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
+                    command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = (" + Program.idUser + ")";
                     command3.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
                     command.ExecuteNonQuery();
                     command2.ExecuteNonQuery();
@@ -351,7 +351,7 @@ namespace Sport1
             OleDbCommand info2;
             OleDbCommand info3;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "' ORDER BY IdIngreEst", connection);
+            info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE IdJugadorEquipo = '" + Program.idPerfil + "' ORDER BY IdIngreEst", connection);
             info3 = new OleDbCommand("SELECT Deporte FROM JugadorEquipo WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);
