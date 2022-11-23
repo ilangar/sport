@@ -91,7 +91,7 @@
             this.btnVerProgresos.FlatAppearance.BorderSize = 0;
             this.btnVerProgresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerProgresos.Image = global::Sport1.Properties.Resources.Botón_ver_progreso;
-            this.btnVerProgresos.Location = new System.Drawing.Point(700, 250);
+            this.btnVerProgresos.Location = new System.Drawing.Point(475, 223);
             this.btnVerProgresos.Margin = new System.Windows.Forms.Padding(0);
             this.btnVerProgresos.Name = "btnVerProgresos";
             this.btnVerProgresos.Size = new System.Drawing.Size(420, 90);
