@@ -98,7 +98,7 @@ namespace Sport1
                 Label lblFutbol = new Label();
                 this.Controls.Add(lblFutbol);
                 lblFutbol.Location = new Point(posLblX, posLblY);
-                lblFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblFutbol.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblFutbol.AutoSize = true;
                 lblFutbol.BackColor = Color.Transparent;
                 lblFutbol.TextAlign = ContentAlignment.MiddleCenter;
@@ -107,7 +107,7 @@ namespace Sport1
                 Label lblEstFutbol = new Label();
                 this.Controls.Add(lblEstFutbol);
                 lblEstFutbol.Location = new Point(posEstLblX, posEstLblY);
-                lblEstFutbol.Font = new Font("Microsoft Sans Serif", 10f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstFutbol.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstFutbol.AutoSize = true;
                 lblEstFutbol.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstFutbol.Text = Convert.ToString(estFut[lbl]);
@@ -130,7 +130,7 @@ namespace Sport1
                 Label lblHandball = new Label();
                 this.Controls.Add(lblHandball);
                 lblHandball.Location = new Point(posLblX, posLblY);
-                lblHandball.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblHandball.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHandball.AutoSize = true;
                 lblHandball.BackColor = Color.Transparent;
                 lblHandball.TextAlign = ContentAlignment.MiddleCenter;
@@ -139,9 +139,9 @@ namespace Sport1
                 Label lblEstHand = new Label();
                 this.Controls.Add(lblEstHand);
                 lblEstHand.Location = new Point(posEstLblX, posEstLblY);
-                lblEstHand.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHand.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstHand.AutoSize = true;
-                lblEstHand .BackColor = Color.Transparent;
+                lblEstHand.BackColor = Color.Transparent;
                 lblEstHand.TextAlign = ContentAlignment.MiddleCenter;
                 lblEstHand.Text = Convert.ToString(estHand[lbl]);
                 lbl++;
@@ -161,7 +161,7 @@ namespace Sport1
                 Label lblHockey = new Label();
                 this.Controls.Add(lblHockey);
                 lblHockey.Location = new Point(posLblX, posLblY);
-                lblHockey.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblHockey.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblHockey.AutoSize = true;
                 lblHockey.TextAlign = ContentAlignment.MiddleCenter;
                 lblHockey.BackColor = Color.Transparent;
@@ -170,7 +170,7 @@ namespace Sport1
                 Label lblEstHockey = new Label();
                 this.Controls.Add(lblEstHockey);
                 lblEstHockey.Location = new Point(posEstLblX, posEstLblY);
-                lblEstHockey.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstHockey.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstHockey.AutoSize = true;
                 lblEstHockey.BackColor = Color.Transparent;
                 lblEstHockey.TextAlign = ContentAlignment.MiddleCenter;
@@ -193,7 +193,7 @@ namespace Sport1
                 Label lblRugby = new Label();
                 this.Controls.Add(lblRugby);
                 lblRugby.Location = new Point(posLblX, posLblY);
-                lblRugby.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblRugby.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblRugby.AutoSize = true;
                 lblRugby.TextAlign = ContentAlignment.MiddleCenter;
                 lblRugby.Text = arrRugby[lbl];
@@ -202,7 +202,7 @@ namespace Sport1
                 Label lblEstRugby = new Label();
                 this.Controls.Add(lblEstRugby);
                 lblEstRugby.Location = new Point(posEstLblX, posEstLblY);
-                lblEstRugby.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstRugby.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstRugby.AutoSize = true;
                 lblEstRugby.BackColor = Color.Transparent;
                 lblEstRugby.TextAlign = ContentAlignment.MiddleCenter;
@@ -224,7 +224,7 @@ namespace Sport1
                 Label lblTenis = new Label();
                 this.Controls.Add(lblTenis);
                 lblTenis.Location = new Point(posLblX, posLblY);
-                lblTenis.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblTenis.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblTenis.AutoSize = true;
                 lblTenis.BackColor = Color.Transparent;
                 lblTenis.TextAlign = ContentAlignment.MiddleCenter;
@@ -233,7 +233,7 @@ namespace Sport1
                 Label lblEstTenis = new Label();
                 this.Controls.Add(lblEstTenis);
                 lblEstTenis.Location = new Point(posEstLblX, posEstLblY);
-                lblEstTenis.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstTenis.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstTenis.AutoSize = true;
                 lblEstTenis.BackColor = Color.Transparent;
                 lblEstTenis.TextAlign = ContentAlignment.MiddleCenter;
@@ -255,7 +255,7 @@ namespace Sport1
                 Label lblVoley = new Label();
                 this.Controls.Add(lblVoley);
                 lblVoley.Location = new Point(posLblX, posLblY);
-                lblVoley.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblVoley.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblVoley.AutoSize = true;
                 lblVoley.TextAlign = ContentAlignment.MiddleCenter;
                 lblVoley.Text = arrVoley[lbl];
@@ -265,7 +265,7 @@ namespace Sport1
                 Label lblEstVoley = new Label();
                 this.Controls.Add(lblEstVoley);
                 lblEstVoley.Location = new Point(posEstLblX, posEstLblY);
-                lblEstVoley.Font = new Font("Microsoft Sans Serif", 15f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
+                lblEstVoley.Font = new Font("Montserrat Alternate Medium", 13f, FontStyle.Bold, GraphicsUnit.Point, ((Byte)(0)));
                 lblEstVoley.AutoSize = true;
                 lblEstVoley.BackColor = Color.Transparent;
 
@@ -351,7 +351,7 @@ namespace Sport1
             OleDbCommand info2;
             OleDbCommand info3;
             info = new OleDbCommand("SELECT Deporte FROM Perfil WHERE Nombre = '" + Program.idPerfil + "'", connection);
-            info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "'" , connection);
+            info2 = new OleDbCommand("SELECT Estd, IdCar FROM IngresarEstadisticas WHERE Per = '" + Program.idPerfil + "' ORDER BY IdIngreEst", connection);
             info3 = new OleDbCommand("SELECT Deporte FROM JugadorEquipo WHERE Nombre = '" + Program.idPerfil + "'", connection);
             OleDbDataAdapter da2 = new OleDbDataAdapter(info2);
             OleDbDataAdapter da = new OleDbDataAdapter(info);

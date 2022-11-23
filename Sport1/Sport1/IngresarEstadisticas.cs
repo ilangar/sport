@@ -43,15 +43,15 @@ namespace Sport1
         string[] arrFut = new string[8] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Tiros al arco", "Tiros fallados", "Pelotas recuperadas", "Amonestaciones" };
         string[] arrFutId = new string[8] { "2", "3", "4", "5", "8", "9", "10", "11" };
         string[] arrHand = new string[9] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Amonestaciones", "Excluciones", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas" };
-        string[] arrHandId = new string[9] { "8", "2", "3", "4", "11", "12", "13", "5","10"};
+        string[] arrHandId = new string[9] { "2", "3", "4", "5", "8", "10", "11", "12","13"};
         string[] arrHock = new string[10] { "Goles", "Asistencias", "Faltas", "Minutos Jugados", "Pelotas perdidas", "Tiros fallados", "Pelotas recuperadas", "Tarjetas verdes", "Tarjetas amarillas", "Tarjetas rojas" };
-        string[] arrHockId = new string[10] { "8", "2", "3", "4", "13", "5", "10", "14", "15", "16" };
+        string[] arrHockId = new string[10] { "2", "3", "4", "5", "8", "10", "13", "14", "15", "16" };
         string[] arrRugby = new string[9] { "Tries", "Tackles", "Minutos jugados", "Lines ganados", "Pelotas perdidas", "Conversiones", "Pelotas recuperadas", "Tarjetas amarillas", "Tarjetas rojas" };
-        string[] arrRugbyId = new string[9] { "17", "18", "4", "19", "13", "20", "10", "15", "16" };
+        string[] arrRugbyId = new string[9] { "4", "10", "13", "15", "16", "17", "18", "19", "20" };
         string[] arrTenis = new string[6] { "Aces", "Errores no forzados", "Faltas", "Doble faltas", "Winners", "Quiebres"};
-        string[] arrTenisId = new string[6] { "21", "22", "3", "23", "24", "25" };
+        string[] arrTenisId = new string[6] {"3", "21", "22",  "23", "24", "25" };
         string[] arrVoley = new string[7] { "Aces", "Errores no forzados", "Remates logrados", "Saques errados", "Recepciones","Armados", "Bloqueos" };
-        string[] arrVoleyId = new string[7] { "21", "22", "26", "27", "28", "29", "6"};
+        string[] arrVoleyId = new string[7] {"6", "21", "22", "26", "27", "28", "29" };
         public void lblBasket()
         {
             while (lbl < 9)
