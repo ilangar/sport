@@ -297,7 +297,7 @@ namespace Sport1
                     command.CommandText = "DELETE FROM JugadorEquipo WHERE Nombre = ('" + Program.idPerfil + "')";
                     command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
                     command3.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
-                    command4.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = (" + Program.idUser + ")";
+                    command4.CommandText = "DELETE FROM JugadorEquipo WHERE Nombre = ('" + Program.idPerfil + "')";
                     command.ExecuteNonQuery();
                     command2.ExecuteNonQuery();
                     command3.ExecuteNonQuery();
@@ -313,15 +313,12 @@ namespace Sport1
                     command.Connection = connection;
                     command2.Connection = connection;
                     command3.Connection = connection;
-                    command4.Connection = connection;
                     command.CommandText = "DELETE FROM Perfil WHERE IdUser = (" + Program.idUser + ")";
                     command2.CommandText = "DELETE FROM IngresarEstadisticas WHERE Per = ('" + Program.idPerfil + "')";
                     command3.CommandText = "DELETE FROM Obj WHERE Per = (" + Program.idUser + ")";
-                    command4.CommandText = "DELETE FROM JugadorEquipo WHERE IdUser = (" + Program.idUser + ")";
                     command.ExecuteNonQuery();
                     command2.ExecuteNonQuery();
                     command3.ExecuteNonQuery();
-                    command4.ExecuteNonQuery();
                     connection.Close();
                 }
 
